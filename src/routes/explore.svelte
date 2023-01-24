@@ -94,6 +94,11 @@
               class="w-[100%] absolute bottom-[75%] left-[105%]"
               alt="arrow"
             />
+            <img
+              src="/images/down.svg"
+              class="h-[115%] absolute bottom-[140%] sm:bottom-[125%] left-[60%] sm:left-[50%]  translate-x-[-50%]"
+              alt="arrow"
+            />
           </a>
         </div>
       </div>
