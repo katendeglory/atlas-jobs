@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?&family=Rubik:wght@300&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html {
+  /* scroll-behavior: smooth; */
+  width: 100%;
+  /* font-family: 'Inter', sans-serif !important; */
+  font-family: 'Rubik', sans-serif !important;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: overlay;
+}
+
+.h-font {
+  /* font-family: 'Inter', sans-serif !important; */
+  font-family: 'Rubik', sans-serif !important;
+}
+
+*::selection {
+  background-color: #F4A26150;
+  opacity: .15;
+  color: white;
+}
+
+:root {
+  --thumbScroll: #cbd5e0;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--thumbScroll);
+  border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--thumbScroll);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--thumbScroll);
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: transparent;
+}
+
+::-webkit-scrollbar-track:active {
+  background: transparent;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Custom Buttons */
+
+.btn-sh {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  resize: none;
+  outline: none;
+  border: none;
+  width: max-content;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  background-size: 200% auto;
+  padding: .75rem 1.5rem;
+  padding-bottom: .83rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-sh:hover {
+  transform: translateY(-2px);
+}
+
+.btn-sh-orange {
+  background-image: linear-gradient(to right, #F4A261 0%, #F4A275 99%);
+  box-shadow: 0 12px 12px -11px #F4A261b8;
+}
+
+.btn-sh-green {
+  background-image: linear-gradient(to right, #68E4BC 0%, #4AD0D1 99%);
+  box-shadow: 0 12px 12px -11px #0db4afb8;
+}
+
+.glassmorph-0 {
+  background: rgba(31, 41, 55, 0.07);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.glassmorph-1 {
+  background: rgba(79, 95, 117, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.glassmorph-2 {
+  background: rgba(31, 41, 55, 0.2);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.glassmorph-3 {
+  background: rgba(31, 41, 55, 0.3);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.glassmorph-4 {
+  background: rgba(31, 41, 55, 0.4);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.glassmorph-5 {
+  background: rgba(31, 41, 55, 0.5);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.glassmorph-6 {
+  background: rgba(31, 41, 55, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.glassmorph-7 {
+  background: rgba(31, 41, 55, 0.7);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.glassmorph-8 {
+  background: rgba(31, 41, 55, 0.8);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.glassmorph-9, .glassmorph-blurry {
+  background: rgba(31, 41, 55, 0.9);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.selectContainer input::placeholder {
+  color: rgb(107, 114, 128) !important;
+}
+
+/* Wrap select-item-1 container around Svelte Select Component */
+
+.select-item-1 .selectContainer {
+  z-index: 10 !important;
+}
+
+.select-item-2 .selectContainer {
+  z-index: 9 !important;
+}
+
+.select-item-3 .selectContainer {
+  z-index: 8 !important;
+}
+
+.select-item-4 .selectContainer {
+  z-index: 7 !important;
+}
+
+.select-item-5 .selectContainer {
+  z-index: 6 !important;
+}
+
+.select-item-6 .selectContainer {
+  z-index: 5 !important;
+}
