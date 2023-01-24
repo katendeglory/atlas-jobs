@@ -24,7 +24,7 @@
       Back
     </button>
 
-    <div class="grid grid-cols-2 gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div class="flex items-center justify-center">
         <img src="/images/doctor.svg" class="h-[20rem]" alt="doctor" />
       </div>

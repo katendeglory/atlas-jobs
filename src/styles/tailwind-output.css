@@ -887,6 +887,9 @@ select {
 .h-\[115\%\] {
   height: 115%;
 }
+.h-\[4rem\] {
+  height: 4rem;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -955,6 +958,9 @@ select {
 }
 .w-\[500\%\] {
   width: 500%;
+}
+.w-\[4rem\] {
+  width: 4rem;
 }
 .max-w-xl {
   max-width: 36rem;

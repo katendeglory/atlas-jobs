@@ -28,19 +28,19 @@
       >
         <a
           href="/food-designer"
-          class="absolute top-[12.50%] left-[27.5%] flex items-center justify-center text-center h-[4.5rem] w-[4.5rem] rounded-full bg-brand-blue text-white text-xs"
+          class="absolute top-[12.50%] left-[27.5%] flex items-center justify-center text-center h-[4rem] w-[4rem] rounded-full bg-brand-blue text-white text-xs"
         >
           FOOD<br />Designer
         </a>
         <a
           href="#home"
-          class="absolute top-[30%] left-[50%] flex items-center justify-center text-center h-[4.5rem] w-[4.5rem] rounded-full bg-brand-blue text-white text-xs"
+          class="absolute top-[30%] left-[50%] flex items-center justify-center text-center h-[4rem] w-[4rem] rounded-full bg-brand-blue text-white text-xs"
         >
           Food<br />Safety<br />Curator
         </a>
         <a
           href="#home"
-          class="absolute bottom-[40%] right-[7.5%] flex items-center justify-center text-center h-[4.5rem] w-[4.5rem] rounded-full bg-brand-blue text-white text-xs"
+          class="absolute bottom-[40%] right-[7.5%] flex items-center justify-center text-center h-[4rem] w-[4rem] rounded-full bg-brand-blue text-white text-xs"
         >
           GMO<br />Farmer
         </a>
