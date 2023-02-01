@@ -37,11 +37,11 @@
       ) {
         // innerHeader.classList.replace("h-16", "h-12");
         // header.classList.add("shadow-sm");
-        header.classList.add("bg-brand-blue");
+        header.classList.add("bg-black");
       } else {
         // innerHeader.classList.replace("h-12", "h-16");
         // header.classList.remove("shadow-sm");
-        header.classList.remove("bg-brand-blue");
+        // header.classList.remove("bg-black");
       }
     };
 
@@ -75,31 +75,32 @@
   });
 </script>
 
-<a href="/#home" class="fixed top-[0.5rem] left-2 md:left-[2rem] z-[70]">
+<!-- <a href="/#home" class="fixed top-[0.5rem] left-2 md:left-[2rem] z-[70]">
   <img src="/favicon.svg" class="w-[75px] md:w-[100px]" alt="play" />
-</a>
+</a> -->
 
 <div
   id="header"
-  class="navbar text-white fixed top-0 left-0 w-full z-50 transition-all
+  class="navbar here here bg-black text-white fixed top-0 left-0 w-full z-50 transition-all
     duration-250"
 >
   <Container overflowHidden={false}>
     <div
       id="inner-header"
-      class="h-16 flex justify-between items-center transition-all duration-250"
+      class="h-14 flex justify-between items-center transition-all duration-250"
     >
       <a class="nav-link flex items-center" href="/#home">
         <!-- <img src="/favicon.svg" class="w-8 object-cover mr-2" alt="home" /> -->
         <!-- <ion-icon name="home" class="text-2xl" /> -->
         <!-- Home -->
+        ATLAS OF EMERGING JOBS
       </a>
 
       <div class="hidden lg:flex">
-        <a class="nav-link mr-6" href="#home">Help</a>
-        <a class="nav-link mr-6" href="#home">Skills</a>
-        <a class="nav-link mr-6" href="#home">Industries</a>
-        <a class="nav-link mr-6" href="#home">FAQs</a>
+        <!-- <a class="nav-link mr-6" href="#home">Help</a> -->
+        <!-- <a class="nav-link mr-6" href="#home">Skills</a> -->
+        <!-- <a class="nav-link mr-6" href="#home">Industries</a> -->
+        <!-- <a class="nav-link mr-6" href="#home">FAQs</a> -->
       </div>
 
       <div class="lg:flex lg:items-center">

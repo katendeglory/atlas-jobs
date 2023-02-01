@@ -7,6 +7,7 @@ module.exports = {
         "brand-orange": "#F4A261",
         "brand-blue": "#38809F",
         "brand-light-blue": "#83D0C7",
+        "brand-green-1": "#6EC977",
       },
       // spacing: {
       //   '128': '32rem',

@@ -4,14 +4,22 @@
 /* Buttons */
 
 .btn {
-  @apply text-gray-50 flex justify-center items-center w-max px-10 py-3 rounded-full;
-  outline: 0px dashed rgba(255, 255, 255, .25);
-  outline-offset: -5px;
+  @apply text-gray-50 flex justify-center items-center w-max px-8 py-3 rounded-xl;
+  /* outline: 0px dashed rgba(255, 255, 255, .25); */
+  /* outline-offset: -5px; */
   white-space: nowrap !important;
 }
 
+.btn-primary-2 {
+  @apply bg-brand-green-1;
+}
+
+.btn-secondary {
+  @apply text-white border border-white rounded-full;
+}
+
 .btn-primary {
-  @apply bg-brand-light-blue;
+  @apply bg-brand-green-1 rounded-full;
 }
 
 

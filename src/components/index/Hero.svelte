@@ -1,40 +1,103 @@
 <script>
+  import { onMount } from "svelte";
   import Container from "../utils/Container.svelte";
+  // let is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  const playVideo = (id) => {
+    let vid = document.getElementById(id);
+    vid.src = "/images/trailer.mp4";
+    vid.preload = "auto";
+    vid.muted = true;
+    vid.autoplay = true;
+    vid.loop = true;
+    vid.playsinline = true;
+    vid["webkit-playsinline"] = true;
+    vid.play();
+    console.log(vid);
+  };
+  onMount(() => {
+    playVideo("hero");
+  });
 </script>
 
-<div
-  class="relative"
-  style="background-image: url(/images/farm.webp); background-size: cover; background-position: center;"
->
-  <Container>
-    <div class="h-screen relative flex flex-col md:flex-row justify-between">
-      <div class="relative z-10 w-full lg:w-9/12 flex flex-col justify-center">
-        <!--  -->
-      </div>
-
-      <div
-        class="w-full pb-12 md:pb-0 lg:w-3/12 flex items-center justify-center lg:justify-end relative z-10"
-      >
+<section class="showcase" id="home">
+  <div class="video-container">
+    <video id="hero" muted autoplay loop playsinline>
+      <source src="/images/trailer.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="content text-gray-50">
+    <Container>
+      <div class="flex flex-col md:flex-row relative">
         <div
-          class="bg-brand-blue/40 uppercase text-4xl px-6 py-10 md:text-5xl md:px-8 md:py-12 text-white text-right font-semibold"
+          class="w-full h-screen lg:w-7/12 flex flex-col justify-center relative z-10"
         >
-          FOOD & BEVERAGE INDUSTRY
+          <h1
+            class="h-font mb-5 md:pt-20 text-6xl sm:text-6xl md:text-7xl lg:text-7xl"
+          >
+            FOOD AND BEVERAGE INDUSTRY
+          </h1>
+
+          <a href="/explore" class="btn btn-primary">
+            See the future
+            <ion-icon name="arrow-forward-outline" class="text-xl ml-2" />
+          </a>
+        </div>
+        <div
+          class="w-full pb-12 md:pb-0 md:h-screen lg:w-5/12 flex items-center justify-center relative z-10"
+        >
+          <!--  -->
         </div>
       </div>
-    </div>
-  </Container>
+    </Container>
+  </div>
+</section>
 
-  <img
-    src="/images/play.svg"
-    class="w-[125px] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
-    alt="play"
-  />
+<style>
+  .showcase {
+    height: 100vh;
+    position: relative;
+  }
+  /* TODO, Fallback background here */
+  .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: var(--primary-color)
+      url("./https://traversymedia.com/downloads/cover.jpg") no-repeat center
+      center/cover;
+  }
+  .video-container video {
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+  }
 
-  <a
-    href="/explore"
-    class="mt-4 btn btn-primary uppercase absolute left-[50%] translate-x-[-50%] bottom-[0%] translate-y-[50%]"
-  >
-    Explore
-    <img src="/images/compass.svg" class="ml-2 w-[1.5rem]" alt="compass" />
-  </a>
-</div>
+  .video-container:after {
+    content: "";
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.05);
+    position: absolute;
+  }
+
+  .content {
+    box-shadow: inset 50vw 0 70px -7px rgba(0, 0, 0, 0.05);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.15);
+  }
+</style>
