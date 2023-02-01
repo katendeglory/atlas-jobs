@@ -689,6 +689,12 @@ select {
 .left-\[2px\] {
   left: 2px;
 }
+.bottom-4 {
+  bottom: 1rem;
+}
+.bottom-8 {
+  bottom: 2rem;
+}
 .z-\[60\] {
   z-index: 60;
 }
@@ -706,6 +712,9 @@ select {
 }
 .z-50 {
   z-index: 50;
+}
+.z-\[800\] {
+  z-index: 800;
 }
 .col-span-full {
   grid-column: 1 / -1;
@@ -887,6 +896,9 @@ select {
 .w-screen {
   width: 100vw;
 }
+.w-\[2rem\] {
+  width: 2rem;
+}
 .min-w-\[100vw\] {
   min-width: 100vw;
 }
@@ -907,6 +919,10 @@ select {
 }
 .translate-x-\[-50\%\] {
   --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.translate-x-\[50\%\] {
+  --tw-translate-x: 50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .transform {

@@ -32,15 +32,46 @@
               <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="flex items-center">
                   <div>
-                    <h1 class="h-font mb-6 text-3xl text-black">
+                    <h1
+                      class="h-font mb-6 text-3xl text-black"
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom"
+                      data-aos-delay="50"
+                      data-aos-offset="0"
+                      data-aos-duration="500"
+                    >
                       FOOD AND BEVERAGE INDUSTRY SECTORS
                     </h1>
-                    <h2 class="mb-6 text-xl text-[#00000080]">Processor</h2>
-                    <p class="mb-6 text-white">
+                    <h2
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom"
+                      data-aos-delay="250"
+                      data-aos-offset="0"
+                      data-aos-duration="500"
+                      class="mb-6 text-xl text-[#00000080]"
+                    >
+                      Processor
+                    </h2>
+                    <p
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom"
+                      data-aos-delay="500"
+                      data-aos-offset="0"
+                      data-aos-duration="500"
+                      class="mb-6 text-white"
+                    >
                       Transform agriculture product received from different
                       producer in their region
                     </p>
-                    <a href="/explore" class="btn btn-secondary">
+                    <a
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom"
+                      data-aos-delay="750"
+                      data-aos-offset="0"
+                      data-aos-duration="500"
+                      href="/explore"
+                      class="btn btn-secondary"
+                    >
                       Discover
                       <ion-icon
                         name="chevron-forward-circle-outline"
@@ -49,7 +80,14 @@
                     </a>
                   </div>
                 </div>
-                <div class="flex items-center justify-end">
+                <div
+                  data-aos="fade-left"
+                  data-aos-anchor-placement="top-bottom"
+                  data-aos-delay="750"
+                  data-aos-offset="0"
+                  data-aos-duration="500"
+                  class="flex items-center justify-end"
+                >
                   <img
                     class="md:w-[35vw]"
                     src="/images/tomatoes.png"
@@ -66,15 +104,46 @@
               <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="flex items-center">
                   <div>
-                    <h1 class="h-font mb-6 text-3xl text-black">
+                    <h1
+                      class="h-font mb-6 text-3xl text-black"
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom"
+                      data-aos-delay="50"
+                      data-aos-offset="0"
+                      data-aos-duration="500"
+                    >
                       FOOD AND BEVERAGE INDUSTRY SECTORS
                     </h1>
-                    <h2 class="mb-6 text-xl text-[#00000080]">Processor</h2>
-                    <p class="mb-6 text-white">
+                    <h2
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom"
+                      data-aos-delay="250"
+                      data-aos-offset="0"
+                      data-aos-duration="500"
+                      class="mb-6 text-xl text-[#00000080]"
+                    >
+                      Processor
+                    </h2>
+                    <p
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom"
+                      data-aos-delay="500"
+                      data-aos-offset="0"
+                      data-aos-duration="500"
+                      class="mb-6 text-white"
+                    >
                       Transform agriculture product received from different
                       producer in their region
                     </p>
-                    <a href="/explore" class="btn btn-secondary">
+                    <a
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom"
+                      data-aos-delay="750"
+                      data-aos-offset="0"
+                      data-aos-duration="500"
+                      href="/explore"
+                      class="btn btn-secondary"
+                    >
                       Discover
                       <ion-icon
                         name="chevron-forward-circle-outline"
@@ -83,7 +152,14 @@
                     </a>
                   </div>
                 </div>
-                <div class="flex items-center justify-end">
+                <div
+                  data-aos="fade-left"
+                  data-aos-anchor-placement="top-bottom"
+                  data-aos-delay="750"
+                  data-aos-offset="0"
+                  data-aos-duration="500"
+                  class="flex items-center justify-end"
+                >
                   <img
                     class="md:w-[35vw]"
                     src="/images/tomatoes.png"
@@ -123,21 +199,55 @@
                     class="md:w-[35vw]"
                     src="/images/scientist.png"
                     alt="tomatoes"
+                    data-aos="fade-right"
+                    data-aos-anchor-placement="top-bottom"
+                    data-aos-delay="750"
+                    data-aos-offset="0"
+                    data-aos-duration="500"
                   />
                 </div>
                 <div class="flex items-center">
                   <div>
-                    <h1 class="h-font mb-6 text-3xl text-black">
+                    <h1
+                      class="h-font mb-6 text-3xl text-black"
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom"
+                      data-aos-delay="50"
+                      data-aos-offset="0"
+                      data-aos-duration="500"
+                    >
                       FOOD AND BEVERAGE INDUSTRY FUTURE JOBS
                     </h1>
-                    <h2 class="mb-6 text-xl text-[#00000080]">
+                    <h2
+                      class="mb-6 text-xl text-[#00000080]"
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom"
+                      data-aos-delay="250"
+                      data-aos-offset="0"
+                      data-aos-duration="500"
+                    >
                       Environmental Practitioner
                     </h2>
-                    <p class="mb-6">
+                    <p
+                      class="mb-6"
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom"
+                      data-aos-delay="500"
+                      data-aos-offset="0"
+                      data-aos-duration="500"
+                    >
                       Assesses, improves, and gives advice to companies on
                       environmental strategies. Measures the carbon footprint...
                     </p>
-                    <a href="/explore" class="btn btn-primary">
+                    <a
+                      href="/explore"
+                      class="btn btn-primary"
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom"
+                      data-aos-delay="50"
+                      data-aos-offset="0"
+                      data-aos-duration="750"
+                    >
                       Discover
                       <ion-icon
                         name="chevron-forward-circle-outline"
@@ -159,21 +269,55 @@
                     class="md:w-[35vw]"
                     src="/images/scientist.png"
                     alt="tomatoes"
+                    data-aos="fade-right"
+                    data-aos-anchor-placement="top-bottom"
+                    data-aos-delay="750"
+                    data-aos-offset="0"
+                    data-aos-duration="500"
                   />
                 </div>
                 <div class="flex items-center">
                   <div>
-                    <h1 class="h-font mb-6 text-3xl text-black">
+                    <h1
+                      class="h-font mb-6 text-3xl text-black"
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom"
+                      data-aos-delay="50"
+                      data-aos-offset="0"
+                      data-aos-duration="500"
+                    >
                       FOOD AND BEVERAGE INDUSTRY FUTURE JOBS
                     </h1>
-                    <h2 class="mb-6 text-xl text-[#00000080]">
+                    <h2
+                      class="mb-6 text-xl text-[#00000080]"
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom"
+                      data-aos-delay="250"
+                      data-aos-offset="0"
+                      data-aos-duration="500"
+                    >
                       Environmental Practitioner
                     </h2>
-                    <p class="mb-6">
+                    <p
+                      class="mb-6"
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom"
+                      data-aos-delay="500"
+                      data-aos-offset="0"
+                      data-aos-duration="500"
+                    >
                       Assesses, improves, and gives advice to companies on
                       environmental strategies. Measures the carbon footprint...
                     </p>
-                    <a href="/explore" class="btn btn-primary">
+                    <a
+                      href="/explore"
+                      class="btn btn-primary"
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom"
+                      data-aos-delay="50"
+                      data-aos-offset="0"
+                      data-aos-duration="750"
+                    >
                       Discover
                       <ion-icon
                         name="chevron-forward-circle-outline"

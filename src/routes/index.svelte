@@ -22,13 +22,27 @@
 <div class="bg-black py-10 text-white">
   <Container>
     <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between">
-      <h1 class="text-6xl md:text-8xl">
+      <h1
+        class="text-6xl md:text-8xl"
+        data-aos="fade-right"
+        data-aos-anchor-placement="top-bottom"
+        data-aos-delay="50"
+        data-aos-offset="0"
+        data-aos-duration="500"
+      >
         FOOD<span class="text-brand-green-1">&</span>
         <br />
         BEVERAGE
       </h1>
 
-      <div class="mt-6 sm:mt-0">
+      <div
+        class="mt-6 sm:mt-0"
+        data-aos="fade-left"
+        data-aos-anchor-placement="top-bottom"
+        data-aos-delay="250"
+        data-aos-offset="0"
+        data-aos-duration="500"
+      >
         <a href="/explore" class="btn btn-primary">
           See the future
           <ion-icon name="arrow-forward-outline" class="text-xl ml-2" />
@@ -43,14 +57,28 @@
 <div class="bg-black py-10 text-white">
   <Container>
     <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between">
-      <h1 class="text-6xl md:text-8xl">
+      <h1
+        class="text-6xl md:text-8xl"
+        data-aos="fade-right"
+        data-aos-anchor-placement="top-bottom"
+        data-aos-delay="50"
+        data-aos-offset="0"
+        data-aos-duration="500"
+      >
         PREPARE FOR THE
         <br />
         FUTURE
         <span class="text-brand-green-1">NOW.</span>
       </h1>
 
-      <div class="mt-6 sm:mt-0">
+      <div
+        class="mt-6 sm:mt-0"
+        data-aos="fade-left"
+        data-aos-anchor-placement="top-bottom"
+        data-aos-delay="250"
+        data-aos-offset="0"
+        data-aos-duration="500"
+      >
         <a href="/explore" class="btn btn-primary">
           See the future
           <ion-icon name="arrow-forward-outline" class="text-xl ml-2" />

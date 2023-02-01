@@ -19,9 +19,7 @@
   />
 {/if}
 
-<div
-  class="block lg:block px-4 pt-2 pb-1 -rounded-md -shadow-sm -bg-brand-white relative z-[999]"
->
+<div class="block lg:block px-4 pt-2 pb-1 relative z-[999]">
   <button class="focus:outline-none" on:click={toggleMenu}>
     <ion-icon name="menu-outline" class="text-3xl" />
   </button>
@@ -39,9 +37,9 @@
       <a class="px-8 mb-4 text-2xl" on:click={hideMenu} href="#home"> ATLAS </a>
       <div class="mb-4 border border-b border-[#FFFFFF80]" />
       <div class="px-8 flex flex-col">
-        <a class="mb-5" on:click={hideMenu} href="#home">Home</a>
-        <a class="mb-5" on:click={hideMenu} href="#home">Ecosystem</a>
-        <a class="mb-5" on:click={hideMenu} href="#home">About us</a>
+        <a class="a-nav mb-5" on:click={hideMenu} href="#home">Home</a>
+        <a class="a-nav mb-5" on:click={hideMenu} href="#home">Ecosystem</a>
+        <a class="a-nav mb-5" on:click={hideMenu} href="#home">About us</a>
       </div>
     </div>
   {/if}

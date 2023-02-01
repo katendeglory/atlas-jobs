@@ -33,11 +33,24 @@
         >
           <h1
             class="h-font mb-5 md:pt-20 text-6xl sm:text-6xl md:text-7xl lg:text-7xl"
+            data-aos="fade-down"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-delay="50"
+            data-aos-offset="0"
+            data-aos-duration="500"
           >
             FOOD AND BEVERAGE INDUSTRY
           </h1>
 
-          <a href="/explore" class="btn btn-primary">
+          <a
+            href="/explore"
+            class="btn btn-primary"
+            data-aos="fade-right"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-delay="500"
+            data-aos-offset="0"
+            data-aos-duration="500"
+          >
             See the future
             <ion-icon name="arrow-forward-outline" class="text-xl ml-2" />
           </a>
@@ -50,6 +63,12 @@
       </div>
     </Container>
   </div>
+
+  <img
+    class="absolute left-[50%] translate-x-[-50%] bottom-8 z-[800] w-[2rem]"
+    src="/images/arrow.svg"
+    alt="arrow"
+  />
 </section>
 
 <style>
