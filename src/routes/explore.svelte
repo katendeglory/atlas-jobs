@@ -1,5 +1,36 @@
 <script>
+  import { onMount } from "svelte";
   import Container from "../components/utils/Container.svelte";
+
+  onMount(() => {
+    const imgs = ["doctor.svg", "doctor.svg", "doctor.svg", "doctor.svg"];
+
+    // Random connected graph
+    const gData = {
+      nodes: imgs.map((img, id) => ({ id, img })),
+      links: [...Array(imgs.length).keys()]
+        .filter((id) => id)
+        .map((id) => ({
+          source: id,
+          target: Math.round(Math.random() * (id - 1)),
+        })),
+    };
+
+    const Graph = ForceGraph3D()(document.getElementById("3d-graph"))
+      .nodeThreeObject(({ img }) => {
+        const imgTexture = new THREE.TextureLoader().load(`./images/${img}`);
+        const material = new THREE.SpriteMaterial({ map: imgTexture });
+        const sprite = new THREE.Sprite(material);
+        sprite.scale.set(15, 15);
+        return sprite;
+      })
+      .onNodeClick((node) => {
+        // Aim at node from outside it
+        console.log(node);
+        // window.location = "/cool"
+      })
+      .graphData(gData);
+  });
 </script>
 
 <svelte:head>
@@ -105,3 +136,5 @@
     </div>
   </div>
 </Container>
+
+<!-- <div id="3d-graph" /> -->

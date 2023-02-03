@@ -24,7 +24,7 @@
 
 <div class="!overflow-visible">
   <div class="relative">
-    <div class="swiper-container h-screen">
+    <div class="swiper-container md:h-[70vh]">
       <div class="swiper-wrapper">
         <section class="swiper-slide">
           <div class="green-grad h-full w-full flex items-center px-2">
@@ -188,7 +188,7 @@
 
 <div class="!overflow-visible">
   <div class="relative">
-    <div class="swiper-container h-screen">
+    <div class="swiper-container md:h-[70vh]">
       <div class="swiper-wrapper">
         <section class="swiper-slide">
           <div class="h-full w-full flex items-center px-2">
@@ -206,10 +206,10 @@
                     data-aos-duration="500"
                   />
                 </div>
-                <div class="flex items-center">
-                  <div>
+                <div class="no-flex-items-center">
+                  <div class="flex flex-col items-end justify-between h-full">
                     <h1
-                      class="h-font mb-6 text-3xl text-black"
+                      class="h-font mb-6 text-3xl text-black text-right"
                       data-aos="fade-up"
                       data-aos-anchor-placement="top-bottom"
                       data-aos-delay="50"
@@ -228,8 +228,8 @@
                     >
                       Environmental Practitioner
                     </h2>
-                    <p
-                      class="mb-6"
+                    <div
+                      class="mb-6 text-right"
                       data-aos="fade-up"
                       data-aos-anchor-placement="top-bottom"
                       data-aos-delay="500"
@@ -238,22 +238,24 @@
                     >
                       Assesses, improves, and gives advice to companies on
                       environmental strategies. Measures the carbon footprint...
-                    </p>
-                    <a
-                      href="/explore"
-                      class="btn btn-primary"
-                      data-aos="fade-up"
-                      data-aos-anchor-placement="top-bottom"
-                      data-aos-delay="50"
-                      data-aos-offset="0"
-                      data-aos-duration="750"
-                    >
-                      Discover
-                      <ion-icon
-                        name="chevron-forward-circle-outline"
-                        class="text-2xl ml-2"
-                      />
-                    </a>
+                    </div>
+                    <div class="flex justify-end">
+                      <a
+                        href="/explore"
+                        class="btn btn-primary"
+                        data-aos="fade-up"
+                        data-aos-anchor-placement="top-bottom"
+                        data-aos-delay="50"
+                        data-aos-offset="0"
+                        data-aos-duration="750"
+                      >
+                        Discover
+                        <ion-icon
+                          name="chevron-forward-circle-outline"
+                          class="text-2xl ml-2"
+                        />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -276,10 +278,10 @@
                     data-aos-duration="500"
                   />
                 </div>
-                <div class="flex items-center">
-                  <div>
+                <div class="no-flex-items-center">
+                  <div class="flex flex-col items-end justify-between h-full">
                     <h1
-                      class="h-font mb-6 text-3xl text-black"
+                      class="h-font mb-6 text-3xl text-black text-right"
                       data-aos="fade-up"
                       data-aos-anchor-placement="top-bottom"
                       data-aos-delay="50"
@@ -298,8 +300,8 @@
                     >
                       Environmental Practitioner
                     </h2>
-                    <p
-                      class="mb-6"
+                    <div
+                      class="mb-6 text-right"
                       data-aos="fade-up"
                       data-aos-anchor-placement="top-bottom"
                       data-aos-delay="500"
@@ -308,22 +310,24 @@
                     >
                       Assesses, improves, and gives advice to companies on
                       environmental strategies. Measures the carbon footprint...
-                    </p>
-                    <a
-                      href="/explore"
-                      class="btn btn-primary"
-                      data-aos="fade-up"
-                      data-aos-anchor-placement="top-bottom"
-                      data-aos-delay="50"
-                      data-aos-offset="0"
-                      data-aos-duration="750"
-                    >
-                      Discover
-                      <ion-icon
-                        name="chevron-forward-circle-outline"
-                        class="text-2xl ml-2"
-                      />
-                    </a>
+                    </div>
+                    <div class="flex justify-end">
+                      <a
+                        href="/explore"
+                        class="btn btn-primary"
+                        data-aos="fade-up"
+                        data-aos-anchor-placement="top-bottom"
+                        data-aos-delay="50"
+                        data-aos-offset="0"
+                        data-aos-duration="750"
+                      >
+                        Discover
+                        <ion-icon
+                          name="chevron-forward-circle-outline"
+                          class="text-2xl ml-2"
+                        />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
