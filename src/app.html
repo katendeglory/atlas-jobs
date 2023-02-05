@@ -15,6 +15,10 @@
 	<script src="https://unpkg.com/3d-force-graph@1.70.19/dist/3d-force-graph.min.js"></script>
 	<!-- AOS.css -->
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<!-- Text animation -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	<!-- Anim XYZ -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@animxyz/core">
 	<!-- Svelte head -->
 	%svelte.head%
 </head>
@@ -26,7 +30,8 @@
 	<!-- AOS.js -->
 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script>
-		AOS.init({ once: true });
+		AOS.init({});
+		// AOS.init({ once: true });
 	</script>
 </body>
 

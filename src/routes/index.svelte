@@ -1,9 +1,9 @@
 <script>
+  import Sliders from "./../components/index/Sliders.svelte";
   import Gallery from "./../components/index/Gallery.svelte";
   import Container from "./../components/utils/Container.svelte";
   import { onMount } from "svelte";
   import Hero from "../components/index/Hero.svelte";
-  import Sliders from "../components/index/Sliders.svelte";
   // import axios from "axios";
 
   onMount(async () => {});
@@ -14,6 +14,8 @@
 </svelte:head>
 
 <Hero />
+
+<div class="" id="about" />
 
 <div class="max-w-full overflow-x-hidden">
   <Sliders />

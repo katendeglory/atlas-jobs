@@ -15,7 +15,11 @@
 }
 
 .btn-secondary {
-  @apply text-white border border-white rounded-full;
+  @apply text-gray-300 border border-gray-300 rounded-full;
+}
+
+.btn-third {
+  @apply text-gray-800 border border-gray-800 rounded-full;
 }
 
 .btn-primary {

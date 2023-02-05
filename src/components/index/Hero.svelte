@@ -12,10 +12,34 @@
     vid.playsinline = true;
     vid["webkit-playsinline"] = true;
     vid.play();
-    console.log(vid);
+    // console.log(vid);
   };
   onMount(() => {
     playVideo("hero");
+
+    var textWrapper = document.querySelector(".hero-text");
+    textWrapper.innerHTML = textWrapper.textContent.replace(
+      /\S/g,
+      "<span class='letter'>$&</span>"
+    );
+
+    anime.timeline({ loop: false }).add({
+      targets: ".hero-text .letter",
+      translateX: [40, 0],
+      translateZ: 0,
+      opacity: [0, 1],
+      easing: "easeOutExpo",
+      duration: 5000,
+      delay: (el, i) => 500 + 30 * i,
+    });
+    // .add({
+    //   targets: ".hero-text .letter",
+    //   translateX: [0, -30],
+    //   opacity: [1, 0],
+    //   easing: "easeInExpo",
+    //   duration: 1100,
+    //   delay: (el, i) => 100 + 30 * i,
+    // });
   });
 </script>
 
@@ -32,14 +56,9 @@
           class="w-full h-screen lg:w-7/12 flex flex-col justify-center relative z-10"
         >
           <h1
-            class="h-font mb-5 md:pt-20 text-6xl sm:text-6xl md:text-7xl lg:text-7xl"
-            data-aos="fade-down"
-            data-aos-anchor-placement="top-bottom"
-            data-aos-delay="50"
-            data-aos-offset="0"
-            data-aos-duration="500"
+            class="hero-text h-font mb-5 md:pt-20 text-6xl sm:text-6xl md:text-7xl lg:text-8xl"
           >
-            FOOD AND BEVERAGE INDUSTRY
+            FOOD & BEVERAGE INDUSTRY
           </h1>
 
           <a
@@ -47,7 +66,7 @@
             class="btn btn-primary"
             data-aos="fade-right"
             data-aos-anchor-placement="top-bottom"
-            data-aos-delay="500"
+            data-aos-delay="1500"
             data-aos-offset="0"
             data-aos-duration="500"
           >
@@ -64,11 +83,12 @@
     </Container>
   </div>
 
-  <img
-    class="absolute left-[50%] translate-x-[-50%] bottom-8 z-[800] w-[2rem]"
-    src="/images/arrow.svg"
-    alt="arrow"
-  />
+  <a
+    href="#about"
+    class="absolute left-[50%] translate-x-[-50%] bottom-8 z-[800]"
+  >
+    <img class="w-[3rem]" src="/images/mouse.gif" alt="arrow" />
+  </a>
 </section>
 
 <style>

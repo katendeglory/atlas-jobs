@@ -1,6 +1,7 @@
 <script>
   /* STYLES IMPORTS */
   import "../styles/app.css";
+  import "../styles/utils.css";
   import "../styles/tailwind-output.css";
   /* JS IMPORTS */
   import NavBar from "../components/layout/NavBar.svelte";

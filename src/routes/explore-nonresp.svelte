@@ -1,5 +1,65 @@
 <script>
+  import { onMount } from "svelte";
   import Container from "../components/utils/Container.svelte";
+
+  let WIDTH;
+  let HEIGHT;
+  let _3DGraphElement;
+
+  onMount(() => {
+    let positionInfo = _3DGraphElement.getBoundingClientRect();
+    HEIGHT = positionInfo.height;
+    WIDTH = positionInfo.width;
+
+    console.log({ HEIGHT, WIDTH });
+
+    const data = [
+      { img: "1.png", id: 1, source: 1, target: 2, fx: -250, fy: 0, fz: 0 },
+      { img: "2.png", id: 2, source: 2, target: 3, fx: -200, fy: 0, fz: 0 },
+      { img: "3.png", id: 3, source: 3, target: 4, fx: -150, fy: 0, fz: 0 },
+      { img: "4.png", id: 4, source: 4, target: 8, fx: -100, fy: -50, fz: 0 },
+      { img: "5.png", id: 5, source: 5, target: 3, fx: -100, fy: 50, fz: 0 },
+      { img: "6.png", id: 6, source: 6, target: 5, fx: -25, fy: 0, fz: 0 },
+      { img: "7.png", id: 7, source: 7, target: 6, fx: -25, fy: 50, fz: 0 },
+      { img: "8.png", id: 8, source: 8, target: 6, fx: -25, fy: -50, fz: 0 },
+      { img: "9.png", id: 9, source: 9, target: 6, fx: 50, fy: 50, fz: 0 },
+      { img: "10.png", id: 10, source: 10, target: 8, fx: 50, fy: -75, fz: 0 },
+      { img: "11.png", id: 11, source: 11, target: 6, fx: 50, fy: 0, fz: 0 },
+    ];
+
+    // ExtraLinks between nodes
+    const extraLinks = [{ source: 11, target: 10 }];
+
+    let nodes = data.map(({ source, target, ...node }) => node);
+    let links = [
+      ...data.map(({ source, target }) => ({ source, target })),
+      ...extraLinks,
+    ];
+
+    // Connected graph
+    const gData = { nodes, links };
+
+    const Graph = ForceGraph3D()(_3DGraphElement)
+      .nodeThreeObject(({ img }) => {
+        const imgTexture = new THREE.TextureLoader().load(
+          `./images/graph/${img}`
+        );
+        const material = new THREE.SpriteMaterial({ map: imgTexture });
+        const sprite = new THREE.Sprite(material);
+
+        if (WIDTH > 800) sprite.scale.set(25, 25);
+        else sprite.scale.set(20, 20);
+        return sprite;
+      })
+      .onNodeClick((node) => {
+        console.log(node);
+        // window.location = "/cool"
+      })
+      //.cameraPosition({x: 0,y: 0,z: 100,})
+      .graphData(gData);
+
+    // Graph.onEngineStop(() => Graph.zoomToFit(500));
+  });
 </script>
 
 <svelte:head>
@@ -15,7 +75,7 @@
 </div>
 
 <Container>
-  <div class="pt-36 md:pt-24 max-w-xl mx-auto min-h-screen">
+  <div class="hidden pt-36 md:pt-24 max-w-xl mx-auto min-h-screen">
     <div class="mb-4 text-brand-blue flex items-center">
       Click on a bubble to learn more
       <ion-icon name="caret-forward-outline" class="text-lg ml-1" />
@@ -105,3 +165,5 @@
     </div>
   </div>
 </Container>
+
+<div bind:this={_3DGraphElement} />
