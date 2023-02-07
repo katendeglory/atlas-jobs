@@ -19,7 +19,7 @@
   />
 {/if}
 
-<div class="block lg:block px-4 pt-2 pb-1 relative z-[999]">
+<div class="block lg:block pt-2 pb-1 relative z-[999]">
   <button class="focus:outline-none" on:click={toggleMenu}>
     <ion-icon name="menu-outline" class="text-3xl" />
   </button>

@@ -42,12 +42,12 @@
       </div>
 
       <div
-        class="swiper-button-next absolute top-[50%] right-[-5px] md:right-0 lg:right-10 text-gray-800"
+        class="swiper-button-next absolute top-[50%] right-[-5px] md:right-0 lg:right-2 text-gray-800"
       >
         <ion-icon name="chevron-forward-outline" class="!text-6xl" />
       </div>
       <div
-        class="swiper-button-prev absolute top-[50%] left-[-5px] md:left-0 lg:left-10 text-gray-800"
+        class="swiper-button-prev absolute top-[50%] left-[-5px] md:left-0 lg:left-2 text-gray-800"
       >
         <ion-icon name="chevron-back-outline" class="!text-6xl" />
       </div>
@@ -107,12 +107,12 @@
       </div>
 
       <div
-        class="swiper-button-next absolute top-[50%] right-[-5px] md:right-0 lg:right-10 text-gray-800"
+        class="swiper-button-next absolute top-[50%] right-[-5px] md:right-0 lg:right-2 text-gray-800"
       >
         <ion-icon name="chevron-forward-outline" class="!text-6xl" />
       </div>
       <div
-        class="swiper-button-prev absolute top-[50%] left-[-5px] md:left-0 lg:left-10 text-gray-800"
+        class="swiper-button-prev absolute top-[50%] left-[-5px] md:left-0 lg:left-2 text-gray-800"
       >
         <ion-icon name="chevron-back-outline" class="!text-6xl" />
       </div>
