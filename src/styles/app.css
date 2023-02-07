@@ -42,7 +42,7 @@ body {
 }
 
 *::selection {
-  background-color: #F4A26150;
+  background-color: #6EC977bb;
   opacity: .15;
   color: white;
 }

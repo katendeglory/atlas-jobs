@@ -15,21 +15,75 @@
     HEIGHT = positionInfo.height;
     WIDTH = positionInfo.width;
 
+    // 500
     console.log({ HEIGHT, WIDTH });
 
+    let NODE_START = -75;
+    let LINK_WIDTH = 50;
+
+    if (WIDTH > 1100) {
+      NODE_START = -160;
+      LINK_WIDTH = 115;
+    } else if (WIDTH > 999) {
+      NODE_START = -150;
+      LINK_WIDTH = 100;
+    } else if (WIDTH > 800) {
+      NODE_START = -100;
+      LINK_WIDTH = 80;
+    } else if (WIDTH > 600) {
+      NODE_START = -125;
+      LINK_WIDTH = 80;
+    }
+
     const nodes = [
-      { img: "01.png", id: 1, fx: -275, fy: 0, fz: 0 },
-      { img: "02.png", id: 2, fx: -200, fy: 0, fz: 0 },
-      { img: "03.png", id: 3, fx: -125, fy: 0, fz: 0 },
-      { img: "04.png", id: 4, fx: -50, fy: -50, fz: 0 },
-      { img: "05.png", id: 5, fx: -50, fy: 50, fz: 0 },
-      { img: "06.png", id: 6, fx: 25, fy: 25, fz: 0 },
-      { img: "07.png", id: 7, fx: 25, fy: 100, fz: 0 },
-      { img: "08.png", id: 8, fx: 25, fy: -50, fz: 0 },
-      { img: "09.png", id: 9, fx: 125, fy: 75, fz: 0 },
-      { img: "10.png", id: 10, fx: 125, fy: -75, fz: 0 },
-      { img: "11.png", id: 11, fx: 125, fy: 0, fz: 0 },
+      /*[0]*/ { img: "01.png", id: 1, fx: 0, fy: 90, fz: 0 },
+      /*[1]*/ { img: "02.png", id: 2, fx: 0, fy: 40, fz: 0 },
+      /*[2]*/ { img: "03.png", id: 3, fx: 0, fy: 0, fz: 0 },
+      // .............................................. //
+      // .............................................. //
+      /*[3]*/ { img: "04.png", id: 4, fx: 0, fy: -30, fz: 0 },
+      /*[4]*/ { img: "05.png", id: 5, fx: 0, fy: 30, fz: 0 },
+      // .............................................. //
+      /*[5]*/ { img: "06.png", id: 6, fx: 0, fy: 30, fz: 0 },
+      /*[6]*/ { img: "07.png", id: 7, fx: 0, fy: 90, fz: 0 },
+      /*[7]*/ { img: "08.png", id: 8, fx: 0, fy: -30, fz: 0 },
+      // .............................................. //
+      /*[8]*/ { img: "09.png", id: 9, fx: 0, fy: 90, fz: 0 },
+      /*[9]*/ { img: "10.png", id: 10, fx: 0, fy: -30, fz: 0 },
+      /*[10]*/ { img: "11.png", id: 11, fx: 0, fy: 30, fz: 0 },
     ];
+
+    // ...................................
+    nodes[0].fx = NODE_START;
+    nodes[1].fx = NODE_START;
+    nodes[2].fx = NODE_START;
+    // ...................................
+    // ...................................
+    nodes[3].fx = nodes[2].fx + LINK_WIDTH;
+    nodes[4].fx = nodes[2].fx + LINK_WIDTH;
+    // ...................................
+    nodes[5].fx = nodes[4].fx + LINK_WIDTH;
+    nodes[6].fx = nodes[4].fx + LINK_WIDTH;
+    nodes[7].fx = nodes[4].fx + LINK_WIDTH;
+    // ...................................
+    nodes[8].fx = nodes[7].fx + LINK_WIDTH;
+    nodes[9].fx = nodes[7].fx + LINK_WIDTH;
+    nodes[10].fx = nodes[7].fx + LINK_WIDTH;
+    // ...................................
+
+    // const nodes = [
+    //   { img: "01.png", id: 1, fx: -125, fy: 50, fz: 0 },
+    //   { img: "02.png", id: 2, fx: -125, fy: 0, fz: 0 },
+    //   { img: "03.png", id: 3, fx: -63, fy: 0, fz: 0 },
+    //   { img: "04.png", id: 4, fx: 0, fy: -25, fz: 0 },
+    //   { img: "05.png", id: 5, fx: 0, fy: 25, fz: 0 },
+    //   { img: "06.png", id: 6, fx: 63, fy: 25, fz: 0 },
+    //   { img: "07.png", id: 7, fx: 63, fy: 75, fz: 0 },
+    //   { img: "08.png", id: 8, fx: 63, fy: -25, fz: 0 },
+    //   { img: "09.png", id: 9, fx: 125, fy: 75, fz: 0 },
+    //   { img: "10.png", id: 10, fx: 125, fy: -25, fz: 0 },
+    //   { img: "11.png", id: 11, fx: 125, fy: 25, fz: 0 },
+    // ];
 
     const links = [
       { source: 1, target: 2 },
@@ -63,55 +117,45 @@
       })
       .onNodeClick((node) => {
         console.log(node);
-        // window.location = "/cool"
+        window.location = "/food-designer";
       })
       //.cameraPosition({x: 0,y: 0,z: 100,})
       .backgroundColor("#00000000")
       // .nodeLabel((node) => `IMAGE #${node.id}`)
-      // .onNodeHover((node) => {
-      //   console.log(node);
-
-      //   if (node) {
-      //     tipShow = true;
-      //     tipContent = `This is the content of the node ${node.id}`;
-      //     tipImg = `${node.img}`;
-      //   } else {
-      //     tipShow = false;
-      //     tipImg = false;
-      //   }
-      // })
+      .onNodeHover((node) => {
+        // console.log(node);
+        if (node) {
+          tipShow = true;
+          tipContent = `This is the content of the node ${node.id}`;
+          tipImg = `${node.img}`;
+        } else {
+          tipShow = false;
+          tipImg = false;
+        }
+      })
       .linkColor((link) => "#fff")
       .linkOpacity(0.25)
       .linkDirectionalParticles(5)
-      .linkDirectionalParticleSpeed(0.03)
+      .linkDirectionalParticleSpeed(0.01)
       .linkDirectionalParticleColor(() => "white")
       .linkDirectionalParticleWidth(2)
+      .linkDirectionalArrowLength(3.5)
+      .linkDirectionalArrowRelPos(1)
+      // .linkCurvature(0.25)
       .graphData(gData);
 
-    // ------------------------------------------------------------------------------
-    // ---- SPOTLIGHT EFFECT --------------------------------------------------------
-    const spotlight = document.querySelector(".spotlight");
-    console.log(spotlight);
-    let spotlightSize = "transparent 160px, rgba(0, 0, 0, 0.85) 200px)";
-
-    window.addEventListener("mousemove", (e) => updateSpotlight(e));
-
-    window.addEventListener("mousedown", (e) => {
-      spotlightSize = "transparent 130px, rgba(0, 0, 0, 0.95) 150px)";
-      updateSpotlight(e);
+    // ........................
+    gradient.addEventListener("mousemove", (e) => {
+      console.log("Mouse moving");
+      console.log(e.target);
+      let w = 500,
+        pct = (360 * +e.pageX) / w,
+        bg = "linear-gradient(" + pct + "deg, #8EF680, #000000)";
+      gradient.style.backgroundImage = bg;
     });
-
-    window.addEventListener("mouseup", (e) => {
-      spotlightSize = "transparent 160px, rgba(0, 0, 0, 0.85) 200px)";
-      updateSpotlight(e);
-    });
-
-    function updateSpotlight(e) {
-      spotlight.style.backgroundImage = `radial-gradient(circle at ${
-        (e.pageX / window.innerWidth) * 100
-      }% ${(e.pageY / window.innerHeight) * 100}%, ${spotlightSize}`;
-    }
   });
+
+  let gradient;
 </script>
 
 <svelte:head>
@@ -122,7 +166,7 @@
   <Container>
     <div class="h-14 flex items-center justify-between uppercase">
       <a class="nav-link flex items-center" href="/#home"> ATLAS </a>
-      <h1 class="">Explore the food & beverage industry</h1>
+      <h1 class="text-sm">Food & beverage industry</h1>
       <div class="" />
     </div>
   </Container>
@@ -220,16 +264,15 @@
   </div>
 </Container>
 
-<div class="green-grad min-h-screen">
-  <div class="spotlight">
-    <div bind:this={_3DGraphElement} />
-  </div>
+<div class="gradient min-h-screen w-full" bind:this={gradient}>
+  <div bind:this={_3DGraphElement} />
 </div>
 
 {#if tipShow}
   <div
     transition:fly={{ duration: 250, y: 200 }}
-    class="fixed bottom-2 left-2 w-[15rem] px-4 py-4 text-sm rounded-md shadow-lg bg-black/75 text-white h-font"
+    class="fixed bottom-2 w-[17.5rem] px-4 py-4 text-sm rounded-md shadow-lg bg-black/75 text-white h-font"
+    style="right: 10px;"
   >
     {#if tipImg}
       <div class="mb-2 flex items-center uppercase">
@@ -241,18 +284,11 @@
 {/if}
 
 <!--  -->
-<!--  -->
 
 <!--  -->
 <style>
-  .spotlight {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-image: radial-gradient(
-      circle,
-      transparent 160px,
-      rgba(0, 0, 0, 0.85) 200px
-    );
+  .gradient {
+    background-image: linear-gradient(-90deg, #8ef680, #000000);
+    /* background-image: linear-gradient(81.48deg, #000000 27.21%, #8ef680 104.74%); */
   }
 </style>
