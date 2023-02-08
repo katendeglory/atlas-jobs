@@ -6,9 +6,12 @@
   let WIDTH;
   let HEIGHT;
   let _3DGraphElement;
+
+  // ------
   let tipShow = false;
   let tipContent = "";
   let tipImg = "";
+  let mouseCoord = { x: 0, y: 0 };
 
   onMount(() => {
     let positionInfo = _3DGraphElement.getBoundingClientRect();
@@ -36,8 +39,8 @@
     }
 
     const nodes = [
-      /*[0]*/ { img: "01.png", id: 1, fx: 0, fy: 90, fz: 0 },
-      /*[1]*/ { img: "02.png", id: 2, fx: 0, fy: 40, fz: 0 },
+      /*[0]*/ { img: "01.png", id: 1, fx: 0, fy: 100, fz: 0 },
+      /*[1]*/ { img: "02.png", id: 2, fx: 0, fy: 50, fz: 0 },
       /*[2]*/ { img: "03.png", id: 3, fx: 0, fy: 0, fz: 0 },
       // .............................................. //
       // .............................................. //
@@ -145,13 +148,20 @@
       .graphData(gData);
 
     // ........................
+    // gradient.addEventListener("mousemove", (e) => {
+    //   console.log("Mouse moving");
+    //   console.log(e.target);
+    //   let w = 500,
+    //     pct = (360 * +e.pageX) / w,
+    //     bg = "linear-gradient(" + pct + "deg, #8EF680, #000000)";
+    //   gradient.style.backgroundImage = bg;
+    // });
+
     gradient.addEventListener("mousemove", (e) => {
       console.log("Mouse moving");
-      console.log(e.target);
-      let w = 500,
-        pct = (360 * +e.pageX) / w,
-        bg = "linear-gradient(" + pct + "deg, #8EF680, #000000)";
-      gradient.style.backgroundImage = bg;
+      mouseCoord.x = e.clientX;
+      mouseCoord.y = e.clientY;
+      console.log(mouseCoord);
     });
   });
 
@@ -270,8 +280,8 @@
 
 {#if tipShow}
   <div
-    transition:fly={{ duration: 250, y: 200 }}
-    class="fixed bottom-2 w-[17.5rem] px-4 py-4 text-sm rounded-md shadow-lg bg-black/75 text-white h-font"
+    transition:fly={{ duration: 250, y: 200, delay: 250 }}
+    class="fixed bottom-2 w-[17.5rem] px-4 py-4 text-sm rounded-md shadow-lg bg-black/75 text-white h-font border border-white/30"
     style="right: 10px;"
   >
     {#if tipImg}
@@ -283,12 +293,38 @@
   </div>
 {/if}
 
+{#if tipShow}
+  <div
+    class="fixed bg-green-500 py-2"
+    style="left: {mouseCoord.x}px; top: {mouseCoord.y}px;"
+  >
+    <div
+      transition:fly={{ duration: 250, y: 200 }}
+      class="absolute bottom-8 w-[8rem] md:w-[13.5rem] px-2 py-2 text-xs rounded-md shadow-lg bg-black/30 text-white h-font border border-white/50"
+    >
+      <div class="flex items-center uppercase">
+        <span class="flex items-center justify-center">
+          <ion-icon name="eye" class="text-xl mr-2" />
+        </span>
+        Click the icon and discover
+      </div>
+    </div>
+  </div>
+{/if}
+
 <!--  -->
 
 <!--  -->
 <style>
   .gradient {
     background-image: linear-gradient(-90deg, #8ef680, #000000);
-    /* background-image: linear-gradient(81.48deg, #000000 27.21%, #8ef680 104.74%); */
+    /* background-image: linear-gradient(
+      81.48deg,
+      #000000 27.21%,
+      #8ef680 104.74%
+    ); */
+
+    background-size: cover;
+    background-position: center;
   }
 </style>
