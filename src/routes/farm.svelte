@@ -27,7 +27,7 @@
         style="background-image: url(/images/explore-farm.png); background-size: cover;"
       >
         <a
-          href="/food-designer"
+          href="/job-page"
           class="absolute top-[12.50%] left-[27.5%] flex items-center justify-center text-center h-[4rem] w-[4rem] rounded-full bg-brand-blue text-white text-xs"
         >
           FOOD<br />Designer

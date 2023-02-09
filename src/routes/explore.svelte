@@ -31,7 +31,7 @@
       NODE_START = -150;
       LINK_WIDTH = 100;
     } else if (WIDTH > 800) {
-      NODE_START = -100;
+      NODE_START = -50;
       LINK_WIDTH = 80;
     } else if (WIDTH > 600) {
       NODE_START = -125;
@@ -39,9 +39,9 @@
     }
 
     const nodes = [
-      /*[0]*/ { img: "01.png", id: 1, fx: 0, fy: 100, fz: 0 },
-      /*[1]*/ { img: "02.png", id: 2, fx: 0, fy: 50, fz: 0 },
-      /*[2]*/ { img: "03.png", id: 3, fx: 0, fy: 0, fz: 0 },
+      /*[0]*/ { img: "01.png", id: 1, fx: 0, fy: 90, fz: 0 },
+      /*[1]*/ { img: "02.png", id: 2, fx: 0, fy: 30, fz: 0 },
+      /*[2]*/ { img: "03.png", id: 3, fx: 0, fy: -30, fz: 0 },
       // .............................................. //
       // .............................................. //
       /*[3]*/ { img: "04.png", id: 4, fx: 0, fy: -30, fz: 0 },
@@ -186,9 +186,27 @@
 
 {#if tipShow}
   <div
+    class="fixed bg-green-500 py-2"
+    style="left: {mouseCoord.x}px; top: {mouseCoord.y}px;"
+  >
+    <div
+      transition:fly={{ duration: 250, y: 200 }}
+      class="absolute translate-x-[-50%] bottom-8 w-[8rem] md:w-[13.5rem] px-2 py-2 text-xs text-white h-font uppercase flex flex-col items-center justify-center"
+    >
+      <div class="">Click the icon and discover</div>
+      <span class="mt-0 flex items-center justify-start">
+        <ion-icon name="caret-down-circle-outline" class="text-xl" />
+      </span>
+    </div>
+  </div>
+{/if}
+
+<!--  -->
+{#if tipShow && WIDTH >= 800}
+  <div
     transition:fly={{ duration: 250, y: 200, delay: 250 }}
-    class="fixed bottom-2 w-[17.5rem] px-4 py-4 text-sm rounded-md shadow-lg bg-black/75 text-white h-font border border-white/30"
-    style="right: 10px;"
+    class="fixed w-[15rem] px-4 py-4 text-sm bg-black/75 text-white h-font border border-white/75"
+    style="left: 10px; top: {mouseCoord.y - 50}px;"
   >
     {#if tipImg}
       <div class="mb-2 flex items-center uppercase">
@@ -199,38 +217,13 @@
   </div>
 {/if}
 
-{#if tipShow}
-  <div
-    class="fixed bg-green-500 py-2"
-    style="left: {mouseCoord.x}px; top: {mouseCoord.y}px;"
-  >
-    <div
-      transition:fly={{ duration: 250, y: 200 }}
-      class="absolute bottom-8 w-[8rem] md:w-[13.5rem] px-2 py-2 text-xs rounded-md shadow-lg bg-black/30 text-white h-font border border-white/50"
-    >
-      <div class="flex items-center uppercase">
-        <span class="flex items-center justify-center">
-          <ion-icon name="eye" class="text-xl mr-2" />
-        </span>
-        Click the icon and discover
-      </div>
-    </div>
-  </div>
-{/if}
-
-<!--  -->
-
 <!--  -->
 <style>
   .gradient {
-    background-image: linear-gradient(-90deg, #8ef680, #000000);
-    /* background-image: linear-gradient(
+    background-image: linear-gradient(
       81.48deg,
       #000000 27.21%,
       #8ef680 104.74%
-    ); */
-
-    background-size: cover;
-    background-position: center;
+    );
   }
 </style>

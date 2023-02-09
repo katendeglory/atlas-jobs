@@ -1,6 +1,7 @@
 <script>
-  import FrameCard from "./../components/utils/FrameCard.svelte";
+  import FrameCard from "../components/utils/FrameCard.svelte";
   import Container from "../components/utils/Container.svelte";
+  import viewport from "../utils/useViewportAction";
 </script>
 
 <svelte:head>
@@ -28,11 +29,21 @@
       <div class="flex justify-center items-start frame-parent">
         <FrameCard />
       </div>
-      <div class="mt-6 sm:mt-0">
-        <h1 class="text-2xl h-font uppercase mb-4 font-bold">
+      <div class="mt-6 sm:mt-0" xyz="fade-100% down-3 stagger-2">
+        <h1
+          class="text-2xl h-font uppercase mb-4 font-bold"
+          use:viewport
+          on:enterViewport={(e) => e.target.classList.add("xyz-in")}
+          on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
+        >
           JOB DESCRIPTION
         </h1>
-        <div class=" mb-4">
+        <div
+          class=" mb-4"
+          use:viewport
+          on:enterViewport={(e) => e.target.classList.add("xyz-in")}
+          on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
+        >
           Assesses, improves, and gives advice to companies on environmental
           strategies. Measures the carbon footprint being left by logistics in
           the FoodBev industry and advises efficient practices to cut it back
@@ -45,31 +56,49 @@
         <div class="flex items-center flex-wrap">
           <div
             class="mr-2 mb-2 inline-block bg-white px-3 py-2 text-gray-700 shadow-md text-sm rounded-xl"
+            use:viewport
+            on:enterViewport={(e) => e.target.classList.add("xyz-in")}
+            on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
           >
             Risk management
           </div>
           <div
             class="mr-2 mb-2 inline-block bg-white px-3 py-2 text-gray-700 shadow-md text-sm rounded-xl"
+            use:viewport
+            on:enterViewport={(e) => e.target.classList.add("xyz-in")}
+            on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
           >
             IT
           </div>
           <div
             class="mr-2 mb-2 inline-block bg-white px-3 py-2 text-gray-700 shadow-md text-sm rounded-xl"
+            use:viewport
+            on:enterViewport={(e) => e.target.classList.add("xyz-in")}
+            on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
           >
             Data Science
           </div>
           <div
             class="mr-2 mb-2 inline-block bg-white px-3 py-2 text-gray-700 shadow-md text-sm rounded-xl"
+            use:viewport
+            on:enterViewport={(e) => e.target.classList.add("xyz-in")}
+            on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
           >
             Security
           </div>
           <div
             class="mr-2 mb-2 inline-block bg-white px-3 py-2 text-gray-700 shadow-md text-sm rounded-xl"
+            use:viewport
+            on:enterViewport={(e) => e.target.classList.add("xyz-in")}
+            on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
           >
             Documentation in foodBev
           </div>
           <div
             class="mr-2 mb-2 inline-block bg-white px-3 py-2 text-gray-700 shadow-md text-sm rounded-xl"
+            use:viewport
+            on:enterViewport={(e) => e.target.classList.add("xyz-in")}
+            on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
           >
             Documentation in foodBev
           </div>
@@ -82,16 +111,25 @@
         <div class="flex items-center flex-wrap">
           <div
             class="mr-2 mb-2 inline-block bg-white px-3 py-2 text-gray-700 shadow-md text-sm rounded-xl"
+            use:viewport
+            on:enterViewport={(e) => e.target.classList.add("xyz-in")}
+            on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
           >
             Communication
           </div>
           <div
             class="mr-2 mb-2 inline-block bg-white px-3 py-2 text-gray-700 shadow-md text-sm rounded-xl"
+            use:viewport
+            on:enterViewport={(e) => e.target.classList.add("xyz-in")}
+            on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
           >
             System thinking
           </div>
           <div
             class="mr-2 mb-2 inline-block bg-white px-3 py-2 text-gray-700 shadow-md text-sm rounded-xl"
+            use:viewport
+            on:enterViewport={(e) => e.target.classList.add("xyz-in")}
+            on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
           >
             Analytical thinking
           </div>

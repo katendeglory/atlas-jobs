@@ -48,7 +48,7 @@ body {
 }
 
 :root {
-  --thumbScroll: #cbd5e0;
+  --thumbScroll: #333333;
 }
 
 ::-webkit-scrollbar {
