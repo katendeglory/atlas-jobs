@@ -1,4 +1,6 @@
 <script>
+  import viewport from "../../utils/useViewportAction";
+
   // your script goes here
 </script>
 
@@ -28,9 +30,23 @@
       <!-- Food Designer -->
       <!-- window title -->
     </div>
-    <div class="content flex flex-col items-center justify-center h-full">
-      <img src="/images/doctor.svg" alt="doctor" />
-      <div class="text-2xl h-font mt-4 font-bold uppercase px-5 text-center">
+    <div
+      class="content flex flex-col items-center justify-center h-full"
+      xyz="fade-100% down-3 stagger-2"
+    >
+      <img
+        src="/images/doctor.svg"
+        alt="doctor"
+        use:viewport
+        on:enterViewport={(e) => e.target.classList.add("xyz-in")}
+        on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
+      />
+      <div
+        class="text-2xl h-font mt-4 font-bold uppercase px-5 text-center"
+        use:viewport
+        on:enterViewport={(e) => e.target.classList.add("xyz-in")}
+        on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
+      >
         Environmental Practioner
       </div>
     </div>
