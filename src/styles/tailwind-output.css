@@ -683,6 +683,45 @@ select {
 .bottom-10 {
   bottom: 2.5rem;
 }
+.top-\[12\.5\%\] {
+  top: 12.5%;
+}
+.left-\[25\%\] {
+  left: 25%;
+}
+.top-\[75\%\] {
+  top: 75%;
+}
+.top-\[25\%\] {
+  top: 25%;
+}
+.top-\[35\%\] {
+  top: 35%;
+}
+.top-\[29\%\] {
+  top: 29%;
+}
+.left-\[75\%\] {
+  left: 75%;
+}
+.left-\[85\%\] {
+  left: 85%;
+}
+.top-\[10\%\] {
+  top: 10%;
+}
+.left-\[65\%\] {
+  left: 65%;
+}
+.left-\[45\%\] {
+  left: 45%;
+}
+.top-\[20\%\] {
+  top: 20%;
+}
+.left-\[40\%\] {
+  left: 40%;
+}
 .z-\[60\] {
   z-index: 60;
 }
@@ -1180,6 +1219,15 @@ select {
 .pt-10 {
   padding-top: 2.5rem;
 }
+.pt-8 {
+  padding-top: 2rem;
+}
+.pt-16 {
+  padding-top: 4rem;
+}
+.pt-14 {
+  padding-top: 3.5rem;
+}
 .text-center {
   text-align: center;
 }
@@ -1244,6 +1292,9 @@ select {
 }
 .tracking-wide {
   letter-spacing: 0.025em;
+}
+.tracking-wider {
+  letter-spacing: 0.05em;
 }
 .text-white {
   --tw-text-opacity: 1;
