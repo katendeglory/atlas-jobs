@@ -1,5 +1,18 @@
 <script>
+  import { onMount } from "svelte";
   import Container from "../components/utils/Container.svelte";
+  import { fly } from "svelte/transition";
+
+  let mouseCoord = { x: 0, y: 0 };
+  let background;
+  let tipShow = false;
+
+  onMount(() => {
+    background.addEventListener("mousemove", (e) => {
+      mouseCoord.x = e.clientX;
+      mouseCoord.y = e.clientY;
+    });
+  });
 </script>
 
 <!-- ASPECT RATIO -->
@@ -24,10 +37,13 @@
     <div
       class="relative aspect-[3/2] min-h-screen bg-black/30 bg-blend-overlay"
       style="background-image: url(/images/field.png); background-size: cover;"
+      bind:this={background}
     >
       <a
         href="/food-designer"
         class="absolute top-[12.5%] left-[25%] flex flex-col items-center justify-center text-center rounded-full text-white text-xs"
+        on:mouseenter={() => (tipShow = true)}
+        on:mouseleave={() => (tipShow = false)}
       >
         <ion-icon name="location" class="text-2xl" />
         <div class="">
@@ -37,6 +53,8 @@
       <a
         href="/food-designer"
         class="absolute top-[45%] left-[37.5%] flex flex-col items-center justify-center text-center rounded-full text-white text-xs"
+        on:mouseenter={() => (tipShow = true)}
+        on:mouseleave={() => (tipShow = false)}
       >
         <ion-icon name="location" class="text-2xl" />
         <div class="">
@@ -46,6 +64,8 @@
       <a
         href="/food-designer"
         class="absolute top-[35%] left-[25%] flex flex-col items-center justify-center text-center rounded-full text-white text-xs"
+        on:mouseenter={() => (tipShow = true)}
+        on:mouseleave={() => (tipShow = false)}
       >
         <ion-icon name="location" class="text-2xl" />
         <div class="">
@@ -56,6 +76,8 @@
       <a
         href="/food-designer"
         class="absolute top-[29%] left-[75%] flex flex-col items-center justify-center text-center rounded-full text-white text-xs"
+        on:mouseenter={() => (tipShow = true)}
+        on:mouseleave={() => (tipShow = false)}
       >
         <ion-icon name="location" class="text-2xl" />
         <div class="">
@@ -66,7 +88,9 @@
       </a>
       <a
         href="/food-designer"
-        class="absolute top-[35%] left-[85%] flex flex-col items-center justify-center text-center rounded-full text-white text-xs"
+        class="absolute top-[55%] left-[75%] flex flex-col items-center justify-center text-center rounded-full text-white text-xs"
+        on:mouseenter={() => (tipShow = true)}
+        on:mouseleave={() => (tipShow = false)}
       >
         <ion-icon name="location" class="text-2xl" />
         <div class="">
@@ -78,6 +102,8 @@
       <a
         href="/food-designer"
         class="absolute top-[10%] left-[65%] flex flex-col items-center justify-center text-center rounded-full text-white text-xs"
+        on:mouseenter={() => (tipShow = true)}
+        on:mouseleave={() => (tipShow = false)}
       >
         <ion-icon name="location" class="text-2xl" />
         <div class="">
@@ -89,6 +115,8 @@
       <a
         href="/food-designer"
         class="absolute top-[30%] left-[50%] flex flex-col items-center justify-center text-center rounded-full text-white text-xs"
+        on:mouseenter={() => (tipShow = true)}
+        on:mouseleave={() => (tipShow = false)}
       >
         <ion-icon name="location" class="text-2xl" />
         <div class="">
@@ -100,6 +128,8 @@
       <a
         href="/food-designer"
         class="absolute top-[20%] left-[40%] flex flex-col items-center justify-center text-center rounded-full text-white text-xs"
+        on:mouseenter={() => (tipShow = true)}
+        on:mouseleave={() => (tipShow = false)}
       >
         <ion-icon name="location" class="text-2xl" />
         <div class="">
@@ -111,6 +141,24 @@
     </div>
   </div>
 </div>
+
+{#if tipShow}
+  <div
+    class="fixed bg-green-500 py-2"
+    style="left: {mouseCoord.x}px; top: {mouseCoord.y}px;"
+  >
+    <div
+      transition:fly={{ duration: 250, y: 200 }}
+      class="absolute bottom-8 w-[10rem] md:w-[14rem] px-2 py-2 text-xs rounded-md shadow-lg bg-black/80 text-white h-font border border-white/50"
+    >
+      <div class="flex items-center">
+        Assesses, improves, and gives advice to companies on environmental
+        strategies. Measures the carbon footprint being left by logistics in the
+        FoodBev industry.
+      </div>
+    </div>
+  </div>
+{/if}
 
 <style>
   ::-webkit-scrollbar {

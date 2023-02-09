@@ -158,10 +158,8 @@
     // });
 
     gradient.addEventListener("mousemove", (e) => {
-      console.log("Mouse moving");
       mouseCoord.x = e.clientX;
       mouseCoord.y = e.clientY;
-      console.log(mouseCoord);
     });
   });
 
