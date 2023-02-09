@@ -842,6 +842,12 @@ select {
 .min-h-screen {
   min-height: 100vh;
 }
+.min-h-\[150vh\] {
+  min-height: 150vh;
+}
+.min-h-\[125vh\] {
+  min-height: 125vh;
+}
 .w-full {
   width: 100%;
 }
@@ -1161,6 +1167,9 @@ select {
 }
 .pb-16 {
   padding-bottom: 4rem;
+}
+.pr-2 {
+  padding-right: 0.5rem;
 }
 .text-center {
   text-align: center;
@@ -1642,6 +1651,10 @@ select:focus, input[type="datetime-local"]:focus, input[type="text"]:focus, inpu
 
   .md\:pb-0 {
     padding-bottom: 0px;
+  }
+
+  .md\:pr-4 {
+    padding-right: 1rem;
   }
 
   .md\:text-8xl {
