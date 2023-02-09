@@ -24,3 +24,14 @@ export default function viewport(element) {
     }
   }
 }
+
+/*
+  <h1
+    class="text-2xl h-font uppercase mb-4 font-bold"
+    use:viewport
+    on:enterViewport={(e) => e.target.classList.add("xyz-in")}
+    on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
+  >
+    Hello
+  </h1>
+*/

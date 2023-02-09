@@ -23,12 +23,12 @@
     use:viewport
     on:enterViewport={() => do_animation(1)}
   >
-    <img src="/images/bio-chemist.png" alt="background" />
+    <img src="/images/home/7.jpg" alt="background" />
     <div class="overlay" />
     <div
       class="gallery-text text-white drop-shadow-lg opacity-0 transition-all text-4xl font-bold"
     >
-      Food Bio Chemist
+      Producer
     </div>
   </a>
 
@@ -38,16 +38,12 @@
     use:viewport
     on:enterViewport={() => do_animation(2)}
   >
-    <img
-      src="/images/environment-evangelist.png"
-      class="slow-1"
-      alt="background"
-    />
+    <img src="/images/home/9.jpg" class="slow-1" alt="background" />
     <div class="overlay slow-1" />
     <div
       class="gallery-text text-white drop-shadow-lg opacity-0 transition-all text-4xl font-bold"
     >
-      Environment Evangelist
+      Designer Robotic
     </div>
   </a>
   <a
@@ -56,26 +52,27 @@
     use:viewport
     on:enterViewport={() => do_animation(3)}
   >
-    <img src="/images/energy-catcher.png" class="slow-4" alt="background" />
+    <img src="/images/home/8.jpg" class="slow-4" alt="background" />
     <div class="overlay slow-2" />
     <div
       class="gallery-text text-white drop-shadow-lg opacity-0 transition-all text-4xl font-bold"
     >
-      Energy Catcher
+      Sustainable packaging
     </div>
   </a>
+
   <a
     href="#home"
     class="image_container {anim_class[4]} h-[60vh] w-full | col-span-full gallery-parent flex items-center justify-center text-center"
     use:viewport
     on:enterViewport={() => do_animation(4)}
   >
-    <img src="/images/energy-catcher-2.png" class="slow-1" alt="background" />
+    <img src="/images/home/10.jpg" class="slow-1" alt="background" />
     <div class="overlay slow-1" />
     <div
       class="gallery-text text-white drop-shadow-lg opacity-0 transition-all text-4xl font-bold"
     >
-      Energy Catcher
+      Environment practioner
     </div>
   </a>
 </div>

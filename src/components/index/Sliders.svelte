@@ -28,16 +28,10 @@
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide min-h-screen w-full">
-          <Slide number="1" />
+          <Slide number="1" img="/images/home/1.jpg" />
         </div>
         <div class="swiper-slide min-h-screen w-full">
-          <Slide number="2" />
-        </div>
-        <div class="swiper-slide min-h-screen w-full">
-          <Slide number="3" />
-        </div>
-        <div class="swiper-slide min-h-screen w-full">
-          <Slide number="4" />
+          <Slide number="2" img="/images/home/2.jpg" />
         </div>
       </div>
 
@@ -67,7 +61,7 @@
             reversed
             title="FOOD AND BEVERAGE INDUSTRY FUTURE JOBS"
             subtitle="Environmental Practitioner"
-            img="/images/scientist.png"
+            img="/images/home/3.jpg"
             desc="Assesses, improves, and gives advice to companies on environmental strategies. Measures the carbon footprint..."
           />
         </div>
@@ -78,29 +72,7 @@
             reversed
             title="FOOD AND BEVERAGE INDUSTRY FUTURE JOBS"
             subtitle="Environmental Practitioner"
-            img="/images/scientist.png"
-            desc="Assesses, improves, and gives advice to companies on environmental strategies. Measures the carbon footprint..."
-          />
-        </div>
-        <div class="swiper-slide min-h-screen w-full">
-          <Slide
-            number="3"
-            class_="bg-white text-gray-800"
-            reversed
-            title="FOOD AND BEVERAGE INDUSTRY FUTURE JOBS"
-            subtitle="Environmental Practitioner"
-            img="/images/scientist.png"
-            desc="Assesses, improves, and gives advice to companies on environmental strategies. Measures the carbon footprint..."
-          />
-        </div>
-        <div class="swiper-slide min-h-screen w-full">
-          <Slide
-            number="4"
-            class_="bg-white text-gray-800"
-            reversed
-            title="FOOD AND BEVERAGE INDUSTRY FUTURE JOBS"
-            subtitle="Environmental Practitioner"
-            img="/images/scientist.png"
+            img="/images/home/4.jpg"
             desc="Assesses, improves, and gives advice to companies on environmental strategies. Measures the carbon footprint..."
           />
         </div>
