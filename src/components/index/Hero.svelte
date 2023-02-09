@@ -4,7 +4,7 @@
   // let is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   const playVideo = (id) => {
     let vid = document.getElementById(id);
-    vid.src = "/images/trailer.mp4";
+    vid.src = "/images/farm-vid.mp4";
     vid.preload = "auto";
     vid.muted = true;
     vid.autoplay = true;

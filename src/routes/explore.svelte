@@ -21,18 +21,18 @@
     // 500
     console.log({ HEIGHT, WIDTH });
 
-    let NODE_START = -75;
-    let LINK_WIDTH = 50;
+    let NODE_START = -65;
+    let LINK_WIDTH = 40;
 
     if (WIDTH > 1100) {
       NODE_START = -160;
-      LINK_WIDTH = 115;
+      LINK_WIDTH = 80;
     } else if (WIDTH > 999) {
       NODE_START = -150;
-      LINK_WIDTH = 100;
+      LINK_WIDTH = 80;
     } else if (WIDTH > 800) {
       NODE_START = -50;
-      LINK_WIDTH = 80;
+      LINK_WIDTH = 70;
     } else if (WIDTH > 600) {
       NODE_START = -125;
       LINK_WIDTH = 80;
@@ -44,12 +44,12 @@
       /*[2]*/ { img: "03.png", id: 3, fx: 0, fy: -30, fz: 0 },
       // .............................................. //
       // .............................................. //
-      /*[3]*/ { img: "04.png", id: 4, fx: 0, fy: -30, fz: 0 },
+      /*[3]*/ { img: "04.png", id: 4, fx: 0, fy: -70, fz: 0 },
       /*[4]*/ { img: "05.png", id: 5, fx: 0, fy: 30, fz: 0 },
       // .............................................. //
       /*[5]*/ { img: "06.png", id: 6, fx: 0, fy: 30, fz: 0 },
-      /*[6]*/ { img: "07.png", id: 7, fx: 0, fy: 90, fz: 0 },
-      /*[7]*/ { img: "08.png", id: 8, fx: 0, fy: -30, fz: 0 },
+      /*[6]*/ { img: "07.png", id: 7, fx: 0, fy: 120, fz: 0 },
+      /*[7]*/ { img: "08.png", id: 8, fx: 0, fy: -60, fz: 0 },
       // .............................................. //
       /*[8]*/ { img: "09.png", id: 9, fx: 0, fy: 90, fz: 0 },
       /*[9]*/ { img: "10.png", id: 10, fx: 0, fy: -30, fz: 0 },
@@ -57,20 +57,22 @@
     ];
 
     // ...................................
-    nodes[0].fx = NODE_START;
+    // ...................................
+    nodes[0].fx = NODE_START + 40;
     nodes[1].fx = NODE_START;
-    nodes[2].fx = NODE_START;
+    nodes[2].fx = NODE_START + 40;
     // ...................................
     // ...................................
-    nodes[3].fx = nodes[2].fx + LINK_WIDTH;
-    nodes[4].fx = nodes[2].fx + LINK_WIDTH;
+    nodes[3].fx = nodes[2].fx + LINK_WIDTH - 10;
+    nodes[6].fx = nodes[2].fx + LINK_WIDTH - 10;
+    nodes[4].fx = nodes[2].fx + LINK_WIDTH - 10;
     // ...................................
     nodes[5].fx = nodes[4].fx + LINK_WIDTH;
-    nodes[6].fx = nodes[4].fx + LINK_WIDTH;
     nodes[7].fx = nodes[4].fx + LINK_WIDTH;
+    nodes[8].fx = nodes[4].fx + LINK_WIDTH;
     // ...................................
-    nodes[8].fx = nodes[7].fx + LINK_WIDTH;
-    nodes[9].fx = nodes[7].fx + LINK_WIDTH;
+    nodes[9].fx = nodes[7].fx + LINK_WIDTH - 20;
+    // ...................................
     nodes[10].fx = nodes[7].fx + LINK_WIDTH;
     // ...................................
 
@@ -122,7 +124,11 @@
         console.log(node);
         window.location = "/ecosystem";
       })
-      //.cameraPosition({x: 0,y: 0,z: 100,})
+      // .cameraPosition({
+      // x: 0,
+      // y: 0,
+      // z: 1000,
+      // })
       .backgroundColor("#00000000")
       // .nodeLabel((node) => `IMAGE #${node.id}`)
       .onNodeHover((node) => {
@@ -144,7 +150,13 @@
       .linkDirectionalParticleWidth(2)
       .linkDirectionalArrowLength(3.5)
       .linkDirectionalArrowRelPos(1)
-      // .linkCurvature(0.25)
+      .linkCurvature((link) => {
+        let id = link.source.id;
+        let curve = 0.25;
+        // if (id <= 4 || id == 8 || id == 10) curve = 0.25;
+        if (id == 11) return -0.25;
+        return curve;
+      })
       .graphData(gData);
 
     // ........................
