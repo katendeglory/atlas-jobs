@@ -148,11 +148,6 @@
       .linkDirectionalParticleWidth(2)
       .linkDirectionalArrowLength(3.5)
       .linkDirectionalArrowRelPos(1)
-      .linkCurvature((link) => {
-        let id = link.source.id;
-        if (id <= 4) return 0.25;
-        else return 0;
-      })
       .graphData(gData);
 
     // ........................
