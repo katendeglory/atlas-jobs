@@ -6,7 +6,7 @@
   <title>Explore the farm | Atlas of Emerging Jobs</title>
 </svelte:head>
 
-<div class="bg-brand-blue text-white fixed top-0 left-0 w-[90vw] z-[60]">
+<div class="bg-brand-blue text-white w-[90vw] fixed top-0 left-0 z-[60]">
   <Container>
     <div class="h-16 flex items-center pl-20 md:pl-10 uppercase">
       Explore the farm

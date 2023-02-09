@@ -8,10 +8,10 @@
   <title>Farm > Food designer | Atlas of Emerging Jobs</title>
 </svelte:head>
 
-<div class="bg-black text-white shadow-md-0 left-0 w-[90vw] relative z-[60]">
+<div class="bg-black text-white shadow-md-0 w-[90vw] fixed top-0 left-0 z-[60]">
   <Container>
     <div class="h-14 flex items-center justify-between uppercase">
-      <a class="nav-link flex items-center" href="/#home"> ATLAS </a>
+      <a class="nav-link flex items-center mr-4" href="/#home"> ATLAS </a>
       <h1 class="text-sm">Farm > ENVIRONMENTAL PRACTIONER</h1>
       <div class="" />
     </div>
@@ -19,7 +19,7 @@
 </div>
 
 <!-- <Container> -->
-<div class="frame-parent pt-6 md:pt-4 min-h-screen">
+<div class="frame-parent pt-16 min-h-screen">
   <button class="mb-4  flex items-center" on:click={() => history.back()}>
     <ion-icon name="chevron-back-outline" class="text-lg mr-1" />
     Back
@@ -148,7 +148,7 @@
       padding-left: 1rem;
       padding-right: 1rem;
       background-position-x: -10vw;
-      background-position-y: 5vh;
+      background-position-y: 10vh;
     }
   }
 
@@ -158,7 +158,7 @@
       background-size: 55%;
       background-repeat: no-repeat;
       background-position-x: -5vw;
-      background-position-y: 5vh;
+      background-position-y: 10vh;
       /* background-size: cover; */
     }
   }
