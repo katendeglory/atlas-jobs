@@ -170,7 +170,7 @@
   <title>Explore the food & beverage industry | Atlas of Emerging Jobs</title>
 </svelte:head>
 
-<div class="bg-black text-white fixed top-0 left-0 w-full z-[60]">
+<div class="bg-black text-white fixed top-0 left-0 w-[90vw] z-[60]">
   <Container>
     <div class="h-14 flex items-center justify-between uppercase">
       <a class="nav-link flex items-center" href="/#home"> ATLAS </a>

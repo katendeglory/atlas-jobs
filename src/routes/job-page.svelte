@@ -8,7 +8,7 @@
   <title>Farm > Food designer | Atlas of Emerging Jobs</title>
 </svelte:head>
 
-<div class="bg-black text-white shadow-md-0 left-0 w-full relative z-[60]">
+<div class="bg-black text-white shadow-md-0 left-0 w-[90vw] relative z-[60]">
   <Container>
     <div class="h-14 flex items-center justify-between uppercase">
       <a class="nav-link flex items-center" href="/#home"> ATLAS </a>
