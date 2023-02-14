@@ -58,7 +58,7 @@
           <h1
             class="hero-text h-font mb-5 md:pt-20 text-6xl sm:text-6xl md:text-7xl lg:text-8xl uppercase"
           >
-            Beverage & Manufacturing Industry
+            Food & Beverage Manufacturing Industry
           </h1>
 
           <a

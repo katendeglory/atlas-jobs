@@ -12,7 +12,7 @@
   let anim_image = "";
 
   export let img = "/images/tomatoes.png";
-  export let title = "FOOD AND BEVERAGE INDUSTRY SECTORS";
+  export let title = "FOOD AND BEVERAGE MANUFACTURING INDUSTRY SECTORS";
   export let subtitle = "Processor";
   export let desc =
     "Transform agriculture product received from different producer in their region";

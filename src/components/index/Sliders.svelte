@@ -59,7 +59,7 @@
             number="1"
             class_="bg-white text-gray-800"
             reversed
-            title="FOOD AND BEVERAGE INDUSTRY FUTURE JOBS"
+            title="FOOD AND BEVERAGE MANUFACTURING INDUSTRY FUTURE JOBS"
             subtitle="Environmental Practitioner"
             img="/images/home/3.jpg"
             desc="Assesses, improves, and gives advice to companies on environmental strategies. Measures the carbon footprint..."
@@ -70,7 +70,7 @@
             number="2"
             class_="bg-white text-gray-800"
             reversed
-            title="FOOD AND BEVERAGE INDUSTRY FUTURE JOBS"
+            title="FOOD AND BEVERAGE MANUFACTURING INDUSTRY FUTURE JOBS"
             subtitle="Environmental Practitioner"
             img="/images/home/4.jpg"
             desc="Assesses, improves, and gives advice to companies on environmental strategies. Measures the carbon footprint..."
