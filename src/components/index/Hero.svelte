@@ -56,9 +56,9 @@
           class="w-full h-screen lg:w-7/12 flex flex-col justify-center relative z-10"
         >
           <h1
-            class="hero-text h-font mb-5 md:pt-20 text-6xl sm:text-6xl md:text-7xl lg:text-8xl"
+            class="hero-text h-font mb-5 md:pt-20 text-6xl sm:text-6xl md:text-7xl lg:text-8xl uppercase"
           >
-            FOOD & BEVERAGE INDUSTRY
+            Beverage & Manufacturing Industry
           </h1>
 
           <a

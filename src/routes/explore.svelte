@@ -186,7 +186,7 @@
   <Container>
     <div class="h-14 flex items-center justify-between uppercase">
       <a class="nav-link flex items-center" href="/#home"> ATLAS </a>
-      <h1 class="text-sm">Food & beverage industry</h1>
+      <h1 class="text-sm">Food & Beverage Ecosystem</h1>
       <div class="" />
     </div>
   </Container>

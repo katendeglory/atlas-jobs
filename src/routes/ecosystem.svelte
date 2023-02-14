@@ -37,7 +37,7 @@
   <div class="map-container w-screen overflow-x-auto">
     <div
       class="relative aspect-[3/2] min-h-screen bg-black/30 bg-blend-overlay"
-      style="background-image: url(/images/field.png); background-size: cover;"
+      style="background-image: url(/images/map-1.png); background-size: cover;"
       bind:this={background}
       xyz="fade-100% down-3 stagger-2"
     >

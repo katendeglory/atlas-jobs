@@ -35,8 +35,9 @@
       xyz="fade-100% down-3 stagger-2"
     >
       <img
-        src="/images/doctor.svg"
+        src="/images/girl-2.png"
         alt="doctor"
+        class="h-[60%] w-auto object-cover"
         use:viewport
         on:enterViewport={(e) => e.target.classList.add("xyz-in")}
         on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
