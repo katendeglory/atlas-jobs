@@ -37,13 +37,13 @@
       <img
         src="/images/accountant.png"
         alt="doctor"
-        class="h-[65%] w-auto object-cover"
+        class="h-[60%] w-auto object-cover"
         use:viewport
         on:enterViewport={(e) => e.target.classList.add("xyz-in")}
         on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
       />
       <div
-        class="text-2xl h-font mt-4 font-bold uppercase px-5 text-center"
+        class="text-2xl h-font mt-4 font-bold uppercase px-5 pb-4 text-center"
         use:viewport
         on:enterViewport={(e) => e.target.classList.add("xyz-in")}
         on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
