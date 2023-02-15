@@ -35,7 +35,7 @@
       xyz="fade-100% down-3 stagger-2"
     >
       <img
-        src="/images/girl-2.png"
+        src="/images/accountant.png"
         alt="doctor"
         class="h-[60%] w-auto object-cover"
         use:viewport
