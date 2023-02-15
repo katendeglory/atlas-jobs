@@ -48,7 +48,7 @@
         on:enterViewport={(e) => e.target.classList.add("xyz-in")}
         on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
       >
-        Environmental Practioner
+        Environmental Practitioner
       </div>
     </div>
   </div>
