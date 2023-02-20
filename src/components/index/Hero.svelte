@@ -86,7 +86,7 @@
             <ion-icon name="arrow-forward-outline" class="text-xl ml-2" />
           </a>
           <div
-            class="flex items-center text-gray-500 text-sm animate-pulse mt-4"
+            class="md:hidden items-center text-gray-500 text-sm animate-pulse mt-4"
           >
             {#if MUTED}
               <ion-icon name="volume-mute" class="text-xl mr-2" />
