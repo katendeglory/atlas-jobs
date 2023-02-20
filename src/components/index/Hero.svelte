@@ -1,4 +1,5 @@
 <script>
+  import { fly } from "svelte/transition";
   import { onMount } from "svelte";
   import Container from "../utils/Container.svelte";
   // let is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
@@ -14,6 +15,11 @@
     vid.play();
     // console.log(vid);
   };
+
+  let MUTED = true;
+  let mouseCoord = { x: -100, y: -100 };
+  let parent;
+
   onMount(() => {
     playVideo("hero");
 
@@ -32,18 +38,24 @@
       duration: 5000,
       delay: (el, i) => 500 + 30 * i,
     });
-    // .add({
-    //   targets: ".hero-text .letter",
-    //   translateX: [0, -30],
-    //   opacity: [1, 0],
-    //   easing: "easeInExpo",
-    //   duration: 1100,
-    //   delay: (el, i) => 100 + 30 * i,
-    // });
+
+    parent.addEventListener("mousemove", (e) => {
+      mouseCoord.x = e.clientX;
+      mouseCoord.y = e.clientY;
+    });
   });
 </script>
 
-<section class="showcase" id="home">
+<section
+  bind:this={parent}
+  class="showcase"
+  id="home"
+  on:click={() => {
+    let newState = !document.getElementById("hero").muted;
+    document.getElementById("hero").muted = newState;
+    MUTED = newState;
+  }}
+>
   <div class="video-container">
     <video id="hero" muted autoplay loop playsinline>
       <source src="/images/trailer.mp4" type="video/mp4" />
@@ -73,6 +85,17 @@
             See the future
             <ion-icon name="arrow-forward-outline" class="text-xl ml-2" />
           </a>
+          <div
+            class="flex items-center text-gray-500 text-sm animate-pulse mt-4"
+          >
+            {#if MUTED}
+              <ion-icon name="volume-mute" class="text-xl mr-2" />
+              Click anywhere unmute
+            {:else}
+              <ion-icon name="volume-high" class="text-xl mr-2" />
+              Click anywhere to mute
+            {/if}
+          </div>
         </div>
         <div
           class="w-full pb-12 md:pb-0 md:h-screen lg:w-5/12 flex items-center justify-center relative z-10"
@@ -91,6 +114,24 @@
   </a>
 </section>
 
+<!-- {#if WIDTH >= 800} -->
+<button
+  transition:fly={{ duration: 250, y: 200, delay: 250 }}
+  class="hidden md:block fixed w-[15rem] px-4 py-4"
+  style="left: {mouseCoord.x - 50}px; top: {mouseCoord.y - 0}px;"
+>
+  <div class="flex items-center text-gray-300 ">
+    {#if MUTED}
+      <ion-icon name="volume-mute" class="text-2xl mr-2" />
+      Click to unmute
+    {:else}
+      <ion-icon name="volume-high" class="text-2xl mr-2" />
+      Click to mute
+    {/if}
+  </div>
+</button>
+
+<!-- {/if} -->
 <style>
   .showcase {
     height: 100vh;
