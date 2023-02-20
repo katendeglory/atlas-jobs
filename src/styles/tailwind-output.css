@@ -845,9 +845,6 @@ select {
 .h-64 {
   height: 16rem;
 }
-.h-\[65\%\] {
-  height: 65%;
-}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1173,9 +1170,6 @@ select {
 }
 .pb-16 {
   padding-bottom: 4rem;
-}
-.pb-3 {
-  padding-bottom: 0.75rem;
 }
 .text-center {
   text-align: center;
