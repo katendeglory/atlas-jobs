@@ -33,9 +33,10 @@
   on:enterViewport={(e) => e.target.classList.add("xyz-in")}
   on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
 >
-  <div class="">
-    <img class="w-16" src={img} alt={img} />
-  </div>
+
+
+  <ion-icon name="location" class="text-lg mr-1" />
+          
   <div class="">
     {title}
   </div>
