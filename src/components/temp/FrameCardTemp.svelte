@@ -2,9 +2,6 @@
   import viewport from "../../utils/useViewportAction";
 
   // your script goes here
-
-  export let img;
-  export let title;
 </script>
 
 <div class="relative -ml-4">
@@ -34,11 +31,11 @@
       <!-- window title -->
     </div>
     <div
-      class="content flex flex-col items-center justify-center h-full px-8"
+      class="content flex flex-col items-center justify-center h-full"
       xyz="fade-100% down-3 stagger-2"
     >
       <img
-        src={img}
+        src="/images/accountant.png"
         alt="doctor"
         class="h-[60%] w-auto object-cover"
         use:viewport
@@ -51,7 +48,7 @@
         on:enterViewport={(e) => e.target.classList.add("xyz-in")}
         on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
       >
-        {title}
+        Environmental Practitioner
       </div>
     </div>
   </div>

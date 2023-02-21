@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import Container from "../components/utils/Container.svelte";
+  import Container from "../../components/utils/Container.svelte";
   import { fly } from "svelte/transition";
 
   let WIDTH;

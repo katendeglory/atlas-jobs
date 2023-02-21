@@ -166,13 +166,13 @@
         const material = new THREE.SpriteMaterial({ map: imgTexture });
         const sprite = new THREE.Sprite(material);
 
-        if (WIDTH > 800) sprite.scale.set(25, 25);
-        else sprite.scale.set(20, 20);
+        if (WIDTH > 800) sprite.scale.set(35, 35);
+        else sprite.scale.set(25, 25);
         return sprite;
       })
       .onNodeClick((node) => {
         console.log(node);
-        window.location = "/ecosystem";
+        window.location = `/ecosystem?id=${node.id}`;
       })
       // .cameraPosition({
       // x: 0,
