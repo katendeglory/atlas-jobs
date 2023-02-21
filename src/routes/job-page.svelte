@@ -51,10 +51,14 @@
     <Container>
       <div class="h-14 flex items-center justify-between uppercase">
         <a class="nav-link flex items-center mr-4" href="/#home"> ATLAS </a>
-        <h1 class="text-sm flex items-center">
-          <a class="mr-1" href="/ecosystem?id={ecosystem}">{valueChain.name}</a>
+        <h1 class="text-sm flex flex-col sm:flex-row items-center">
+          <a class="mr-1 flex items-center" href="/ecosystem?id={ecosystem}">
+            {valueChain.name} >
+          </a>
+          <a
+            class="flex items-center"
+            href="/job-page?id={job.id}&ecosystem={ecosystem}"
           >
-          <a class="ml-1" href="/job-page?id={job.id}&ecosystem={ecosystem}">
             {job.title}
           </a>
         </h1>
