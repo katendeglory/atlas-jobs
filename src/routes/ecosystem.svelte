@@ -96,14 +96,14 @@
   </div>
 
   <div class="pt-14">
-    <div class="h-screen w-screen overflow-auto bg-black">
+    <div class="h-screen w-screen overflow-auto gradient">
       <div
         class="[16:9] w-[184vh] h-[103.5vh] md:w-[100vw] md:h-[56.25vw] relative bg-black/30-bg-blend-overlay"
         style="background-image: url(/images/map.png); background-size: cover;"
         bind:this={background}
       >
         <div
-          class="[16:9] w-[184vh] h-[103.5vh] md:w-[100vw] md:h-[56.25vw] relative bg-black/30"
+          class="[16:9] w-[184vh] h-[103.5vh] md:w-[100vw] md:h-[56.25vw] relative bg-black/40"
           xyz="fade-100% down-3 stagger-2"
         >
           <div
@@ -130,3 +130,13 @@
     </div>
   </div>
 {/if}
+
+<style>
+  .gradient {
+    background-image: linear-gradient(
+      81.48deg,
+      #000000 27.21%,
+      #8ef680 104.74%
+    );
+  }
+</style>

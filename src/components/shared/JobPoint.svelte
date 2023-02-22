@@ -34,7 +34,7 @@
   use:viewport
 >
   <ion-icon name="location" class="text-2xl mr-1" />
-  <div class="max-w-[8.5rem]">
+  <div class="max-w-[8.5rem] drop-shadow-xl">
     {title}
   </div>
 </a>
