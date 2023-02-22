@@ -3,6 +3,7 @@ import { writable } from 'svelte/store'
 let jobs_ = [
   {
     id: 1,
+    top: "55", left: "15",
     title: "Environmental practitioner",
     img: "/images/jobs/job-01.png",
     valueChains: [1, 2, 6],
@@ -12,6 +13,7 @@ let jobs_ = [
   },
   {
     id: 2,
+    top: "20", left: "84.5",
     title: "Energy Catcher",
     img: "/images/jobs/job-02.png",
     valueChains: [2, 6, 10],
@@ -21,6 +23,7 @@ let jobs_ = [
   },
   {
     id: 3,
+    top: "45", left: "11.75",
     title: "Water treatment Operator",
     img: "/images/jobs/job-03.png",
     valueChains: [1, 2, 6],
@@ -30,6 +33,7 @@ let jobs_ = [
   },
   {
     id: 4,
+    top: "45", left: "40",
     title: "Digital Twin Ecosystem Architect",
     img: "/images/jobs/job-04.png",
     valueChains: [1, 2, 10, 8],
@@ -39,6 +43,7 @@ let jobs_ = [
   },
   {
     id: 5,
+    top: "50", left: "30",
     title: "Digital Twin Ecosystem manager",
     img: "/images/jobs/job-05.png",
     valueChains: [1, 2, 10, 8],
@@ -48,6 +53,7 @@ let jobs_ = [
   },
   {
     id: 6,
+    top: "20", left: "56",
     title: "Sustainable packaging technologist",
     img: "/images/jobs/job-06.png",
     valueChains: [2, 6, 10, 3, 7],
@@ -57,6 +63,7 @@ let jobs_ = [
   },
   {
     id: 7,
+    top: "58.5", left: "22.5",
     title: "Supply safety consultant",
     img: "/images/jobs/job-06.png",
     valueChains: [2, 9, 3, 6],
@@ -66,6 +73,7 @@ let jobs_ = [
   },
   {
     id: 8,
+    top: "27.5", left: "62.5",
     title: "Circulated economy designer",
     img: "/images/jobs/job-08.png",
     valueChains: [1, 2, 6],
@@ -75,6 +83,7 @@ let jobs_ = [
   },
   {
     id: 9,
+    top: "55", left: "75",
     title: "Food plant cybersecurity specialist",
     img: "/images/jobs/job-09.png",
     valueChains: [1, 2, 6, 8, 10, 4],
@@ -84,6 +93,7 @@ let jobs_ = [
   },
   {
     id: 10,
+    top: "54.5", left: "26",
     title: "Food logistics specialist",
     img: "/images/jobs/job-10.png",
     valueChains: [6, 10, 8, 3, 9, 4],
@@ -93,6 +103,7 @@ let jobs_ = [
   },
   {
     id: 11,
+    top: "46", left: "74",
     title: "Food waste recycling specialist",
     img: "/images/jobs/job-11.png",
     valueChains: [1, 2, 6, 10, 9],
@@ -102,6 +113,7 @@ let jobs_ = [
   },
   {
     id: 12,
+    top: "13.5", left: "41.5",
     title: "Architect of blockchain platforms for food & bev",
     img: "/images/jobs/job-12.png",
     valueChains: [2, 4, 8, 10, 6, 3],
@@ -111,6 +123,7 @@ let jobs_ = [
   },
   {
     id: 13,
+    top: "45", left: "52.5",
     title: "System modernization engineer",
     img: "/images/jobs/job-13.png",
     valueChains: [2, 6, 10],
@@ -120,6 +133,7 @@ let jobs_ = [
   },
   {
     id: 14,
+    top: "57.5", left: "46.5",
     title: "Designer of robotic systems for plants",
     img: "/images/jobs/job-14.png",
     valueChains: [2, 6, 10],
@@ -129,6 +143,7 @@ let jobs_ = [
   },
   {
     id: 15,
+    top: "14", left: "52.25",
     title: "Climate change data analyst",
     img: "/images/jobs/job-15.png",
     valueChains: [1, 2, 6, 10],
@@ -138,6 +153,7 @@ let jobs_ = [
   },
   {
     id: 16,
+    top: "20", left: "47.5",
     title: "Environmental evangelist",
     img: "/images/jobs/job-16.png",
     valueChains: [1, 2, 6, 0],
@@ -147,6 +163,7 @@ let jobs_ = [
   },
   {
     id: 17,
+    top: "10", left: "66.5",
     title: "Cost accounting manager",
     img: "/images/jobs/job-17.png",
     valueChains: [2, 6],
@@ -156,15 +173,17 @@ let jobs_ = [
   },
   {
     id: 18,
+    top: "16.5", left: "12.5",
     title: "Agriculture sustainability analyst",
     img: "/images/jobs/job-18.png",
-    valueChains: [1, 6],
+    valueChains: [1, 6,],
     desc: `A professional who analyses data to determine which crops and cattle breeds are most suitable for different areas based on climate and soil conditions using artificial intelligence (AI). He also conducts research to improve crop production and breeding methods and develop new varieties, and creates plans for farming operations.`,
     hardSkills: ["IT", "Agriculture", "Ecology"],
     softSkills: ["Lean production", "system thinking", "critical thinking", "cross-disciplinary thinking"],
   },
   {
     id: 19,
+    top: "48", left: "86",
     title: "Food biochemist",
     img: "/images/jobs/job-19.png",
     valueChains: [1, 2, 6, 10],
@@ -174,6 +193,7 @@ let jobs_ = [
   },
   {
     id: 20,
+    top: "16.5", left: "72",
     title: "System risk manager",
     img: "/images/jobs/job-20.png",
     valueChains: [1, 2, 6],
@@ -187,52 +207,42 @@ let valueChains_ = [
   {
     id: 1,
     name: "Producers",
-    map: "/images/maps/map-1.png",
   },
   {
     id: 2,
     name: "Food Processor",
-    map: "/images/maps/map-1.png",
   },
   {
     id: 3,
     name: "Wholesalers",
-    map: "/images/maps/map-1.png",
   },
   {
     id: 4,
     name: "Online Shopping",
-    map: "/images/maps/map-1.png",
   },
   {
     id: 5,
     name: "Store",
-    map: "/images/maps/map-1.png",
   },
   {
     id: 6,
     name: "Sustainability",
-    map: "/images/maps/map-1.png",
   },
   {
     id: 7,
     name: "Grocery Shopping",
-    map: "/images/maps/map-1.png",
   },
   {
     id: 8,
     name: "Delivery",
-    map: "/images/maps/map-1.png",
   },
   {
     id: 9,
     name: "Restaurant",
-    map: "/images/maps/map-1.png",
   },
   {
     id: 10,
     name: "Innovators",
-    map: "/images/maps/map-1.png",
   },
 ];
 

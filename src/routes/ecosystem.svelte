@@ -19,7 +19,6 @@
 <script>
   import { onMount } from "svelte";
   import Container from "../components/utils/Container.svelte";
-  import { fly } from "svelte/transition";
   import { valueChains, jobs } from "../stores/data";
   import JobPoint from "../components/shared/JobPoint.svelte";
 
@@ -58,7 +57,8 @@
 
   console.log(job);
 
-  job = job.map((j, i) => ({ ...j, ...POSITIONS[i] }));
+  // job = job.map((j, i) => ({ ...j, ...POSITIONS[i] }));
+  job = job.map((j, i) => ({ ...j }));
 
   let mouseCoord = { x: 0, y: 0 };
   let background;
@@ -90,39 +90,43 @@
     <Container>
       <div class="h-14 flex items-center justify-between uppercase">
         <a class="nav-link flex items-center mr-4" href="/#home"> ATLAS </a>
-        <h1 class="text-sm">{valueChain.name}</h1>
+        <h1 class="text-sm text-center">{valueChain.name}</h1>
         <div class="" />
       </div>
     </Container>
   </div>
 
   <div class="pt-14">
-    <div class="map-container w-screen overflow-x-auto">
+    <div class="h-screen w-screen overflow-auto bg-black">
       <div
-        class="relative aspect-[3/2] min-h-screen bg-black/30 bg-blend-overlay"
-        style="background-image: url({valueChain.map}); background-size: cover;"
+        class="[16:9] w-[184vh] h-[103.5vh] md:w-[100vw] md:h-[56.25vw] relative bg-black/30-bg-blend-overlay"
+        style="background-image: url(/images/map.png); background-size: cover;"
         bind:this={background}
-        xyz="fade-100% down-3 stagger-2"
       >
         <div
-          class="fixed z-0 top-16 w-screen !text-gray-300 text-xs text-center animate-pulse flex items-center justify-center"
+          class="[16:9] w-[184vh] h-[103.5vh] md:w-[100vw] md:h-[56.25vw] relative bg-black/30"
+          xyz="fade-100% down-3 stagger-2"
         >
-          <ion-icon name="compass-outline" class="mr-1 text-xl" /> Scroll to pan
-          the map
-        </div>
+          <div
+            class="fixed z-0 top-16 w-screen !text-gray-300 text-xs text-center animate-pulse flex items-center justify-center"
+          >
+            <ion-icon name="compass-outline" class="mr-1 text-xl" /> Scroll to pan
+            the map
+          </div>
 
-        <div
-          class="fixed z-0 top-16 pl-2 text-xs flex items-center justify-start"
-        >
-          <a href="/explore" class="mb-4 flex items-center text-gray-300">
-            <ion-icon name="chevron-back-outline" class="text-lg mr-1" />
-            Back
-          </a>
-        </div>
+          <div
+            class="fixed z-0 top-16 pl-2 text-xs flex items-center justify-start"
+          >
+            <a href="/explore" class="mb-4 flex items-center text-gray-300">
+              <ion-icon name="chevron-back-outline" class="text-lg mr-1" />
+              Back
+            </a>
+          </div>
 
-        {#each job as j}
-          <JobPoint {...j} {mouseCoord} ecosystem={id} />
-        {/each}
+          {#each job as j}
+            <JobPoint {...j} {mouseCoord} ecosystem={id} />
+          {/each}
+        </div>
       </div>
     </div>
   </div>
