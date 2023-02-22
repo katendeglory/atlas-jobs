@@ -98,21 +98,16 @@
   <div class="pt-14">
     <div class="h-screen w-screen overflow-auto gradient">
       <div
-        class="[16:9] w-[184vh] h-[103.5vh] md:w-[100vw] md:h-[56.25vw] relative"
+        class="[16:9] w-[184vh] h-[103.5vh] md:w-[100vw] md:h-[56.25vw] relative -bg-black/30-bg-blend-overlay"
+        style="background-image: url(/images/map.png); background-size: cover; filter: brightness(50%);"
         bind:this={background}
       >
-        <img
-          class="[16:9] w-[184vh] h-[103.5vh] md:w-[100vw] md:h-[56.25vw] absolute top-0 left-0 right-0 bottom-0"
-          src="/images/map.png"
-          alt="map"
-          style="background-image: url(/images/map.png); background-size: cover; filter: brightness(70%);"
-        />
         <div
           class="[16:9] w-[184vh] h-[103.5vh] md:w-[100vw] md:h-[56.25vw] relative bg-black/0"
           xyz="fade-100% down-3 stagger-2"
         >
           <div
-            class="fixed z-0 top-16 w-screen !text-gray-300 text-xs text-center animate-pulse flex lg:hidden items-center justify-center"
+            class="fixed z-0 top-16 w-screen !text-gray-300 text-xs text-center animate-pulse flex items-center justify-center"
           >
             <ion-icon name="compass-outline" class="mr-1 text-xl" /> Scroll to pan
             the map

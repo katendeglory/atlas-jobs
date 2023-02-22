@@ -25,7 +25,7 @@
 
 <a
   href="/job-page?id={id}&ecosystem={ecosystem}"
-  class="text-white absolute flex flex-col items-center justify-center text-center rounded-full text-xs"
+  class="absolute flex flex-col items-center justify-center text-center rounded-full text-xs"
   style="top: {top}%; left: {left}%;"
   on:mouseenter={() => (tipShow = true)}
   on:mouseleave={() => (tipShow = false)}
@@ -33,8 +33,8 @@
   on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
   use:viewport
 >
-  <ion-icon name="location" class="text-2xl mr-1" />
-  <div class="max-w-[8.5rem] drop-shadow-xl">
+  <ion-icon name="location" class="text-white text-2xl mr-1" />
+  <div class="max-w-[8.5rem] text-white font-semibold">
     {title}
   </div>
 </a>
