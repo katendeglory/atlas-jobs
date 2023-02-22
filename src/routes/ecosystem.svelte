@@ -81,7 +81,6 @@
 </svelte:head>
 
 {#if !valueChain}
-  <!-- <EcosystemTemp /> -->
   <div class="text-4xl h-screen uppercase flex items-center justify-center">
     Page Not Found
   </div>
@@ -89,7 +88,7 @@
   <div class="bg-black text-white w-[90vw] fixed top-0 left-0 z-[60]">
     <Container>
       <div class="h-14 flex items-center justify-between uppercase">
-        <a class="nav-link flex items-center mr-4" href="/#home"> ATLAS </a>
+        <a class="nav-link flex items-center mr-4" href="/"> ATLAS </a>
         <h1 class="text-sm text-center">{valueChain.name}</h1>
         <div class="" />
       </div>

@@ -23,7 +23,6 @@
   import Container from "../components/utils/Container.svelte";
   import viewport from "../utils/useViewportAction";
   import { jobs, valueChains } from "../stores/data";
-  import JobPageTemp from "../components/temp/JobPageTemp.svelte";
 
   export let id;
   export let qs;
@@ -33,8 +32,8 @@
   let valueChain = $valueChains.find((el) => el.id == ecosystem);
 
   onMount(() => {
-    console.log(valueChain);
-    console.log(job);
+    // console.log(valueChain);
+    // console.log(job);
   });
 </script>
 
@@ -43,14 +42,16 @@
 </svelte:head>
 
 {#if !job}
-  <JobPageTemp />
+  <div class="text-4xl h-screen uppercase flex items-center justify-center">
+    Page Not Found
+  </div>
 {:else}
   <div
     class="bg-black text-white shadow-md-0 w-[90vw] fixed top-0 left-0 z-[60]"
   >
     <Container>
       <div class="h-14 flex items-center justify-between uppercase">
-        <a class="nav-link flex items-center mr-4" href="/#home"> ATLAS </a>
+        <a class="nav-link flex items-center mr-4" href="/"> ATLAS </a>
         <h1 class="text-sm flex flex-col sm:flex-row items-center">
           <a class="mr-1 flex items-center" href="/ecosystem?id={ecosystem}">
             {valueChain.name} >

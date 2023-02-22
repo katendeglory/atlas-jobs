@@ -34,10 +34,10 @@
         <ion-icon name="arrow-forward-circle" class="text-2xl ml-2" />
       </a> -->
 
-      <a class="px-8 mb-4 text-2xl" on:click={hideMenu} href="#home"> ATLAS </a>
+      <a class="px-8 mb-4 text-2xl" on:click={hideMenu} href="/"> ATLAS </a>
       <div class="mb-4 border border-b border-[#FFFFFF80]" />
       <div class="px-8 flex flex-col">
-        <a class="a-nav mb-5" on:click={hideMenu} href="#home">Home</a>
+        <a class="a-nav mb-5" on:click={hideMenu} href="/">Home</a>
         <a class="a-nav mb-5" on:click={hideMenu} href="#home">Ecosystem</a>
         <a class="a-nav mb-5" on:click={hideMenu} href="#home">About us</a>
       </div>

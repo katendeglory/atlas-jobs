@@ -266,7 +266,7 @@
 <div class="bg-black text-white w-[90vw] fixed top-0 left-0 z-[60]">
   <Container>
     <div class="h-14 flex items-center justify-between uppercase">
-      <a class="nav-link flex items-center" href="/#home"> ATLAS </a>
+      <a class="nav-link flex items-center" href="/"> ATLAS </a>
       <h1 class="text-sm">Food & Beverage Ecosystem</h1>
       <div class="" />
     </div>

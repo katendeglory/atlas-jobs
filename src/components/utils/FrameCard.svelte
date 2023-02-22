@@ -15,18 +15,19 @@
     <div class="titlebar bg-gradient-to-b from-gray-500 to-gray-600">
       <div class="buttons">
         <div class="close">
-          <a class="closebutton" href="#home"><span><strong>x</strong></span></a
-          >
+          <span class="closebutton">
+            <span><strong>x</strong></span>
+          </span>
           <!-- close button link -->
         </div>
         <div class="minimize">
-          <a class="minimizebutton" href="#home">
+          <span class="minimizebutton">
             <span><strong>&ndash;</strong></span>
-          </a>
+          </span>
           <!-- minimize button link -->
         </div>
         <div class="zoom">
-          <a class="zoombutton" href="#home"><span><strong>+</strong></span></a>
+          <span class="zoombutton"><span><strong>+</strong></span></span>
           <!-- zoom button link -->
         </div>
       </div>
