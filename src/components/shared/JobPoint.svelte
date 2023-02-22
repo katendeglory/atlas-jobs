@@ -8,7 +8,7 @@
   let tipShow = false;
 
   export let id;
-  export let img;
+  // export let img;
   export let title;
   export let desc;
 
@@ -19,7 +19,7 @@
   export let mouseCoord;
 
   onMount(() => {
-    console.log({ img, title, top, left });
+    // console.log({ img, title, top, left });
   });
 </script>
 
@@ -34,19 +34,18 @@
   on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
 >
   <ion-icon name="location" class="text-2xl mr-1" />
-
-  <div class="">
+  <div class="max-w-[10rem]">
     {title}
   </div>
 </a>
 
 {#if tipShow}
   <div
-    class="fixed bg-green-500 py-2"
+    class="fixed bg-green-500 py-2 z-50"
     style="left: {mouseCoord.x}px; top: {mouseCoord.y}px;"
   >
     <div
-      transition:fly={{ duration: 250, y: 200 }}
+      transition:fly={{ duration: 100, y: 200 }}
       class="clippy absolute top-8 -left-10 w-[10rem] md:w-[16rem] px-2 py-2 text-xs rounded-md shadow-lg bg-black/70 text-white h-font border border-white/50"
     >
       <div class="flex items-center line-clamp-6 pt-8 no-pt-1">

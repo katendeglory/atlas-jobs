@@ -20,19 +20,34 @@
   import { onMount } from "svelte";
   import Container from "../components/utils/Container.svelte";
   import { fly } from "svelte/transition";
-  import EcosystemTemp from "../components/temp/EcosystemTemp.svelte";
   import { valueChains, jobs } from "../stores/data";
   import JobPoint from "../components/shared/JobPoint.svelte";
 
   let POSITIONS = [
-    { top: "12.5", left: "25" },
-    { top: "45", left: "37.5" },
-    { top: "35", left: "25" },
-    { top: "29", left: "75" },
-    { top: "55", left: "75" },
-    { top: "10", left: "65" },
-    { top: "30", left: "50" },
-    { top: "20", left: "40" },
+    { top: "05", left: "10" },
+    { top: "10", left: "30" },
+    { top: "14", left: "50" },
+    { top: "18", left: "20" },
+
+    { top: "06", left: "80" },
+    { top: "06", left: "50" },
+    { top: "22", left: "40" },
+    { top: "26", left: "60" },
+
+    { top: "26", left: "80" },
+    { top: "30", left: "30" },
+    { top: "34", left: "50" },
+    { top: "38", left: "70" },
+
+    { top: "55", left: "10" },
+    { top: "50", left: "30" },
+    { top: "60", left: "50" },
+    { top: "64", left: "30" },
+
+    { top: "78", left: "50" },
+    { top: "78", left: "70" },
+    { top: "80", left: "20" },
+    { top: "90", left: "50" },
   ];
 
   export let id;
@@ -40,6 +55,8 @@
 
   let valueChain = $valueChains.find((el) => el.id == id);
   let job = $jobs.filter((el) => el.valueChains.find((vc) => vc == id));
+
+  console.log(job);
 
   job = job.map((j, i) => ({ ...j, ...POSITIONS[i] }));
 
@@ -64,7 +81,10 @@
 </svelte:head>
 
 {#if !valueChain}
-  <EcosystemTemp />
+  <!-- <EcosystemTemp /> -->
+  <div class="text-4xl h-screen uppercase flex items-center justify-center">
+    Page Not Found
+  </div>
 {:else}
   <div class="bg-black text-white w-[90vw] fixed top-0 left-0 z-[60]">
     <Container>
@@ -94,13 +114,10 @@
         <div
           class="fixed z-0 top-16 pl-2 text-xs flex items-center justify-start"
         >
-          <button
-            class="mb-4 flex items-center text-gray-300"
-            on:click={() => history.back()}
-          >
+          <a href="/explore" class="mb-4 flex items-center text-gray-300">
             <ion-icon name="chevron-back-outline" class="text-lg mr-1" />
             Back
-          </button>
+          </a>
         </div>
 
         {#each job as j}

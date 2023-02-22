@@ -75,6 +75,12 @@
 
           <a
             href="/explore"
+            on:click={() => {
+              setTimeout(() => {
+                document.getElementById("hero").muted = true;
+                MUTED = true;
+              }, 50);
+            }}
             class="btn btn-primary"
             data-aos="fade-right"
             data-aos-anchor-placement="top-bottom"

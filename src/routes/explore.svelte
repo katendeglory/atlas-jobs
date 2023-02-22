@@ -46,15 +46,25 @@
         fx: 0,
         fy: 90,
         fz: 0,
+        MAPPED_JOB_ID: 1,
         title: "Producers",
       },
-      /*[1]*/ { img: "02.png", id: 2, fx: 0, fy: 30, fz: 0, title: "Store" },
+      /*[1]*/ {
+        img: "02.png",
+        id: 2,
+        fx: 0,
+        fy: 30,
+        fz: 0,
+        MAPPED_JOB_ID: 5,
+        title: "Store",
+      },
       /*[2]*/ {
         img: "03.png",
         id: 3,
         fx: 0,
         fy: -30,
         fz: 0,
+        MAPPED_JOB_ID: 3,
         title: "Wholesalers",
       },
       // .............................................. //
@@ -65,6 +75,7 @@
         fx: 0,
         fy: -70,
         fz: 0,
+        MAPPED_JOB_ID: 2,
         title: "Food Processor",
       },
       /*[4]*/ {
@@ -73,16 +84,26 @@
         fx: 0,
         fy: 30,
         fz: 0,
+        MAPPED_JOB_ID: 6,
         title: "Sustainability",
       },
       // .............................................. //
-      /*[5]*/ { img: "06.png", id: 6, fx: 0, fy: 30, fz: 0, title: "Delivery" },
+      /*[5]*/ {
+        img: "06.png",
+        id: 6,
+        fx: 0,
+        fy: 30,
+        fz: 0,
+        MAPPED_JOB_ID: 8,
+        title: "Delivery",
+      },
       /*[6]*/ {
         img: "07.png",
         id: 7,
         fx: 0,
         fy: 120,
         fz: 0,
+        MAPPED_JOB_ID: 7,
         title: "Grocery Shopping",
       },
       /*[7]*/ {
@@ -91,6 +112,7 @@
         fx: 0,
         fy: -60,
         fz: 0,
+        MAPPED_JOB_ID: 4,
         title: "Online Shopping",
       },
       // .............................................. //
@@ -100,7 +122,8 @@
         fx: 0,
         fy: 90,
         fz: 0,
-        title: "Innovation",
+        MAPPED_JOB_ID: 10,
+        title: "Innovators",
       },
       /*[9]*/ {
         img: "10.png",
@@ -108,6 +131,7 @@
         fx: 0,
         fy: -30,
         fz: 0,
+        MAPPED_JOB_ID: 0,
         title: "Consumer",
       },
       /*[10]*/ {
@@ -116,6 +140,7 @@
         fx: 0,
         fy: 30,
         fz: 0,
+        MAPPED_JOB_ID: 9,
         title: "Restaurant",
       },
     ];
@@ -172,7 +197,11 @@
       })
       .onNodeClick((node) => {
         console.log(node);
-        window.location = `/ecosystem?id=${node.id}`;
+        // Remove store & consumer
+        // if (node.MAPPED_JOB_ID != 0 && node.MAPPED_JOB_ID != 5)
+        if (node.MAPPED_JOB_ID != 0)
+          window.location = `/ecosystem?id=${node.MAPPED_JOB_ID}`;
+        else console.log("No Job ID");
       })
       // .cameraPosition({
       // x: 0,
