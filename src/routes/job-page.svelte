@@ -57,7 +57,7 @@
             {valueChain.name} >
           </a>
           <a
-            class="flex items-center"
+            class="flex items-center justify-center text-center"
             href="/job-page?id={job.id}&ecosystem={ecosystem}"
           >
             {job.title}

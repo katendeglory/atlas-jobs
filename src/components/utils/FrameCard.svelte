@@ -47,7 +47,7 @@
         on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
       />
       <div
-        class="text-2xl h-font mt-4 font-bold uppercase px-5 pb-4 text-center"
+        class="text-xl h-font mt-4 font-bold uppercase px-5 pb-5 text-center"
         use:viewport
         on:enterViewport={(e) => e.target.classList.add("xyz-in")}
         on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
