@@ -56,7 +56,7 @@
         fy: 30,
         fz: 0,
         MAPPED_JOB_ID: 5,
-        title: "Store",
+        title: "Black Store",
       },
       /*[2]*/ {
         img: "03.png",
@@ -191,8 +191,8 @@
         const material = new THREE.SpriteMaterial({ map: imgTexture });
         const sprite = new THREE.Sprite(material);
 
-        if (WIDTH > 800) sprite.scale.set(35, 35);
-        else sprite.scale.set(25, 25);
+        if (WIDTH > 800) sprite.scale.set(30, 30);
+        else sprite.scale.set(22, 22);
         return sprite;
       })
       .onNodeClick((node) => {

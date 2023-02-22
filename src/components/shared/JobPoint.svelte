@@ -34,7 +34,7 @@
   use:viewport
 >
   <ion-icon name="location" class="text-white text-2xl mr-1" />
-  <div class="max-w-[8.5rem] text-white font-semibold">
+  <div class="max-w-[8.5rem] text-white font-bold">
     {title}
   </div>
 </a>

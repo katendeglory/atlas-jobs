@@ -222,7 +222,7 @@ let valueChains_ = [
   },
   {
     id: 5,
-    name: "Store",
+    name: "Black Store",
   },
   {
     id: 6,
