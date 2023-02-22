@@ -118,24 +118,24 @@
   >
     <img class="w-[3rem]" src="/images/mouse.gif" alt="arrow" />
   </a>
+
+  <button
+    transition:fly={{ duration: 250, y: 200, delay: 250 }}
+    class="hidden md:block absolute w-[15rem] px-4 py-4"
+    style="left: {mouseCoord.x - 50}px; top: {mouseCoord.y - 0}px;"
+  >
+    <div class="flex items-center text-gray-300 ">
+      {#if MUTED}
+        <ion-icon name="volume-mute" class="text-2xl mr-2" />
+        Click to unmute
+      {:else}
+        <ion-icon name="volume-high" class="text-2xl mr-2" />
+        Click to mute
+      {/if}
+    </div>
+  </button>
 </section>
 
-<!-- {#if WIDTH >= 800} -->
-<button
-  transition:fly={{ duration: 250, y: 200, delay: 250 }}
-  class="hidden md:block fixed w-[15rem] px-4 py-4"
-  style="left: {mouseCoord.x - 50}px; top: {mouseCoord.y - 0}px;"
->
-  <div class="flex items-center text-gray-300 ">
-    {#if MUTED}
-      <ion-icon name="volume-mute" class="text-2xl mr-2" />
-      Click to unmute
-    {:else}
-      <ion-icon name="volume-high" class="text-2xl mr-2" />
-      Click to mute
-    {/if}
-  </div>
-</button>
 
 <!-- {/if} -->
 <style>
