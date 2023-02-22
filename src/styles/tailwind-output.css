@@ -605,14 +605,14 @@ select {
 .left-0 {
   left: 0px;
 }
-.top-16 {
-  top: 4rem;
-}
 .right-0 {
   right: 0px;
 }
 .bottom-0 {
   bottom: 0px;
+}
+.top-16 {
+  top: 4rem;
 }
 .bottom-8 {
   bottom: 2rem;
@@ -683,10 +683,6 @@ select {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
 .mr-4 {
   margin-right: 1rem;
 }
@@ -731,12 +727,6 @@ select {
 }
 .mr-3 {
   margin-right: 0.75rem;
-}
-.-ml-2 {
-  margin-left: -0.5rem;
-}
-.-ml-3 {
-  margin-left: -0.75rem;
 }
 .block {
   display: block;
@@ -831,18 +821,6 @@ select {
 .w-11\/12 {
   width: 91.666667%;
 }
-.min-w-\[23rem\] {
-  min-width: 23rem;
-}
-.min-w-\[22\.5rem\] {
-  min-width: 22.5rem;
-}
-.min-w-\[20rem\] {
-  min-width: 20rem;
-}
-.min-w-\[30rem\] {
-  min-width: 30rem;
-}
 .max-w-full {
   max-width: 100%;
 }
@@ -852,17 +830,11 @@ select {
 .max-w-xs {
   max-width: 20rem;
 }
-.max-w-5xl {
-  max-width: 64rem;
-}
 .max-w-\[20rem\] {
   max-width: 20rem;
 }
-.max-w-\[22\.5rem\] {
-  max-width: 22.5rem;
-}
-.max-w-\[22rem\] {
-  max-width: 22rem;
+.max-w-5xl {
+  max-width: 64rem;
 }
 .translate-x-\[-50\%\] {
   --tw-translate-x: -50%;
@@ -1016,10 +988,6 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
-.bg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
-}
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -1082,10 +1050,6 @@ select {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
-.px-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-}
 .pt-14 {
   padding-top: 3.5rem;
 }
@@ -1127,9 +1091,6 @@ select {
 }
 .pb-16 {
   padding-bottom: 4rem;
-}
-.pb-8 {
-  padding-bottom: 2rem;
 }
 .text-center {
   text-align: center;
@@ -1179,9 +1140,6 @@ select {
 }
 .font-normal {
   font-weight: 400;
-}
-.font-semibold {
-  font-weight: 600;
 }
 .uppercase {
   text-transform: uppercase;
@@ -1516,11 +1474,6 @@ select:focus, input[type="datetime-local"]:focus, input[type="text"]:focus, inpu
     font-size: 3.75rem;
     line-height: 1;
   }
-
-  .sm\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
 }
 
 @media (min-width: 768px) {
@@ -1531,14 +1484,6 @@ select:focus, input[type="datetime-local"]:focus, input[type="text"]:focus, inpu
 
   .md\:left-0 {
     left: 0px;
-  }
-
-  .md\:-mt-4 {
-    margin-top: -1rem;
-  }
-
-  .md\:-mt-6 {
-    margin-top: -1.5rem;
   }
 
   .md\:block {
@@ -1583,18 +1528,6 @@ select:focus, input[type="datetime-local"]:focus, input[type="text"]:focus, inpu
 
   .md\:w-\[28rem\] {
     width: 28rem;
-  }
-
-  .md\:min-w-\[25rem\] {
-    min-width: 25rem;
-  }
-
-  .md\:min-w-\[20rem\] {
-    min-width: 20rem;
-  }
-
-  .md\:max-w-\[22rem\] {
-    max-width: 22rem;
   }
 
   .md\:grid-cols-2 {

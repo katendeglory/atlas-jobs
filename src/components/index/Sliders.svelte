@@ -33,6 +33,12 @@
         <div class="swiper-slide min-h-screen w-full">
           <Slide number="2" img="/images/home/2.jpg" />
         </div>
+        <div class="swiper-slide min-h-screen w-full">
+          <Slide number="3" img="/images/home/8.jpg" />
+        </div>
+        <div class="swiper-slide min-h-screen w-full">
+          <Slide number="4" img="/images/home/11.jpg" />
+        </div>
       </div>
 
       <div
@@ -73,6 +79,28 @@
             title="FOOD AND BEVERAGE MANUFACTURING INDUSTRY FUTURE JOBS"
             subtitle="Environmental Practitioner"
             img="/images/home/4.jpg"
+            desc="Assesses, improves, and gives advice to companies on environmental strategies. Measures the carbon footprint..."
+          />
+        </div>
+        <div class="swiper-slide min-h-screen w-full">
+          <Slide
+            number="3"
+            class_="bg-white text-gray-800"
+            reversed
+            title="FOOD AND BEVERAGE MANUFACTURING INDUSTRY FUTURE JOBS"
+            subtitle="Environmental Practitioner"
+            img="/images/home/7.jpg"
+            desc="Assesses, improves, and gives advice to companies on environmental strategies. Measures the carbon footprint..."
+          />
+        </div>
+        <div class="swiper-slide min-h-screen w-full">
+          <Slide
+            number="4"
+            class_="bg-white text-gray-800"
+            reversed
+            title="FOOD AND BEVERAGE MANUFACTURING INDUSTRY FUTURE JOBS"
+            subtitle="Environmental Practitioner"
+            img="/images/home/9.jpg"
             desc="Assesses, improves, and gives advice to companies on environmental strategies. Measures the carbon footprint..."
           />
         </div>
