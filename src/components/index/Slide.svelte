@@ -10,9 +10,9 @@
   let anim_class = "";
   let anim_image = "";
 
-  export let url = "/explore";
-  export let img = "/images/tomatoes.png";
-  export let title = "FOOD AND BEVERAGE MANUFACTURING INDUSTRY SECTORS";
+  export let link = "/explore";
+  export let img = "";
+  export let title = "";
   export let subtitle = "Processor";
   export let desc =
     "Transform agriculture product received from different producer in their region";
@@ -57,7 +57,7 @@
             {desc}
           </p>
           <a
-            href={url}
+            href={link}
             class="{anim_class} btn btn-third"
             use:viewport
             on:enterViewport={() => (anim_class = "xyz-in")}
