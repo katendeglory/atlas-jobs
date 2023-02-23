@@ -73,8 +73,8 @@
             Food & Beverage Manufacturing Industry
           </h1>
 
-          <a
-            href="/explore"
+          <button
+            on:click={() => (window.location = "/explore")}
             on:click={() => {
               setTimeout(() => {
                 document.getElementById("hero").muted = true;
@@ -90,7 +90,7 @@
           >
             See the future
             <ion-icon name="arrow-forward-outline" class="text-xl ml-2" />
-          </a>
+          </button>
           <div
             class="md:hidden flex items-center text-gray-500 text-sm animate-pulse mt-4"
           >
