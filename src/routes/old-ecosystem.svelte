@@ -116,10 +116,13 @@
           <div
             class="fixed z-0 top-16 pl-2 text-xs flex items-center justify-start"
           >
-            <a href="/explore" class="mb-4 flex items-center text-gray-300">
+            <button
+              on:click={() => (window.location = "/explore")}
+              class="mb-4 flex items-center text-gray-300"
+            >
               <ion-icon name="chevron-back-outline" class="text-lg mr-1" />
               Back
-            </a>
+            </button>
           </div>
 
           {#each job as j}

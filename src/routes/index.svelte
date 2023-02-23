@@ -45,10 +45,13 @@
         data-aos-offset="0"
         data-aos-duration="500"
       >
-        <a href="/explore" class="btn btn-primary">
+        <button
+          on:click={() => (window.location = "/explore")}
+          class="btn btn-primary"
+        >
           See the future
           <ion-icon name="arrow-forward-outline" class="text-xl ml-2" />
-        </a>
+        </button>
       </div>
     </div>
   </Container>
@@ -81,10 +84,13 @@
         data-aos-offset="0"
         data-aos-duration="500"
       >
-        <a href="/explore" class="btn btn-primary">
+        <button
+          on:click={() => (window.location = "/explore")}
+          class="btn btn-primary"
+        >
           See the future
           <ion-icon name="arrow-forward-outline" class="text-xl ml-2" />
-        </a>
+        </button>
       </div>
     </div>
   </Container>
