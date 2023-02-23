@@ -23,7 +23,7 @@
     use:viewport
     on:enterViewport={() => do_animation(1)}
   >
-    <img src="/images/home/job-06.1.jpg" alt="background" />
+    <img src="/images/home/job-01.jpg" alt="background" />
     <div class="overlay" />
     <div
       class="gallery-text text-white drop-shadow-lg opacity-0 transition-all text-4xl font-bold"
