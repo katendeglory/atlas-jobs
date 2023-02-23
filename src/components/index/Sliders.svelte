@@ -47,7 +47,7 @@
         </div>
         <div class="swiper-slide min-h-screen w-full">
           <Slide
-            subtitle="Innovators"
+            subtitle="Innovators/New & Experimental Products"
             title="FOOD AND BEVERAGE MANUFACTURING INDUSTRY SECTORS"
             img="/images/home/3.jpg"
             link="/ecosystem?id=10"
