@@ -56,8 +56,8 @@
           >
             {desc}
           </p>
-          <a
-            href={link}
+          <button
+            on:click={() => (window.location = link)}
             class="{anim_class} btn btn-third"
             use:viewport
             on:enterViewport={() => (anim_class = "xyz-in")}
@@ -65,7 +65,7 @@
           >
             Discover
             <ion-icon name="chevron-forward-outline" class="text-2xl ml-2" />
-          </a>
+          </button>
         </div>
       </div>
       <!--  -->
