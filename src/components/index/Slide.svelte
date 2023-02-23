@@ -5,12 +5,12 @@
   // -----------------
   export let class_ = "green-grad text-black";
   export let reversed = false;
-  export let number;
 
   // -----------------
   let anim_class = "";
   let anim_image = "";
 
+  export let url = "/explore";
   export let img = "/images/tomatoes.png";
   export let title = "FOOD AND BEVERAGE MANUFACTURING INDUSTRY SECTORS";
   export let subtitle = "Processor";
@@ -47,7 +47,6 @@
             on:exitViewport={() => (anim_class = "")}
           >
             {subtitle}
-            {number}
           </h2>
           <p
             class="{anim_class} mb-6"
@@ -58,7 +57,7 @@
             {desc}
           </p>
           <a
-            href="/explore"
+            href={url}
             class="{anim_class} btn btn-third"
             use:viewport
             on:enterViewport={() => (anim_class = "xyz-in")}
