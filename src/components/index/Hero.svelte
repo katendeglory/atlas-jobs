@@ -44,18 +44,22 @@
       mouseCoord.y = e.clientY;
     });
   });
-</script>
 
-<section
-  bind:this={parent}
-  class="showcase"
-  id="home"
-  on:click={() => {
+  const muteVideo = () => {
+    setTimeout(() => {
+      document.getElementById("hero").muted = true;
+      MUTED = true;
+    }, 10);
+  };
+
+  const toggleMute = () => {
     let newState = !document.getElementById("hero").muted;
     document.getElementById("hero").muted = newState;
     MUTED = newState;
-  }}
->
+  };
+</script>
+
+<section bind:this={parent} class="showcase" id="home" on:click={toggleMute}>
   <div class="video-container">
     <video id="hero" muted autoplay loop playsinline>
       <source src="/images/trailer.mp4" type="video/mp4" />
@@ -75,12 +79,7 @@
 
           <button
             on:click={() => (window.location = "/explore")}
-            on:click={() => {
-              setTimeout(() => {
-                document.getElementById("hero").muted = true;
-                MUTED = true;
-              }, 50);
-            }}
+            on:click={muteVideo}
             class="btn btn-primary"
             data-aos="fade-right"
             data-aos-anchor-placement="top-bottom"
@@ -114,7 +113,8 @@
 
   <a
     href="#about"
-    class="absolute left-[50%] translate-x-[-50%] bottom-8 z-[800]"
+    class="absolute left-[50%] translate-x-[-50%] bottom-8 z-[90]"
+    on:click={muteVideo}
   >
     <img class="w-[3rem]" src="/images/mouse.gif" alt="arrow" />
   </a>

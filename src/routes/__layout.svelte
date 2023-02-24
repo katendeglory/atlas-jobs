@@ -52,7 +52,7 @@
 </div>
 
 <!-- For tailwind purge -->
-<div class="no-scroll-smooth" />
+<div class="scroll-smooth" />
 
 <style>
   .layout {
