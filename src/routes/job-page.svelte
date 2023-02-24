@@ -1,12 +1,15 @@
 <script context="module">
   import queryString from "query-string";
+  import axios from "axios";
+
   /**
    * @type {import('@sveltejs/kit').Load}
    */
   export async function load({ url, params }) {
     let { id, ecosystem } = queryString.parse(window.location.search);
     if (!id) id = "0";
-    // window.location = "/";
+    // HERE HERE : Make the API Call........................
+    // .....................................................
     return {
       props: {
         id: id,

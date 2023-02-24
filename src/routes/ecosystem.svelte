@@ -1,12 +1,15 @@
 <script context="module">
   import queryString from "query-string";
+  import axios from "axios";
+
   /**
    * @type {import('@sveltejs/kit').Load}
    */
   export async function load({ url, params }) {
     let { id } = queryString.parse(window.location.search);
     if (!id) id = "0";
-    // window.location = "/";
+    // HERE HERE : Make the API Call........................
+    // .....................................................
     return {
       props: {
         id: id,
@@ -55,9 +58,6 @@
   let valueChain = $valueChains.find((el) => el.id == id);
   let job = $jobs.filter((el) => el.valueChains.find((vc) => vc == id));
 
-  console.log(job);
-
-  // job = job.map((j, i) => ({ ...j, ...POSITIONS[i] }));
   job = job.map((j, i) => ({ ...j }));
 
   let mouseCoord = { x: 0, y: 0 };

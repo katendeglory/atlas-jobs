@@ -653,8 +653,8 @@ select {
 .z-10 {
   z-index: 10;
 }
-.z-\[50\] {
-  z-index: 50;
+.z-\[90\] {
+  z-index: 90;
 }
 .z-\[850\] {
   z-index: 850;
@@ -668,8 +668,14 @@ select {
 .\!z-0 {
   z-index: 0 !important;
 }
-.z-\[90\] {
-  z-index: 90;
+.z-\[70\] {
+  z-index: 70;
+}
+.z-\[50\] {
+  z-index: 50;
+}
+.z-\[20\] {
+  z-index: 20;
 }
 .col-span-full {
   grid-column: 1 / -1;

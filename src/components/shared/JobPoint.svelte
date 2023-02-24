@@ -14,12 +14,117 @@
 
   // Positioning...
   export let ecosystem;
-  export let top;
-  export let left;
   export let mouseCoord;
+  // ...
+  let top;
+  let left;
+
+  let MAPPER = [
+    {
+      id: 1, // Environmental practitioner
+      top: "55",
+      left: "15",
+    },
+    {
+      id: 2, // Energy Catcher
+      top: "20",
+      left: "84.5",
+    },
+    {
+      id: 3, // Water treatment Operator
+      top: "45",
+      left: "11.75",
+    },
+    {
+      id: 4, // Digital Twin Ecosystem Architect
+      top: "45",
+      left: "40",
+    },
+    {
+      id: 5, // Digital Twin Ecosystem manager
+      top: "50",
+      left: "30",
+    },
+    {
+      id: 6, // Sustainable packaging technologist
+      top: "20",
+      left: "56",
+    },
+    {
+      id: 7, // Supply safety consultant
+      top: "58.5",
+      left: "22.5",
+    },
+    {
+      id: 8, // Circulated economy designer
+      top: "27.5",
+      left: "62.5",
+    },
+    {
+      id: 9, // Food plant cybersecurity specialist
+      top: "55",
+      left: "75",
+    },
+    {
+      id: 10, // Food logistics specialist
+      top: "54.5",
+      left: "26",
+    },
+    {
+      id: 11, // Food waste recycling specialist
+      top: "46",
+      left: "74",
+    },
+    {
+      id: 12, // Architect of blockchain platforms for food & be
+      top: "13.5",
+      left: "41.5",
+    },
+    {
+      id: 13, // System modernization engineer
+      top: "45",
+      left: "52.5",
+    },
+    {
+      id: 14, // Designer of robotic systems for plants
+      top: "57.5",
+      left: "46.5",
+    },
+    {
+      id: 15, // Climate change data analyst
+      top: "14",
+      left: "52.25",
+    },
+    {
+      id: 16, // Environmental evangelist
+      top: "20",
+      left: "47.5",
+    },
+    {
+      id: 17, // Cost accounting manager
+      top: "10",
+      left: "66.5",
+    },
+    {
+      id: 18, // Agriculture sustainability analyst
+      top: "16.5",
+      left: "12.5",
+    },
+    {
+      id: 19, // Food biochemist
+      top: "48",
+      left: "86",
+    },
+    {
+      id: 20, // System risk manager
+      top: "16.5",
+      left: "72",
+    },
+  ];
 
   onMount(() => {
-    // console.log({ img, title, top, left });
+    top = MAPPER.find((coord) => coord.id == id).top;
+    left = MAPPER.find((coord) => coord.id == id).left;
   });
 </script>
 

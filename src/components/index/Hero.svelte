@@ -113,7 +113,7 @@
 
   <a
     href="#about"
-    class="absolute left-[50%] translate-x-[-50%] bottom-8 z-[90]"
+    class="absolute left-[50%] translate-x-[-50%] bottom-8 z-[20]"
     on:click={muteVideo}
   >
     <img class="w-[3rem]" src="/images/mouse.gif" alt="arrow" />
