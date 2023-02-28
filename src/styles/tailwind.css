@@ -26,17 +26,21 @@
   @apply bg-brand-green-1 rounded-full;
 }
 
+.btn-black {
+  @apply bg-black rounded-2xl;
+}
+
 
 /**********************************************************************************************
   FORMS CUSTOMIZATION 
 ***********************************************************************************************/
 
 select, input[type="text"], input[type="file"], input[type="date"], input[type="email"], input[type="password"], input[type="number"], textarea, .selectContainer, .selectContainer input, .selectContainer .listContainer {
-  @apply rounded-xl border-none ring-1 ring-gray-200 cursor-pointer text-gray-800 shadow-sm !important;
+  @apply rounded-2xl border-none ring-1 ring-gray-200 cursor-pointer text-gray-800 shadow-sm !important;
 }
 
 select, input[type="file"], input[type="text"], input[type="date"], input[type="datetime-local"], input[type="time"], input[type="email"], input[type="password"], input[type="number"], textarea {
-  @apply inline-block px-4 py-3 w-full cursor-text !important;
+  @apply inline-block px-4 py-2 w-full cursor-text !important;
 }
 
 select:focus, input[type="datetime-local"]:focus, input[type="text"]:focus, input[type="file"]:focus, input[type="date"]:focus, input[type="time"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="number"]:focus, textarea:focus, .selectContainer input:focus {

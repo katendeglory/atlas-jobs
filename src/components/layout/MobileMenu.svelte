@@ -38,8 +38,24 @@
       <div class="mb-4 border border-b border-[#FFFFFF80]" />
       <div class="px-8 flex flex-col">
         <a class="a-nav mb-5" on:click={hideMenu} href="/">Home</a>
-        <a class="a-nav mb-5" on:click={hideMenu} href="#home">Ecosystem</a>
-        <a class="a-nav mb-5" on:click={hideMenu} href="#home">About us</a>
+        <button
+          class="a-nav mb-5 flex items-center justify-start"
+          on:click={() => {
+            window.location = "/about";
+            hideMenu();
+          }}
+        >
+          About
+        </button>
+        <button
+          class="a-nav mb-5 flex items-center justify-start"
+          on:click={() => {
+            window.location = "/contact";
+            hideMenu();
+          }}
+        >
+          Contact us
+        </button>
       </div>
     </div>
   {/if}
