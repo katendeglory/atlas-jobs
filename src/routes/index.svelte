@@ -21,24 +21,11 @@
   <Sliders />
 </div>
 
-<div class="bg-black py-10 text-white">
+<div class="bg-black py-14 text-white">
   <Container>
-    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between">
-      <h1
-        class="text-6xl md:text-8xl"
-        data-aos="fade-right"
-        data-aos-anchor-placement="top-bottom"
-        data-aos-delay="50"
-        data-aos-offset="0"
-        data-aos-duration="500"
-      >
-        FOOD<span class="text-brand-green-1">&</span>
-        <br />
-        BEVERAGE
-      </h1>
-
+    <div class="flex items-center justify-center">
       <div
-        class="mt-6 sm:mt-0"
+        class="mt-5 sm:mt-0 flex items-center justify-center"
         data-aos="fade-left"
         data-aos-anchor-placement="top-bottom"
         data-aos-delay="250"
@@ -63,16 +50,14 @@
   <Container>
     <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between">
       <h1
-        class="text-6xl md:text-8xl"
+        class="text-4xl md:text-5xl lg:text-6xl"
         data-aos="fade-right"
         data-aos-anchor-placement="top-bottom"
         data-aos-delay="50"
         data-aos-offset="0"
         data-aos-duration="500"
       >
-        PREPARE FOR THE
-        <br />
-        FUTURE
+        PREPARE FOR THE FUTURE
         <span class="text-brand-green-1">NOW.</span>
       </h1>
 

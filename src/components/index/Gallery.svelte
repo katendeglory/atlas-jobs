@@ -16,10 +16,10 @@
   };
 </script>
 
-<div class="grid grid-cols-1 md:grid-cols-2">
+<div class="grid grid-cols-1 md:grid-cols-3">
   <button
     on:click={() => (window.location = "/job-page?id=19&ecosystem=2")}
-    class="image_container {anim_class[1]} h-[60vh] w-full | col-span-full gallery-parent flex items-center justify-center text-center"
+    class="image_container {anim_class[1]} h-[70vh] w-full | gallery-parent flex items-center justify-center text-center"
     use:viewport
     on:enterViewport={() => do_animation(1)}
   >
@@ -31,10 +31,9 @@
       Food Biochemist
     </div>
   </button>
-
   <button
     on:click={() => (window.location = "/job-page?id=14&ecosystem=2")}
-    class="image_container {anim_class[2]} h-[60vh] w-full | gallery-parent flex items-center justify-center text-center"
+    class="image_container {anim_class[2]} h-[70vh] w-full | gallery-parent flex items-center justify-center text-center"
     use:viewport
     on:enterViewport={() => do_animation(2)}
   >
@@ -48,7 +47,7 @@
   </button>
   <button
     on:click={() => (window.location = "/job-page?id=17&ecosystem=2")}
-    class="image_container {anim_class[3]} h-[60vh] w-full | gallery-parent flex items-center justify-center text-center"
+    class="image_container {anim_class[3]} h-[70vh] w-full | gallery-parent flex items-center justify-center text-center"
     use:viewport
     on:enterViewport={() => do_animation(3)}
   >
@@ -58,21 +57,6 @@
       class="gallery-text text-white drop-shadow-lg opacity-0 transition-all text-4xl font-bold"
     >
       Cost accounting manager
-    </div>
-  </button>
-
-  <button
-    on:click={() => (window.location = "/job-page?id=2&ecosystem=2")}
-    class="image_container {anim_class[4]} h-[60vh] w-full | col-span-full gallery-parent flex items-center justify-center text-center"
-    use:viewport
-    on:enterViewport={() => do_animation(4)}
-  >
-    <img src="/images/home/job-05.jpg" class="slow-1" alt="background" />
-    <div class="overlay slow-1" />
-    <div
-      class="gallery-text text-white drop-shadow-lg opacity-0 transition-all text-4xl font-bold"
-    >
-      Energy Catcher
     </div>
   </button>
 </div>

@@ -13,6 +13,7 @@
   export let link = "/explore";
   export let img = "";
   export let title = "";
+  export let title2 = "";
   export let subtitle = "Processor";
   export let desc =
     "Transform agriculture product received from different producer in their region";
@@ -33,15 +34,23 @@
       <div class="flex items-center" xyz="fade-100% down-3 stagger-2">
         <div>
           <h1
-            class="{anim_class} h-font mb-6 text-4xl md:text-5xl font-bold"
+            class="{anim_class} h-font mb-3 text-6xl md:text-7xl font-bold capitalize"
             use:viewport
             on:enterViewport={() => (anim_class = "xyz-in")}
             on:exitViewport={() => (anim_class = "")}
           >
             {title}
           </h1>
+          <h1
+            class="{anim_class} h-font mb-4 text-xl md:text-2xl"
+            use:viewport
+            on:enterViewport={() => (anim_class = "xyz-in")}
+            on:exitViewport={() => (anim_class = "")}
+          >
+            {title2}
+          </h1>
           <h2
-            class="{anim_class} h-font mb-6 text-2xl uppercase font-normal"
+            class="{anim_class} tracking-wider font-semibold mb-4 text-lg md:text-xl"
             use:viewport
             on:enterViewport={() => (anim_class = "xyz-in")}
             on:exitViewport={() => (anim_class = "")}
@@ -49,7 +58,7 @@
             {subtitle}
           </h2>
           <p
-            class="{anim_class} mb-6"
+            class="{anim_class} mb-4"
             use:viewport
             on:enterViewport={() => (anim_class = "xyz-in")}
             on:exitViewport={() => (anim_class = "")}
