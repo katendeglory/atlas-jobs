@@ -34,7 +34,7 @@
       <div class="flex items-center" xyz="fade-100% down-3 stagger-2">
         <div>
           <h1
-            class="{anim_class} h-font mb-3 text-6xl md:text-7xl font-bold capitalize"
+            class="{anim_class} h-font mb-3 text-5xl sm:text-6xl md:text-7xl font-bold capitalize"
             use:viewport
             on:enterViewport={() => (anim_class = "xyz-in")}
             on:exitViewport={() => (anim_class = "")}

@@ -1633,6 +1633,11 @@ select:focus, input[type="datetime-local"]:focus, input[type="text"]:focus, inpu
     font-size: 3rem;
     line-height: 1;
   }
+
+  .sm\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
 }
 
 @media (min-width: 768px) {

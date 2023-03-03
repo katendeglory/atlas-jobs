@@ -78,7 +78,7 @@
 
 <section
   bind:this={parent}
-  class="showcase overflow-x-hidden"
+  class="showcase overflow-x-hidden h-screen overflow-hidden"
   id="home"
   on:click={togglePause}
 >
@@ -228,7 +228,6 @@
 <!-- {/if} -->
 <style>
   .showcase {
-    height: 100vh;
     position: relative;
   }
   /* TODO, Fallback background here */
