@@ -54,17 +54,20 @@
   >
     <Container>
       <div class="h-14 flex items-center justify-between uppercase">
-        <a class="nav-link flex items-center mr-4" href="/"> ATLAS </a>
+        <a class="h-font nav-link flex items-center mr-4" href="/">
+          ATLAS OF EMERGING JOBS
+        </a>
         <h1 class="text-sm flex flex-col sm:flex-row items-center">
           <a class="mr-1 flex items-center" href="/ecosystem?id={ecosystem}">
-            {valueChain.name} >
+            {valueChain.name}
           </a>
-          <a
+          <!-- <a
             class="flex items-center justify-center text-center line-clamp-1"
             href="/job-page?id={job.id}&ecosystem={ecosystem}"
           >
+            >
             {job.title}
-          </a>
+          </a> -->
         </h1>
         <div class="" />
       </div>

@@ -56,7 +56,7 @@
         fy: 30,
         fz: 0,
         MAPPED_JOB_ID: 5,
-        title: "Black Store",
+        title: "Dark Store",
       },
       /*[2]*/ {
         img: "03.png",
@@ -76,7 +76,7 @@
         fy: -70,
         fz: 0,
         MAPPED_JOB_ID: 2,
-        title: "Food Processor",
+        title: "Manufacturing & Processing",
       },
       /*[4]*/ {
         img: "05.png",
@@ -95,7 +95,7 @@
         fy: 30,
         fz: 0,
         MAPPED_JOB_ID: 8,
-        title: "Delivery",
+        title: "Transport & Delivery",
       },
       /*[6]*/ {
         img: "07.png",
@@ -104,7 +104,7 @@
         fy: 120,
         fz: 0,
         MAPPED_JOB_ID: 7,
-        title: "Grocery Shopping",
+        title: "Retail & Groceries",
       },
       /*[7]*/ {
         img: "08.png",
@@ -113,7 +113,7 @@
         fy: -60,
         fz: 0,
         MAPPED_JOB_ID: 4,
-        title: "Online Shopping",
+        title: "Online Marketplace",
       },
       // .............................................. //
       /*[8]*/ {
@@ -123,7 +123,7 @@
         fy: 90,
         fz: 0,
         MAPPED_JOB_ID: 10,
-        title: "Innovators",
+        title: "New Product Development",
       },
       /*[9]*/ {
         img: "10.png",
@@ -266,7 +266,9 @@
 <div class="bg-black text-white w-[90vw] fixed top-0 left-0 z-[60]">
   <Container>
     <div class="h-14 flex items-center justify-between uppercase">
-      <a class="nav-link flex items-center" href="/"> ATLAS </a>
+      <a class="h-font nav-link flex items-center" href="/">
+        ATLAS OF EMERGING JOBS
+      </a>
       <h1 class="text-sm">Food & Beverage Ecosystem</h1>
       <div class="" />
     </div>

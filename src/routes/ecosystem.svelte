@@ -88,7 +88,9 @@
   <div class="bg-black text-white w-[90vw] fixed top-0 left-0 z-[60]">
     <Container>
       <div class="h-14 flex items-center justify-between uppercase">
-        <a class="nav-link flex items-center mr-4" href="/"> ATLAS </a>
+        <a class="h-font nav-link flex items-center mr-4" href="/">
+          ATLAS OF EMERGING JOBS
+        </a>
         <h1 class="text-sm text-center">{valueChain.name}</h1>
         <div class="" />
       </div>

@@ -183,48 +183,21 @@ let jobs_ = [
   },
 ];
 
+
 let valueChains_ = [
-  {
-    id: 1,
-    name: "Producers",
-  },
-  {
-    id: 2,
-    name: "Food Processor",
-  },
-  {
-    id: 3,
-    name: "Wholesalers",
-  },
-  {
-    id: 4,
-    name: "Online Shopping",
-  },
-  {
-    id: 5,
-    name: "Black Store",
-  },
-  {
-    id: 6,
-    name: "Sustainability",
-  },
-  {
-    id: 7,
-    name: "Grocery Shopping",
-  },
-  {
-    id: 8,
-    name: "Delivery",
-  },
-  {
-    id: 9,
-    name: "Restaurant",
-  },
-  {
-    id: 10,
-    name: "Innovators",
-  },
+  { id: 1, name: "Producers" },
+  { id: 2, name: "Manufacturing & Processing" },
+  { id: 3, name: "Wholesalers" },
+  { id: 4, name: "Online Marketplace" },
+  { id: 5, name: "Dark Store" },
+  { id: 6, name: "Sustainability" },
+  { id: 7, name: "Retail & Groceries" },
+  { id: 8, name: "Transport & Delivery" },
+  { id: 9, name: "Restaurant" },
+  { id: 10, name: "New Product Development" },
 ];
+
+
 
 const valueChains = writable(valueChains_);
 const jobs = writable(jobs_);

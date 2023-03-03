@@ -85,7 +85,7 @@
       id="inner-header"
       class="h-14 flex justify-between items-center transition-all duration-250"
     >
-      <a class="nav-link flex items-center" href="/">
+      <a class="h-font nav-link flex items-center" href="/">
         ATLAS OF EMERGING JOBS
       </a>
 
