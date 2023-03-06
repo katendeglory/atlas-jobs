@@ -185,16 +185,16 @@ let jobs_ = [
 
 
 let valueChains_ = [
-  { id: 1, name: "Producers" },
-  { id: 2, name: "Manufacturing & Processing" },
-  { id: 3, name: "Wholesalers" },
-  { id: 4, name: "Online Marketplace" },
-  { id: 5, name: "Dark Store" },
-  { id: 6, name: "Sustainability" },
-  { id: 7, name: "Retail & Groceries" },
-  { id: 8, name: "Transport & Delivery" },
-  { id: 9, name: "Restaurant" },
-  { id: 10, name: "New Product Development" },
+/*0*/  { id: 1, name: "Producers" },
+/*1*/  { id: 2, name: "Manufacturing & Processing" },
+/*2*/  { id: 3, name: "Wholesalers / Distribution" },
+/*3*/  { id: 4, name: "Online Marketplace" },
+/*4*/  { id: 5, name: "Dark Stores" },
+/*5*/  { id: 6, name: "Sustainability Providers" },
+/*6*/  { id: 7, name: "Retail & Groceries" },
+/*7*/  { id: 8, name: "Transport & Delivery" },
+/*8*/  { id: 9, name: "Restaurant" },
+/*9*/  { id: 10, name: "New Product Development" },
 ];
 
 

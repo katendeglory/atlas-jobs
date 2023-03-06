@@ -131,7 +131,9 @@
               data-aos-duration="500"
             >
               See the future
-              <ion-icon name="arrow-forward-outline" class="text-xl ml-2" />
+              <span class="material-symbols-outlined text-xl ml-2">
+                trending_flat
+              </span>
             </button>
           </div>
           <div

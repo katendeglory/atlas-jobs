@@ -25,7 +25,7 @@
   <Container>
     <div class="flex items-center justify-center">
       <div
-        class="mt-5 sm:mt-0 flex items-center justify-center"
+        class="flex items-center justify-center"
         data-aos="fade-left"
         data-aos-anchor-placement="top-bottom"
         data-aos-delay="250"
@@ -37,7 +37,9 @@
           class="btn btn-primary"
         >
           See the future
-          <ion-icon name="arrow-forward-outline" class="text-xl ml-2" />
+          <span class="material-symbols-outlined text-xl ml-2">
+            trending_flat
+          </span>
         </button>
       </div>
     </div>
@@ -74,7 +76,9 @@
           class="btn btn-primary"
         >
           See the future
-          <ion-icon name="arrow-forward-outline" class="text-xl ml-2" />
+          <span class="material-symbols-outlined text-xl ml-2">
+            trending_flat
+          </span>
         </button>
       </div>
     </div>

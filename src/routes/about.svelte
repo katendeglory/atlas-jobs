@@ -71,10 +71,9 @@
             on:click={() => (window.location = "/explore")}
           >
             Explore
-            <ion-icon
-              name="arrow-forward-outline"
-              class="text-2xl ml-2 text-brand-yellow"
-            />
+            <span class="material-symbols-outlined text-xl ml-2">
+              trending_flat
+            </span>
           </button>
         </div>
       </div>
@@ -125,10 +124,9 @@
             on:click={() => (window.location = "/explore")}
           >
             Explore
-            <ion-icon
-              name="arrow-forward-outline"
-              class="text-2xl ml-2 text-brand-yellow"
-            />
+            <span class="material-symbols-outlined text-xl ml-2">
+              trending_flat
+            </span>
           </button>
         </div>
       </div>

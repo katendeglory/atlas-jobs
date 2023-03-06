@@ -97,7 +97,7 @@
             subtitle="Cost accounting manager"
             img="/images/home/job-02.jpg"
             desc="A professional who develops cost standards for materials and labor, etc., designs and implements cost accounting systems, analyzes production costs and recommends changes, and oversees annual physical inventory. He also hires, trains, and supervises cost and inventory accounting staff."
-            link="/job-page?id=17&ecosystem=2"
+            link="/job-page?id=17"
           />
         </div>
         <div class="swiper-slide min-h-screen w-full">
@@ -109,7 +109,7 @@
             subtitle="Designer of robotic systems for plants"
             img="/images/home/job-03.jpg"
             desc="An IT specialist who designs industrial robots and cyber-physical systems for food and beverage plants to optimize the process of production"
-            link="/job-page?id=14&ecosystem=2"
+            link="/job-page?id=14"
           />
         </div>
         <div class="swiper-slide min-h-screen w-full">
@@ -121,7 +121,7 @@
             subtitle="Food biochemist"
             img="/images/home/job-04.jpg"
             desc="Plans and conducts complex projects in basic and applied research of organic substances used for food and beverage preparation, manages laboratory teams and monitors the quality of their work, and presents new solutions to food technologists and management."
-            link="/job-page?id=19&ecosystem=2"
+            link="/job-page?id=19"
           />
         </div>
         <div class="swiper-slide min-h-screen w-full">
@@ -133,7 +133,7 @@
             subtitle="Energy Catcher"
             img="/images/home/job-05.jpg"
             desc="A professional who advises on how to capture and use the energy from alternative sources (solar, wind, hydro, kinetic, etc.) effectively"
-            link="/job-page?id=2&ecosystem=2"
+            link="/job-page?id=2"
           />
         </div>
       </div>

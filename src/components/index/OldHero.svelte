@@ -88,7 +88,9 @@
             data-aos-duration="500"
           >
             See the future
-            <ion-icon name="arrow-forward-outline" class="text-xl ml-2" />
+            <span class="material-symbols-outlined text-xl ml-2">
+              trending_flat
+            </span>
           </button>
           <div
             class="md:hidden flex items-center text-gray-500 text-sm animate-pulse mt-4"

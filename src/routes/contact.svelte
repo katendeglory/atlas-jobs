@@ -35,7 +35,10 @@
   <title>Contact US - Atlas of Emerging Jobs</title>
 </svelte:head>
 
-<div class="gradient">
+<div
+  class="bg-black/10 bg-blend-overlay"
+  style="background-image: url(/images/neon-city.jpg); background-size: cover;"
+>
   <Container>
     <div class="min-h-screen grid grid-cols-1 md:grid-cols-2 pt-16 pb-16">
       <h1
@@ -82,7 +85,7 @@
               type="text"
               class={`w-full`}
               required
-              placeholder="Object"
+              placeholder="Title"
             />
           </div>
 

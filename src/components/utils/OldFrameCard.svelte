@@ -15,25 +15,17 @@
     <div class="titlebar bg-gradient-to-b from-gray-500 to-gray-600">
       <div class="buttons">
         <div class="close">
-          <span class="closebutton">
-            <span><strong>x</strong></span>
-          </span>
-          <!-- close button link -->
+          <span class="close-btn"><span><strong>x</strong></span></span>
         </div>
         <div class="minimize">
-          <span class="minimizebutton">
-            <span><strong>&ndash;</strong></span>
-          </span>
-          <!-- minimize button link -->
+          <span class="min-btn"><span><strong>&ndash;</strong></span></span>
         </div>
         <div class="zoom">
-          <span class="zoombutton"><span><strong>+</strong></span></span>
-          <!-- zoom button link -->
+          <span class="zoom-btn"><span><strong>+</strong></span></span>
         </div>
       </div>
-      <!-- Food Designer -->
-      <!-- window title -->
     </div>
+    <!--  -->
     <div
       class="content flex flex-col items-center justify-center h-full px-8"
       xyz="fade-100% down-3 stagger-2"
@@ -59,12 +51,6 @@
 </div>
 
 <style>
-  /* window BEGIN */
-
-  a {
-    text-decoration: none;
-  }
-
   span {
     line-height: 9px;
     vertical-align: 50%;
@@ -124,11 +110,11 @@
     border: 1px solid #b03537;
   }
 
-  .close:active .closebutton {
+  .close:active .close-btn {
     color: #4e0002;
   }
 
-  .closebutton {
+  .close-btn {
     color: #820005;
     visibility: hidden;
     cursor: default;
@@ -151,11 +137,11 @@
     border: 1px solid #af7c33;
   }
 
-  .minimize:active .minimizebutton {
+  .minimize:active .min-btn {
     color: #5a2607;
   }
 
-  .minimizebutton {
+  .min-btn {
     color: #9a5518;
     visibility: hidden;
     cursor: default;
@@ -178,11 +164,11 @@
     border: 1px solid #128435;
   }
 
-  .zoom:active .zoombutton {
+  .zoom:active .zoom-btn {
     color: #003107;
   }
 
-  .zoombutton {
+  .zoom-btn {
     color: #006519;
     visibility: hidden;
     cursor: default;
