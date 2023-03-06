@@ -9,7 +9,7 @@
 
   const go = () => {
     if (get($valueChains[vc], "id")) {
-      window.location = `/ecosystem?id=${vc}`;
+      window.location = `/ecosystem?id=${Number.parseInt(vc) + 1}`;
     } else console.log("Nowhere to go");
   };
 </script>
