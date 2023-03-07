@@ -20,7 +20,12 @@
       >
         Contact Us
       </button>
-      <a class="a-nav" href="#home">Team</a>
+      <button
+        class="a-nav flex justify-start"
+        on:click={() => (window.location = "/jobs")}
+      >
+        Emerging Jobs
+      </button>
       <a class="a-nav col-span-full sm:col-span-1" href="#home">
         Global Team (Russia)
       </a>

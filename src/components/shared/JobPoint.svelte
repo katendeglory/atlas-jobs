@@ -1,4 +1,5 @@
 <script>
+  import get from "lodash.get";
   import { createEventDispatcher, onMount } from "svelte";
   import { fly } from "svelte/transition";
   import viewport from "../../utils/useViewportAction";
@@ -11,6 +12,8 @@
   // export let img;
   export let title;
   export let desc;
+  export let isAtRisk;
+  export let isTransforming;
 
   // Positioning...
   export let ecosystem;
@@ -20,6 +23,11 @@
   let left;
 
   let MAPPER = [
+    /**
+     *
+     *  20 JOBS
+     *
+     **/
     {
       id: 1, // Environmental practitioner
       top: "55",
@@ -27,8 +35,8 @@
     },
     {
       id: 2, // Energy Catcher
-      top: "20",
-      left: "84.5",
+      top: "22.5",
+      left: "82.5",
     },
     {
       id: 3, // Water treatment Operator
@@ -47,7 +55,7 @@
     },
     {
       id: 6, // Sustainable packaging technologist
-      top: "20",
+      top: "21",
       left: "56",
     },
     {
@@ -57,7 +65,7 @@
     },
     {
       id: 8, // Circulated economy designer
-      top: "27.5",
+      top: "55",
       left: "62.5",
     },
     {
@@ -77,8 +85,8 @@
     },
     {
       id: 12, // Architect of blockchain platforms for food & be
-      top: "13.5",
-      left: "41.5",
+      top: "18.5",
+      left: "30",
     },
     {
       id: 13, // System modernization engineer
@@ -92,17 +100,17 @@
     },
     {
       id: 15, // Climate change data analyst
-      top: "14",
-      left: "52.25",
+      top: "37.5",
+      left: "55",
     },
     {
       id: 16, // Environmental evangelist
-      top: "20",
+      top: "21",
       left: "47.5",
     },
     {
       id: 17, // Cost accounting manager
-      top: "10",
+      top: "40",
       left: "66.5",
     },
     {
@@ -117,8 +125,99 @@
     },
     {
       id: 20, // System risk manager
-      top: "16.5",
+      top: "21",
       left: "72",
+    },
+    /**
+     *
+     *  JOBS AT RISK
+     *
+     **/
+    {
+      id: 21, // Operations Supervisor
+      top: "55",
+      left: "15",
+    },
+    {
+      id: 22, // L & D Facilitators
+      top: "22.5",
+      left: "50.5",
+    },
+    {
+      id: 23, // Warehouse Pickers
+      top: "45",
+      left: "11.75",
+    },
+    {
+      id: 24, // Stock-takers
+      top: "45",
+      left: "40",
+    },
+    {
+      id: 25, // Production Planner/buyer
+      top: "45",
+      left: "52.5",
+    },
+    {
+      id: 26, // Courier
+      top: "57.5",
+      left: "46.5",
+    },
+    {
+      id: 27, // Maintenance Staff
+      top: "55",
+      left: "75",
+    },
+    {
+      id: 28, // Supply chain to put the product to market
+      top: "46",
+      left: "74",
+    },
+    /**
+     *
+     * TRANSFORMING JOBS
+     *
+     *
+     **/
+    {
+      id: 29, // Operator + Artisan → Equipment Operational specialist
+      top: "24.5",
+      left: "12.5",
+    },
+    {
+      id: 30, // Food scientist / Nutritionist
+      top: "35",
+      left: "10",
+    },
+    {
+      id: 31, // Marketing Manager
+      top: "40",
+      left: "20",
+    },
+    {
+      id: 32, // E-commerce designer → Integration software engineer
+      top: "35",
+      left: "30",
+    },
+    {
+      id: 33, // Farmworker → farm technician
+      top: "27.5",
+      left: "25",
+    },
+    {
+      id: 34, // Food delivery logist
+      top: "27.5",
+      left: "35",
+    },
+    {
+      id: 35, // Wellness expert
+      top: "27.5",
+      left: "45",
+    },
+    {
+      id: 36, // R&D Manager
+      top: "37.5",
+      left: "45",
     },
   ];
 
@@ -140,7 +239,7 @@
 >
   <ion-icon name="location" class="text-white text-2xl mr-1" />
   <div class="max-w-[8.5rem] text-white font-bold">
-    {title}
+    {title.split("→")[0]}
   </div>
 </a>
 
@@ -154,6 +253,21 @@
       class="clippy absolute top-8 -left-10 w-[10rem] md:w-[16rem] px-2 py-2 text-xs rounded-md shadow-lg bg-black/70 text-white h-font border border-white/50"
     >
       <div class="flex items-center line-clamp-6 pt-8 no-pt-1">
+        {#if isAtRisk}
+          <div class="h-font font-semibold mb-1 text-sm">
+            Rationale behind the decrease:
+          </div>
+        {/if}
+        {#if isTransforming}
+          <div class="h-font font-semibold mb-1 text-sm">
+            What is job changing into and why?
+          </div>
+          {#if get(title.split("→"), `[1]`)}
+            <div class="h-font mb-1">
+              Turning into {get(title.split("→"), `[1]`)}.
+            </div>
+          {/if}
+        {/if}
         {desc}
       </div>
     </div>

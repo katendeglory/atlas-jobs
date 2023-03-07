@@ -56,6 +56,7 @@
       </div>
 
       <button
+        on:click={() => (window.location = "/ecosystem?id=11")}
         class="absolute z-0 bottom-16 sm:bottom-4 right-4 px-2 py-1 text-xs bg-black/80 rounded-md flex items-center shadow-xl border border-white/10"
       >
         What jobs are at risk
@@ -71,14 +72,14 @@
           <VCRotator deg={30} />
           <VCRotator deg={60} />
           <VCRotator deg={90} />
-          <VCRotator deg={120}  />
-          <VCRotator deg={150}  />
-          <VCRotator deg={180}  />
-          <VCRotator deg={210}  />
-          <VCRotator deg={240}  />
-          <VCRotator deg={270}  />
-          <VCRotator deg={300}  />
-          <VCRotator deg={330}  />
+          <VCRotator deg={120} />
+          <VCRotator deg={150} />
+          <VCRotator deg={180} />
+          <VCRotator deg={210} />
+          <VCRotator deg={240} />
+          <VCRotator deg={270} />
+          <VCRotator deg={300} />
+          <VCRotator deg={330} />
         </div>
       </div>
 

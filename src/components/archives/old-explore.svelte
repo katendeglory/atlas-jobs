@@ -1,5 +1,5 @@
 <script>
-  import { valueChains } from "../stores/data";
+  import { valueChains } from "../../stores/data";
   import { onMount } from "svelte";
   // https://stackoverflow.com/questions/12813573/position-icons-into-circle
 

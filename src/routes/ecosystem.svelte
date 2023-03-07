@@ -24,33 +24,7 @@
   import Container from "../components/utils/Container.svelte";
   import { valueChains, jobs } from "../stores/data";
   import JobPoint from "../components/shared/JobPoint.svelte";
-
-  let POSITIONS = [
-    { top: "05", left: "10" },
-    { top: "10", left: "30" },
-    { top: "14", left: "50" },
-    { top: "18", left: "20" },
-
-    { top: "06", left: "80" },
-    { top: "06", left: "50" },
-    { top: "22", left: "40" },
-    { top: "26", left: "60" },
-
-    { top: "26", left: "80" },
-    { top: "30", left: "30" },
-    { top: "34", left: "50" },
-    { top: "38", left: "70" },
-
-    { top: "55", left: "10" },
-    { top: "50", left: "30" },
-    { top: "60", left: "50" },
-    { top: "64", left: "30" },
-
-    { top: "78", left: "50" },
-    { top: "78", left: "70" },
-    { top: "80", left: "20" },
-    { top: "90", left: "50" },
-  ];
+  import TopNav from "../components/utils/TopNav.svelte";
 
   export let id;
   export let qs;
@@ -85,17 +59,7 @@
     Page Not Found
   </div>
 {:else}
-  <div class="bg-black text-white w-[90vw] fixed top-0 left-0 z-[60]">
-    <Container>
-      <div class="h-14 flex items-center justify-between uppercase">
-        <a class="h-font nav-link flex items-center mr-4" href="/">
-          ATLAS OF EMERGING JOBS
-        </a>
-        <h1 class="text-sm text-center">{valueChain.name}</h1>
-        <div class="" />
-      </div>
-    </Container>
-  </div>
+  <TopNav subtitle={valueChain.name} />
 
   <div class="pt-14">
     <div class="h-screen w-screen overflow-auto gradient">
@@ -105,7 +69,7 @@
       >
         <img
           class="[16:9] w-[184vh] h-[103.5vh] md:w-[100vw] md:h-[56.25vw] absolute top-0 left-0 right-0 bottom-0"
-          src="/images/map.png"
+          src="/images/{valueChain.map}"
           alt="map"
           style="background-image: url(/images/map.png); background-size: cover; filter: brightness(70%);"
         />

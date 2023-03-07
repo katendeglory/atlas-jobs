@@ -36,7 +36,7 @@
 </svelte:head>
 
 <div
-  class="bg-black/10 bg-blend-overlay"
+  class="bg-black/10 bg-blend-overlay px-6 md:px-0"
   style="background-image: url(/images/neon-city.jpg); background-size: cover;"
 >
   <Container>
@@ -49,7 +49,7 @@
       <!--  -->
       <!--  -->
       <!--  -->
-      <div class="bg-black shadow-md rounded-xl overflow-hidden">
+      <div class="glassmorph-1 rounded-2xl overflow-hidden">
         <form
           on:submit|preventDefault={handleSubmit}
           class="w-full h-full grid grid-cols-1 gap-4 px-4 py-5"
@@ -94,7 +94,7 @@
               bind:value={message.content}
               class="w-full col-span-full"
               required
-              rows="3"
+              rows="4"
               placeholder="Message..."
             />
           </div>

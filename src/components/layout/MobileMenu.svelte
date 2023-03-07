@@ -57,6 +57,15 @@
         >
           About
         </button>
+        <button
+          class="a-nav px-8 py-2 flex items-center justify-start"
+          on:click={() => {
+            window.location = "/jobs";
+            hideMenu();
+          }}
+        >
+          List of emerging jobs
+        </button>
         <button class="px-8 menu py-2 hidden md:flex items-center">
           <span class="a-nav"> Ecosystem </span>
           <div

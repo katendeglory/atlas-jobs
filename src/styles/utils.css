@@ -95,6 +95,7 @@
     margin-top: -5.5em !important;
     margin-left: -5.5em;
     transform: rotate(0deg) translate(0vh) rotate(0deg) !important;
+    z-index: 1 !important;
   }
 }
 
@@ -127,7 +128,12 @@
     border-radius: 9999px !important;
     margin-top: -5.5em !important;
     transform: rotate(0deg) translate(0vh) rotate(0deg) !important;
+    z-index: 1 !important;
   }
+}
+
+.degnone::after {
+  z-index: 3 !important;
 }
 
 /* Glow Effect */

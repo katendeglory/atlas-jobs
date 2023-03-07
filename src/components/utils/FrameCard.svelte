@@ -9,14 +9,16 @@
     class="frame flex flex-col items-center justify-center h-full px-8"
     xyz="fade-100% down-3 stagger-2"
   >
-    <img
-      src={img}
-      alt="doctor"
-      class="h-[100%] object-cover"
-      use:viewport
-      on:enterViewport={(e) => e.target.classList.add("xyz-in")}
-      on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
-    />
+    {#if img}
+      <img
+        src={img}
+        alt="doctor"
+        class="h-[100%] object-cover"
+        use:viewport
+        on:enterViewport={(e) => e.target.classList.add("xyz-in")}
+        on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
+      />
+    {/if}
   </div>
 </div>
 
