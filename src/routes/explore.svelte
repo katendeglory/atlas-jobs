@@ -62,6 +62,13 @@
         What jobs are at risk
         <ion-icon name="help-circle" class="ml-1 text-xl" />
       </button>
+
+      <div
+        class="absolute text-gray-400 text-xs z-0 bottom-16 sm:bottom-4 left-4 hidden md:flex items-center"
+      >
+        This diagram shows the Food & Beverage Manufacturing Ecosystem. Each box
+        represents elements in the journey “from farm to fork”.
+      </div>
       <!-- End Tips -->
 
       <div
