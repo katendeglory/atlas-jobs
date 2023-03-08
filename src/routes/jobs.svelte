@@ -48,10 +48,13 @@
             <FrameCard img={null} />
           </div>
 
-          <div class="grid grid-cols-1 gap-2">
+          <div class="grid grid-cols-1 gap-3">
             {#each $jobs.filter( (el) => el.valueChains.find((vc_id) => vc_id == vc.id) ) as job, n}
               <span class="flex items-center text-sm lg:text-base">
-                <ion-icon name="radio-button-on-outline" class="text-lg mr-4" />
+                <ion-icon
+                  name="radio-button-on-outline"
+                  class="text-base md:text-lg mr-2 md:mr-4"
+                />
                 {job.title.split("→")[0]} —
                 <button
                   class="underline ml-1 h-font"
