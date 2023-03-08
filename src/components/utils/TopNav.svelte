@@ -2,8 +2,9 @@
   import Container from "./Container.svelte";
 
   export let title_desk = "ATLAS OF EMERGING JOBS";
-  export let title_mobi = "";
+  export let title_mobi = "Home";
   export let subtitle;
+  export let crumb_last_child = "";
   export let url = null;
 </script>
 
@@ -25,6 +26,12 @@
           </a>
         {:else}
           <span class="mr-1 flex items-center"> {subtitle} </span>
+        {/if}
+        {#if crumb_last_child}
+          <span class="mr-1 hidden md:flex items-center">
+            {url ? ">" : ""}
+            {crumb_last_child}
+          </span>
         {/if}
       </h1>
       <div class="" />

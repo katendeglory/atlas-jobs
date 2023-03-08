@@ -50,15 +50,16 @@
 
           <div class="grid grid-cols-1 gap-2">
             {#each $jobs.filter( (el) => el.valueChains.find((vc_id) => vc_id == vc.id) ) as job, n}
-              <button
-                class="flex items-center text-sm lg:text-base cursor-default"
-                on:click={() => (window.location = `/job-page?id=${job.id}`)}
-              >
+              <span class="flex items-center text-sm lg:text-base">
                 <ion-icon name="radio-button-on-outline" class="text-lg mr-4" />
                 {job.title.split("→")[0]} —
-                <span class="underline ml-1 h-font cursor-pointer">preview</span
+                <button
+                  class="underline ml-1 h-font"
+                  on:click={() => (window.location = `/job-page?id=${job.id}`)}
                 >
-              </button>
+                  preview
+                </button>
+              </span>
             {/each}
           </div>
         </div>

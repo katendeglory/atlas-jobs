@@ -55,9 +55,13 @@
   </div>
 {:else}
   {#if ecosystem}
-    <TopNav subtitle={valueChain.name} url="/ecosystem?id={ecosystem}" />
+    <TopNav
+      subtitle={valueChain.name}
+      url="/ecosystem?id={ecosystem}"
+      crumb_last_child={job.title}
+    />
   {:else}
-    <TopNav subtitle="" />
+    <TopNav subtitle="" crumb_last_child={job.title} />
   {/if}
 
   <div class="pt-0 min-h-screen text-gray-300">
@@ -72,7 +76,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 min-h-screen">
       <!-- Left -->
       <div
-        class="frame-parent flex justify-center items-center relative min-h-[60vh]"
+        class="frame-parent bg-gray-800/50 bg-blend-overlay flex justify-center items-center relative min-h-[60vh]"
       >
         <div
           id="particles-js2"
@@ -169,7 +173,8 @@
 
 <style>
   .frame-parent {
-    background-image: url(/images/bg-2.jpg);
+    /* background-image: url(/images/about-3.jpg); */
+    background-image: url(/images/bg-7.jpg);
     background-size: cover;
   }
 </style>

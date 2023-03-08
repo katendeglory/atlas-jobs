@@ -21,7 +21,6 @@
 
 <script>
   import { onMount } from "svelte";
-  import Container from "../components/utils/Container.svelte";
   import { valueChains, jobs } from "../stores/data";
   import JobPoint from "../components/shared/JobPoint.svelte";
   import TopNav from "../components/utils/TopNav.svelte";
@@ -37,6 +36,18 @@
   let mouseCoord = { x: 0, y: 0 };
   let background;
 
+  const playVideo = (id) => {
+    let vid = document.getElementById(id);
+    vid.src = "/images/globe-2.mp4";
+    vid.preload = "auto";
+    vid.muted = true;
+    vid.autoplay = true;
+    vid.loop = true;
+    vid.playsinline = true;
+    vid["webkit-playsinline"] = true;
+    vid.play();
+  };
+
   onMount(() => {
     // console.log({ valueChain, job });
 
@@ -44,6 +55,16 @@
       mouseCoord.x = e.clientX;
       mouseCoord.y = e.clientY;
     });
+
+    playVideo("hero");
+
+    particlesJS.load(
+      "particles-js",
+      "/js/particlesjs-config-3.json",
+      function () {
+        console.log("particles.js loaded - callback");
+      }
+    );
   });
 </script>
 
@@ -62,11 +83,22 @@
   <TopNav subtitle={valueChain.name} />
 
   <div class="pt-14">
-    <div class="h-screen w-screen overflow-auto gradient">
+    <div class="h-screen w-screen overflow-auto no-gradient">
       <div
         class="[16:9] w-[184vh] h-[103.5vh] md:w-[100vw] md:h-[56.25vw] relative"
         bind:this={background}
       >
+        <div class="absolute top-0 left-0 z-0 w-full h-full">
+          <div class="w-full h-full">
+            <video id="hero" muted autoplay loop playsinline>
+              <source src="/images/globe-2.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div
+            class="absolute top-0 left-0 z-0 w-full h-full"
+            id="particles-js"
+          />
+        </div>
         <img
           class="[16:9] w-[184vh] h-[103.5vh] md:w-[100vw] md:h-[56.25vw] absolute top-0 left-0 right-0 bottom-0"
           src="/images/{valueChain.map}"
