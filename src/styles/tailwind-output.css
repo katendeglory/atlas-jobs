@@ -833,6 +833,9 @@ select {
 .min-h-\[60vh\] {
   min-height: 60vh;
 }
+.min-h-\[75vh\] {
+  min-height: 75vh;
+}
 .w-full {
   width: 100%;
 }

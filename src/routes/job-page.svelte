@@ -76,7 +76,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 min-h-screen">
       <!-- Left -->
       <div
-        class="frame-parent bg-gray-800/50 bg-blend-overlay flex justify-center items-center relative min-h-[60vh]"
+        class="frame-parent bg-gray-800/50 bg-blend-overlay flex justify-center items-center relative min-h-[75vh]"
       >
         <div
           id="particles-js2"
