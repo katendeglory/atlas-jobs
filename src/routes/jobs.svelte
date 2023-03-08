@@ -48,7 +48,7 @@
             <FrameCard img={null} />
           </div>
 
-          <div class="grid grid-cols-1 gap-3">
+          <div class="grid grid-cols-1 gap-2">
             {#each $jobs.filter( (el) => el.valueChains.find((vc_id) => vc_id == vc.id) ) as job, n}
               <span class="flex items-center text-sm lg:text-base">
                 <ion-icon
