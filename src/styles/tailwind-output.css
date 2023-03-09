@@ -665,6 +665,9 @@ select {
 .-left-10 {
   left: -2.5rem;
 }
+.bottom-20 {
+  bottom: 5rem;
+}
 .z-0 {
   z-index: 0;
 }
@@ -1651,6 +1654,14 @@ select:focus, input[type="datetime-local"]:focus, input[type="text"]:focus, inpu
 
   .sm\:bottom-4 {
     bottom: 1rem;
+  }
+
+  .sm\:bottom-10 {
+    bottom: 2.5rem;
+  }
+
+  .sm\:bottom-12 {
+    bottom: 3rem;
   }
 
   .sm\:col-span-1 {

@@ -19,7 +19,6 @@
 
   onMount(() => {
     playVideo("hero");
-
     particlesJS.load(
       "particles-js",
       "/js/particlesjs-config.json",
@@ -57,17 +56,17 @@
 
       <button
         on:click={() => (window.location = "/ecosystem?id=11")}
-        class="absolute z-0 bottom-16 sm:bottom-4 right-4 px-2 py-1 text-xs bg-black/80 rounded-md flex items-center shadow-xl border border-white/10"
+        class="absolute z-0 bottom-20 sm:bottom-12 right-4 px-2 py-1 text-xs bg-black/80 rounded-md flex items-center shadow-xl border border-white/10"
       >
         What jobs are at risk
         <ion-icon name="help-circle" class="ml-1 text-xl" />
       </button>
 
       <div
-        class="absolute text-gray-400 text-xs z-0 bottom-16 sm:bottom-4 left-4 hidden md:flex items-center"
+        class="absolute text-gray-400 text-xs z-0 bottom-16 sm:bottom-4 left-0 right-0 hidden md:flex items-center justify-center"
       >
         This diagram shows the Food & Beverage Manufacturing Ecosystem. Each box
-        represents elements in the journey “from farm to fork”.
+        represents elements in the journey “from farm to fork”
       </div>
       <!-- End Tips -->
 
@@ -98,6 +97,22 @@
           <VCPoint vc="-1" deg="none" icon="person" customN="Consumer" />
           <VCPoint
             vc="0"
+            deg={280 + 20}
+            icon="compost"
+            customN="Raw Materials"
+          />
+          <VCPoint vc="1" deg={320 + 20} icon="settings" />
+          <VCPoint vc="2" deg={0 + 10} icon="store" />
+          <VCPoint vc="5" deg={40 - 0} icon="recycling" />
+          <VCPoint vc="7" deg={80 + 10} icon="local_shipping" />
+          <VCPoint vc="3" deg={120 + 20} icon="shopping_cart" />
+          <VCPoint vc="9" deg={160 + 10} icon="tips_and_updates" />
+          <VCPoint vc="6" deg={200 - 0} icon="storefront" />
+          <VCPoint vc="8" deg={240 - 0} icon="restaurant" />
+
+          <!-- <VCPoint vc="-1" deg="none" icon="person" customN="Consumer" />
+          <VCPoint
+            vc="0"
             deg={288 + 10}
             icon="compost"
             customN="Raw Materials"
@@ -108,9 +123,8 @@
           <VCPoint vc="7" deg={72 - 10} icon="local_shipping" />
           <VCPoint vc="3" deg={108 + 10} icon="shopping_cart" />
           <VCPoint vc="9" deg={144 + 10} icon="tips_and_updates" />
-          <VCPoint vc="4" deg={180} icon="view_in_ar" />
           <VCPoint vc="6" deg={216 - 10} icon="storefront" />
-          <VCPoint vc="8" deg={252 - 10} icon="restaurant" />
+          <VCPoint vc="8" deg={252 - 10} icon="restaurant" /> -->
         </div>
       </div>
     </div>
