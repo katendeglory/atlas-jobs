@@ -197,7 +197,7 @@ let jobs_ = [
     id: 18,
     title: "Agriculture sustainability analyst",
     img: "/images/jobs/job-18.png",
-    valueChains: [1, 6,],
+    valueChains: [1, 6],
     desc: `A professional who analyses data to determine which crops and cattle breeds are most suitable for different areas based on climate and soil conditions using artificial intelligence (AI). He also conducts research to improve crop production and breeding methods and develop new varieties, and creates plans for farming operations.`,
     hardSkills: ["IT", "Agriculture", "Ecology"],
     softSkills: ["Lean production", "system thinking", "critical thinking", "cross-disciplinary thinking"],
@@ -234,7 +234,7 @@ let jobs_ = [
   {
     id: 21,
     title: "Operations Supervisor",
-    img: null,
+    img: "images/jobs/job-21.png",
     valueChains: [11],
     desc: `Optimization of the workflow and automation`,
     hardSkills: [],
@@ -245,7 +245,7 @@ let jobs_ = [
   {
     id: 22,
     title: "L & D Facilitators",
-    img: null,
+    img: "images/jobs/job-22.png",
     valueChains: [11],
     desc: `Online LMS`,
     hardSkills: [],
@@ -256,7 +256,7 @@ let jobs_ = [
   {
     id: 23,
     title: "Warehouse Pickers",
-    img: null,
+    img: "images/jobs/job-23.png",
     valueChains: [11],
     desc: `Automation`,
     hardSkills: [],
@@ -267,7 +267,7 @@ let jobs_ = [
   {
     id: 24,
     title: "Stock-takers",
-    img: null,
+    img: "images/jobs/job-24.png",
     valueChains: [11],
     desc: `Digital analytical systems tell us when we are out`,
     hardSkills: [],
@@ -278,7 +278,7 @@ let jobs_ = [
   {
     id: 25,
     title: "Production Planner/buyer",
-    img: null,
+    img: "images/jobs/job-25.png",
     valueChains: [11],
     desc: `Digital analytical systems will help in procurement planning, so the number of staff members can be reduced.`,
     hardSkills: [],
@@ -289,7 +289,7 @@ let jobs_ = [
   {
     id: 26,
     title: "Couriers",
-    img: null,
+    img: "images/jobs/job-26.png",
     valueChains: [11],
     desc: `Drones and self-driving cars will compete with humans`,
     hardSkills: [],
@@ -300,7 +300,7 @@ let jobs_ = [
   {
     id: 27,
     title: "Maintenance staff",
-    img: null,
+    img: "images/jobs/job-27.png",
     valueChains: [11],
     desc: `Self-correcting technology`,
     hardSkills: [],
@@ -311,7 +311,7 @@ let jobs_ = [
   {
     id: 28,
     title: "Supply chain (product to market)",
-    img: null,
+    img: "images/jobs/job-28.png",
     valueChains: [11],
     desc: `Cutting the mediators by Uber-like platforms`,
     hardSkills: [],
@@ -328,7 +328,7 @@ let jobs_ = [
   {
     id: 29,
     title: "Operator + Artisan → Equipment Operational specialist",
-    img: null,
+    img: "images/jobs/job-29.png",
     valueChains: [1, 2],
     desc: `Automatisation is efficient and economically reasonable because it helps cut off production costs. An artisan has no need to do manual labor but has to learn how to work with robots and digital systems`,
     hardSkills: ["Artisan gets upskilled"],
@@ -339,7 +339,7 @@ let jobs_ = [
   {
     id: 30,
     title: "Food scientist / Nutritionist",
-    img: null,
+    img: "images/jobs/job-30.png",
     valueChains: [2, 9, 10],
     desc: `A better understanding of consumer needs, improved tech skills, a better understanding of nutrition`,
     hardSkills: ["Biomedical knowledge", "Data Analysis"],
@@ -350,7 +350,7 @@ let jobs_ = [
   {
     id: 31,
     title: "Marketing manager → Customer insight manager",
-    img: null,
+    img: "images/jobs/job-31.png",
     valueChains: [1, 2, 3, 4, 7, 9],
     desc: ``,
     hardSkills: [],
@@ -361,7 +361,7 @@ let jobs_ = [
   {
     id: 32,
     title: "E-commerce designer → Integration software engineer",
-    img: null,
+    img: "images/jobs/job-32.png",
     valueChains: [1, 2, 3, 4, 7],
     desc: `Systemic integration of multiple parties is needed for making effective digital platforms for e-commerce`,
     hardSkills: ["Combining different software"],
@@ -372,7 +372,7 @@ let jobs_ = [
   {
     id: 33,
     title: "Farmworker → farm technician",
-    img: null,
+    img: "images/jobs/job-33.png",
     valueChains: [1],
     desc: `Farms have become more automated, which provides possibilities to make production much more effective, but it requires some IT skills.`,
     hardSkills: [],
@@ -383,7 +383,7 @@ let jobs_ = [
   {
     id: 34,
     title: "Food delivery logist",
-    img: null,
+    img: "images/jobs/job-34.png",
     valueChains: [1, 2, 3, 4, 8, 9],
     desc: `Personalizing food consumption`,
     hardSkills: ["Knowledge of diverse food", "knowing community", "road safety skills", "communication", "drone operating"],
@@ -394,7 +394,7 @@ let jobs_ = [
   {
     id: 35,
     title: "Wellness expert",
-    img: null,
+    img: "images/jobs/job-35.png",
     valueChains: [],
     desc: `Manage more healthy ways of food behavior (working with clients)`,
     hardSkills: ["Change management", "mental and physical health", "people skills", "alternative therapy"],
@@ -405,7 +405,7 @@ let jobs_ = [
   {
     id: 36,
     title: "R&D Manager",
-    img: null,
+    img: "images/jobs/job-36.png",
     valueChains: [1, 2, 10],
     desc: `Additional requirements because of new techs and consumers' demand`,
     hardSkills: ["Additional technical skills"],
@@ -416,18 +416,18 @@ let jobs_ = [
 ];
 
 
+
 let valueChains_ = [
-/*0*/  { id: 1, map: "map-1.png", img: null, name: "Producers" },
-/*1*/  { id: 2, map: "map-1.png", img: null, name: "Manufacturing & Processing" },
-/*2*/  { id: 3, map: "map-1.png", img: null, name: "Wholesalers / Distribution" },
-/*3*/  { id: 4, map: "map-1.png", img: null, name: "Online Marketplace" },
-/*4*/  { id: 5, map: "map-1.png", img: null, name: "Dark Stores" },
-/*5*/  { id: 6, map: "map-1.png", img: null, name: "Sustainability Providers" },
-/*6*/  { id: 7, map: "map-1.png", img: null, name: "Retail & Groceries" },
-/*7*/  { id: 8, map: "map-1.png", img: null, name: "Transport & Delivery" },
-/*8*/  { id: 9, map: "map-1.png", img: null, name: "Restaurant" },
-/*9*/  { id: 10, map: "map-1.png", img: null, name: "New Product Development" },
-/*10*/  { id: 11, map: "map-1.png", img: null, name: "Jobs at Risk" },
+/*0*/  { id: 1, map: "map-1.png", img: "images/vcs/vc-01.png", name: "Producers" },
+/*1*/  { id: 2, map: "map-1.png", img: "/images/vcs/vc-02.png", name: "Manufacturing & Processing" },
+/*2*/  { id: 3, map: "map-1.png", img: "images/vcs/vc-03.png", name: "Wholesalers / Distribution" },
+/*3*/  { id: 4, map: "map-1.png", img: "/images/vcs/vc-04.png", name: "Online Marketplace" },
+/*5*/  { id: 6, map: "map-1.png", img: "images/vcs/vc-06.png", name: "Sustainability Providers" },
+/*6*/  { id: 7, map: "map-1.png", img: "images/vcs/vc-07.png", name: "Retail & Groceries" },
+/*7*/  { id: 8, map: "map-1.png", img: "/images/vcs/vc-08.png", name: "Transport & Delivery" },
+/*8*/  { id: 9, map: "map-1.png", img: "images/vcs/vc-09.png", name: "Restaurant" },
+/*9*/  { id: 10, map: "map-1.png", img: "/images/vcs/vc-10.png", name: "New Product Development" },
+/*10*/  { id: 11, map: "map-1.png", img: "images/vcs/vc-11.png", name: "Jobs at Risk" },
 ];
 
 

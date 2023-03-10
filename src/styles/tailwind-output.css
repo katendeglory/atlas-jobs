@@ -836,6 +836,9 @@ select {
 .min-h-\[75vh\] {
   min-height: 75vh;
 }
+.min-h-\[100\%\] {
+  min-height: 100%;
+}
 .w-full {
   width: 100%;
 }
@@ -880,6 +883,9 @@ select {
 }
 .w-11\/12 {
   width: 91.666667%;
+}
+.min-w-\[100\%\] {
+  min-width: 100%;
 }
 .max-w-full {
   max-width: 100%;

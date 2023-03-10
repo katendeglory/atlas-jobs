@@ -29,6 +29,13 @@
   });
 </script>
 
+<svelte:head>
+  <title>
+    Explore the food and beverage manufacturing industry - Atlas of Emerging
+    Jobs
+  </title>
+</svelte:head>
+
 <section
   class="fixed top-0 left-0 bottom-0 right-0 h-screen w-screen overflow-hidden"
 >
@@ -109,22 +116,6 @@
           <VCPoint vc="9" deg={160 + 10} icon="tips_and_updates" />
           <VCPoint vc="6" deg={200 - 0} icon="storefront" />
           <VCPoint vc="8" deg={240 - 0} icon="restaurant" />
-
-          <!-- <VCPoint vc="-1" deg="none" icon="person" customN="Consumer" />
-          <VCPoint
-            vc="0"
-            deg={288 + 10}
-            icon="compost"
-            customN="Raw Materials"
-          />
-          <VCPoint vc="1" deg={324 + 10} icon="settings" />
-          <VCPoint vc="2" deg={0} icon="store" />
-          <VCPoint vc="5" deg={36 - 10} icon="recycling" />
-          <VCPoint vc="7" deg={72 - 10} icon="local_shipping" />
-          <VCPoint vc="3" deg={108 + 10} icon="shopping_cart" />
-          <VCPoint vc="9" deg={144 + 10} icon="tips_and_updates" />
-          <VCPoint vc="6" deg={216 - 10} icon="storefront" />
-          <VCPoint vc="8" deg={252 - 10} icon="restaurant" /> -->
         </div>
       </div>
     </div>

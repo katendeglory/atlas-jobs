@@ -173,7 +173,6 @@
 
 <style>
   .frame-parent {
-    /* background-image: url(/images/about-3.jpg); */
     background-image: url(/images/bg-7.jpg);
     background-size: cover;
   }

@@ -5,23 +5,11 @@
 
 <div class="border-outside-frame flex items-center justify-center">
   <div class="outside-frame flex items-center justify-center">
-    <div class="border-frame flex items-center justify-center">
-      <div
-        class="frame flex flex-col items-center justify-center h-full px-8"
-        xyz="fade-100% down-3 stagger-2"
-      >
-        {#if img}
-          <img
-            src={img}
-            alt="doctor"
-            class="h-[100%] object-cover"
-            use:viewport
-            on:enterViewport={(e) => e.target.classList.add("xyz-in")}
-            on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
-          />
-        {/if}
-      </div>
-    </div>
+    <div
+      class="frame flex flex-col items-center justify-center h-full px-8"
+      xyz="fade-100% down-3 stagger-2"
+      style={`background-image: url(${img || "/images/bg-1.jpg"});`}
+    />
   </div>
 </div>
 
@@ -30,7 +18,8 @@
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     overflow: hidden;
     background-size: cover;
-    background-image: url(/images/bg-1.jpg);
+    background-position: center;
+    /* background-image: url(/images/bg-1.jpg); */
   }
 
   .outside-frame {
@@ -42,12 +31,6 @@
     background-blend-mode: overlay;
   }
 
-  .border-frame {
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    overflow: hidden;
-    background-color: #c6810110;
-  }
-
   .border-outside-frame {
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     overflow: hidden;
@@ -57,13 +40,8 @@
   /* Desktop */
   @media (min-width: 700px) {
     .frame {
-      width: 30vw;
-      height: 25vw;
-    }
-
-    .border-frame {
-      width: 30.35vw;
-      height: 25.35vw;
+      width: 33vw;
+      height: 28vw;
     }
 
     .outside-frame {
@@ -80,13 +58,8 @@
   /* Mobile */
   @media (max-width: 699px) {
     .frame {
-      width: 35vh;
-      height: 30vh;
-    }
-
-    .border-frame {
-      width: 35.35vh;
-      height: 30.35vh;
+      width: 43vh;
+      height: 38vh;
     }
 
     .outside-frame {
