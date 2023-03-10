@@ -121,7 +121,7 @@
           >
             <button
               on:click={() => window.history.back()}
-              class="mb-4 flex items-center text-gray-300"
+              class="mb-4 flex items-center text-gray-300 !text-base"
             >
               <ion-icon name="chevron-back-outline" class="text-lg mr-1" />
               Back

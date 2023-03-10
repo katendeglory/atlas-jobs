@@ -66,7 +66,7 @@
 
   <div class="pt-0 min-h-screen text-gray-300">
     <button
-      class="fixed top-16 left-2 mb-4 flex items-center !z-30"
+      class="fixed top-16 left-2 mb-4 flex items-center !z-30 !text-base"
       on:click={() => history.back()}
     >
       <ion-icon name="chevron-back-outline" class="text-lg mr-1" />

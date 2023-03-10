@@ -114,7 +114,7 @@
           mollitia aspernatur nulla hic? Culpa animi dicta consectetur!
           <br />
           <br />
-          <button
+          <!-- <button
             data-aos="fade-right"
             data-aos-anchor-placement="top-bottom"
             data-aos-delay="600"
@@ -127,7 +127,7 @@
             <span class="material-symbols-outlined text-xl ml-2">
               trending_flat
             </span>
-          </button>
+          </button> -->
         </div>
       </div>
       <div class="flex items-center rounded-xl">
@@ -189,7 +189,7 @@
           mollitia aspernatur nulla hic? Culpa animi dicta consectetur!
           <br />
           <br />
-          <button
+          <!-- <button
             class="btn btn-black !w-full"
             data-aos="fade-left"
             data-aos-anchor-placement="top-bottom"
@@ -202,72 +202,8 @@
             <span class="material-symbols-outlined text-xl ml-2">
               trending_flat
             </span>
-          </button>
+          </button> -->
         </div>
-      </div>
-    </div>
-  </Container>
-</div>
-
-<div class="pt-20 min-h-screen bg-black text-gray-200">
-  <div class="py-2" />
-  <Container>
-    <!-- Bio Here -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 py-8">
-      <div class="flex items-center tracking-wide">
-        <div
-          class=""
-          data-aos="fade-right"
-          data-aos-anchor-placement="top-bottom"
-          data-aos-delay="500"
-          data-aos-offset="0"
-          data-aos-duration="500"
-        >
-          <div class="text-3xl uppercase tracking-wider flex items-center mb-4">
-            Lorem ipsum dolor sit amet
-          </div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident vel
-          harum hic velit assumenda sequi debitis eius rem vero a. Lorem ipsum dolor
-          sit amet.
-          <br />
-          <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias laboriosam
-          ipsum minus hic fuga fugit. Fugiat quaerat reiciendis corporis, eum ullam
-          ratione! Rerum corrupti repellat alias ab odit illum itaque.
-          <br />
-          <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores laborum
-          blanditiis itaque ut! Sequi impedit harum commodi hic! Tempore ipsum quam
-          laboriosam. Eligendi, vel, consectetur quos omnis non cumque neque ea iste
-          mollitia aspernatur nulla hic? Culpa animi dicta consectetur!
-          <br />
-          <br />
-          <button
-            data-aos="fade-right"
-            data-aos-anchor-placement="top-bottom"
-            data-aos-delay="600"
-            data-aos-offset="0"
-            data-aos-duration="500"
-            class="btn btn-primary !w-full !rounded-2xl"
-            on:click={() => (window.location = "/explore")}
-          >
-            Explore
-            <span class="material-symbols-outlined text-xl ml-2">
-              trending_flat
-            </span>
-          </button>
-        </div>
-      </div>
-      <div class="flex items-center rounded-xl">
-        <div
-          data-aos="fade-left"
-          data-aos-anchor-placement="top-bottom"
-          data-aos-delay="500"
-          data-aos-offset="0"
-          data-aos-duration="500"
-          class="w-full h-[25rem] relative rounded-md bg-center"
-          style="background-image: url(/images/about-2.jpg); background-size: cover;"
-        />
       </div>
     </div>
   </Container>
