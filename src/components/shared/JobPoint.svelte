@@ -237,7 +237,11 @@
   on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
   use:viewport
 >
-  <ion-icon name="location" class="text-white text-2xl mr-1" />
+  {#if isTransforming}
+    <ion-icon name="location-outline" class="text-white text-2xl mr-1" />
+  {:else}
+    <ion-icon name="location" class="text-white text-2xl mr-1" />
+  {/if}
   <div class="max-w-[8.5rem] text-white font-bold">
     {title.split("→")[0]}
   </div>
