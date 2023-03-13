@@ -56,7 +56,7 @@
     <div
       class="gallery-text text-white drop-shadow-lg opacity-0 transition-all text-4xl font-bold"
     >
-      Cost accounting manager
+      Carbon Cost accounting manager
     </div>
   </button>
 </div>

@@ -94,7 +94,7 @@
             reversed
             title="Explore the Future Jobs"
             title2="In the Food & Beverage Manufacturing Ecosystem"
-            subtitle="Cost accounting manager"
+            subtitle="Carbon Cost accounting manager"
             img="/images/home/job-02.jpg"
             desc="A professional who develops cost standards for materials and labor, etc., designs and implements cost accounting systems, analyzes production costs and recommends changes, and oversees annual physical inventory. He also hires, trains, and supervises cost and inventory accounting staff."
             link="/job-page?id=17"
@@ -106,7 +106,7 @@
             reversed
             title="Explore the Future Jobs"
             title2="In the Food & Beverage Manufacturing Ecosystem"
-            subtitle="Designer of robotic systems for plants"
+            subtitle="robotic systems designer for plants"
             img="/images/home/job-03.jpg"
             desc="An IT specialist who designs industrial robots and cyber-physical systems for food and beverage plants to optimize the process of production"
             link="/job-page?id=14"
@@ -132,7 +132,7 @@
             title2="In the Food & Beverage Manufacturing Ecosystem"
             subtitle="Energy Catcher"
             img="/images/home/job-05.jpg"
-            desc="A professional who advises on how to capture and use the energy from alternative sources (solar, wind, hydro, kinetic, etc.) effectively"
+            desc="A professional who advises on how to capture and use the energy from alternative sources (solar, wind, hydro, kinetic, etc.) effectively."
             link="/job-page?id=2"
           />
         </div>

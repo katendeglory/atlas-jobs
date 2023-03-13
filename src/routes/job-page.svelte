@@ -58,10 +58,13 @@
     <TopNav
       subtitle={valueChain.name}
       url="/ecosystem?id={ecosystem}"
-      crumb_last_child={job.title}
+      crumb_last_child={job.title.toLowerCase().split("→")[0]}
     />
   {:else}
-    <TopNav subtitle="" crumb_last_child={job.title} />
+    <TopNav
+      subtitle=""
+      crumb_last_child={job.title.toLowerCase().split("→")[0]}
+    />
   {/if}
 
   <div class="pt-0 min-h-screen text-gray-300">
@@ -98,6 +101,7 @@
         >
           {job.title}
         </h1>
+
         <h1
           class="text-2xl h-font uppercase mb-2 font-semibold"
           use:viewport
@@ -107,7 +111,7 @@
           {#if job.isAtRisk}
             The rationale behind the decrease
           {:else if job.isTransforming}
-            What is changing and why?
+            What is changing?
           {:else}
             JOB DESCRIPTION
           {/if}
@@ -121,8 +125,29 @@
           {job.desc}
         </div>
 
-        {#if !job.isAtRisk && !job.isTransforming}
-          <h2 class="text-2xl h-font font-semibold mb-2">Hard Skills</h2>
+        {#if job.isTransforming}
+          <h1
+            class="mt-6 text-2xl h-font uppercase font-semibold"
+            use:viewport
+            on:enterViewport={(e) => e.target.classList.add("xyz-in")}
+            on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
+          >
+            Why?
+          </h1>
+          <div
+            class="mb-4"
+            use:viewport
+            on:enterViewport={(e) => e.target.classList.add("xyz-in")}
+            on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
+          >
+            {job.why}
+          </div>
+        {/if}
+
+        {#if !job.isAtRisk}
+          <h2 class="text-2xl h-font font-semibold mb-2">
+            {job.isTransforming ? "New" : ""} Hard Skills
+          </h2>
           <div class="flex items-center flex-wrap">
             {#each job.hardSkills as hs}
               <div
@@ -135,7 +160,9 @@
               </div>
             {/each}
           </div>
-          <h2 class="text-2xl h-font font-semibold mt-6 mb-2">Soft Skills</h2>
+          <h2 class="text-2xl h-font font-semibold mt-6 mb-2">
+            {job.isTransforming ? "New" : ""} Soft Skills
+          </h2>
           <div class="flex items-center flex-wrap">
             {#each job.softSkills as hs}
               <div
@@ -145,23 +172,6 @@
                 on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
               >
                 {hs}
-              </div>
-            {/each}
-          </div>
-        {/if}
-        {#if job.isTransforming}
-          <h2 class="text-2xl h-font font-semibold mt-6 mb-2">
-            New Skills Needed
-          </h2>
-          <div class="flex items-center flex-wrap">
-            {#each [...job.softSkills, ...job.hardSkills] as skill}
-              <div
-                class="mr-2 mb-2 inline-block capitalize bg-gray-200 px-3 py-2 text-black shadow-md text-sm rounded-xl"
-                use:viewport
-                on:enterViewport={(e) => e.target.classList.add("xyz-in")}
-                on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
-              >
-                {skill}
               </div>
             {/each}
           </div>

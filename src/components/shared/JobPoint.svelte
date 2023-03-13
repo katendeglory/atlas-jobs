@@ -128,6 +128,11 @@
       top: "21",
       left: "72",
     },
+    {
+      id: 36, // ESG Specialist
+      top: "27.5",
+      left: "45",
+    },
     /**
      *
      *  JOBS AT RISK
@@ -210,12 +215,7 @@
       left: "35",
     },
     {
-      id: 35, // Wellness expert
-      top: "27.5",
-      left: "45",
-    },
-    {
-      id: 36, // R&D Manager
+      id: 35, // R&D Manager
       top: "37.5",
       left: "45",
     },
@@ -242,8 +242,8 @@
   {:else}
     <ion-icon name="location" class="text-white text-2xl mr-1" />
   {/if}
-  <div class="max-w-[8.5rem] text-white font-bold">
-    {title.split("→")[0]}
+  <div class="max-w-[8.5rem] text-white font-bold !capitalize line-clamp-2">
+    {title.toLowerCase().split("→")[0]}
   </div>
 </a>
 

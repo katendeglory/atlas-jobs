@@ -1,8 +1,6 @@
 <script>
   import FrameCard from "../components/utils/FrameCard.svelte";
-  import viewport from "../utils/useViewportAction";
   import { onMount } from "svelte";
-  import Container from "../components/utils/Container.svelte";
   import { valueChains, jobs } from "../stores/data";
   import TopNav from "../components/utils/TopNav.svelte";
 
@@ -63,13 +61,20 @@
           <div class="grid grid-cols-1 gap-2">
             {#each $jobs.filter( (el) => el.valueChains.find((vc_id) => vc_id == vc.id) ) as job, n}
               <span class="flex items-center text-sm lg:text-base">
-                <ion-icon
-                  name="radio-button-on-outline"
-                  class="text-base md:text-lg mr-2 md:mr-4"
-                />
-                {job.title.split("→")[0]} —
+                <div class="flex items-center text-sm lg:text-base">
+                  <ion-icon
+                    name="radio-button-on-outline"
+                    class="text-base md:text-lg mr-2 md:mr-4"
+                  />
+                </div>
+                <div class="flex items-center line-clamp-1 capitalize">
+                  {job.title.toLowerCase().split("→")[0]} —
+                </div>
                 <button
                   class="underline ml-1 h-font"
+                  title="💡 Learn more about “{job.title
+                    .toLowerCase()
+                    .split('→')[0]}”"
                   on:click={() => (window.location = `/job-page?id=${job.id}`)}
                 >
                   preview

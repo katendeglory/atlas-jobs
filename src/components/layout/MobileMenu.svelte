@@ -67,7 +67,7 @@
           List of emerging jobs
         </button>
         <button class="px-8 menu py-2 hidden md:flex items-center">
-          <span class="a-nav"> Ecosystem </span>
+          <span class="a-nav"> Ecosystems </span>
           <div
             class="submenu absolute right-0 translate-x-[-16rem] md:translate-x-[-20rem] px-2 py-2 hidden"
           >
