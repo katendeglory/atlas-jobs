@@ -36,7 +36,7 @@
     {
       id: 2, // Energy Catcher
       top: "22.5",
-      left: "82.5",
+      left: "75",
     },
     {
       id: 3, // Water treatment Operator
@@ -75,8 +75,8 @@
     },
     {
       id: 10, // Food logistics specialist
-      top: "52.5",
-      left: "26",
+      top: "57.5",
+      left: "46.5",
     },
     {
       id: 11, // Food waste recycling specialist
@@ -95,8 +95,8 @@
     },
     {
       id: 14, // Designer of robotic systems for plants
-      top: "57.5",
-      left: "46.5",
+      top: "52.5",
+      left: "26",
     },
     {
       id: 15, // Climate change data analyst
@@ -120,13 +120,13 @@
     },
     {
       id: 19, // Food biochemist
-      top: "48",
-      left: "86",
+      top: "37.5",
+      left: "80",
     },
     {
-      id: 20, // System risk manager
-      top: "21",
-      left: "72",
+      id: 20, // AI SYSTEMS RISK ANALYST
+      top: "15",
+      left: "65",
     },
     {
       id: 36, // ESG Specialist
@@ -187,12 +187,12 @@
     {
       id: 29, // Operator + Artisan → Equipment Operational specialist
       top: "24.5",
-      left: "12.5",
+      left: "15.5",
     },
     {
       id: 30, // Food scientist / Nutritionist
       top: "35",
-      left: "10",
+      left: "11",
     },
     {
       id: 31, // Marketing Manager
@@ -210,14 +210,14 @@
       left: "25",
     },
     {
-      id: 34, // Food delivery logist
-      top: "27.5",
-      left: "35",
+      id: 34, // Logistics planner
+      top: "37.5",
+      left: "45",
     },
     {
       id: 35, // R&D Manager
-      top: "37.5",
-      left: "45",
+      top: "27.5",
+      left: "35",
     },
   ];
 
@@ -256,7 +256,7 @@
       transition:fly={{ duration: 100, y: 200 }}
       class="clippy absolute top-8 -left-10 w-[10rem] md:w-[16rem] px-2 py-2 text-xs rounded-md shadow-lg bg-black/70 text-white h-font border border-white/50"
     >
-      <div class="flex items-center line-clamp-6 pt-8 no-pt-1">
+      <div class="flex items-center line-clamp-6 pt-8 px-1">
         {#if isAtRisk}
           <div class="h-font font-semibold mb-1 text-sm">
             Rationale behind the decrease:
