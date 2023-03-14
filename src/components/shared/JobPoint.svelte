@@ -60,13 +60,13 @@
     },
     {
       id: 7, // Supply safety consultant
-      top: "58.5",
-      left: "22.5",
-    },
-    {
-      id: 8, // Circulated economy designer
       top: "55",
       left: "62.5",
+    },
+    {
+      id: 8, // Circular economy designer
+      top: "58.5",
+      left: "32.5",
     },
     {
       id: 9, // Food plant cybersecurity specialist
@@ -75,7 +75,7 @@
     },
     {
       id: 10, // Food logistics specialist
-      top: "54.5",
+      top: "52.5",
       left: "26",
     },
     {
@@ -109,9 +109,9 @@
       left: "47.5",
     },
     {
-      id: 17, // Cost accounting manager
-      top: "40",
-      left: "66.5",
+      id: 17, // Carbon Cost accounting manager
+      top: "35",
+      left: "30",
     },
     {
       id: 18, // Agriculture sustainability analyst
@@ -201,8 +201,8 @@
     },
     {
       id: 32, // E-commerce designer → Integration software engineer
-      top: "35",
-      left: "30",
+      top: "40",
+      left: "66.5",
     },
     {
       id: 33, // Farmworker → farm technician

@@ -425,16 +425,16 @@ let jobs_ = [
 
 
 let valueChains_ = [
-/*0*/  { id: 1, map: "map-1.png", img: "images/vcs/vc-01.png", name: "Producers" },
-/*1*/  { id: 2, map: "map-1.png", img: "/images/vcs/vc-02.png", name: "Manufacturing & Processing" },
-/*2*/  { id: 3, map: "map-1.png", img: "images/vcs/vc-03.png", name: "Wholesalers / Distribution" },
-/*3*/  { id: 4, map: "map-1.png", img: "/images/vcs/vc-04.png", name: "Online Marketplace" },
-/*5*/  { id: 6, map: "map-1.png", img: "images/vcs/vc-06.png", name: "Sustainability Providers" },
-/*6*/  { id: 7, map: "map-1.png", img: "images/vcs/vc-07.png", name: "Retail & Groceries" },
-/*7*/  { id: 8, map: "map-1.png", img: "/images/vcs/vc-08.png", name: "Transport & Delivery" },
-/*8*/  { id: 9, map: "map-1.png", img: "images/vcs/vc-09.png", name: "Restaurant" },
-/*9*/  { id: 10, map: "map-1.png", img: "/images/vcs/vc-10.png", name: "New Product Development" },
-/*10*/  { id: 11, map: "map-1.png", img: "images/vcs/vc-11.png", name: "Jobs at Risk" },
+/*0*/  { id: 1, map: "/maps/map-1.png", img: "/images/vcs/vc-01.png", name: "Producers" },
+/*1*/  { id: 2, map: "/maps/manufacturing_plant.gif", img: "/images/vcs/vc-02.png", name: "Manufacturing & Processing" },
+/*2*/  { id: 3, map: "/maps/whosaler.gif", img: "/images/vcs/vc-03.png", name: "Wholesalers / Distribution" },
+/*3*/  { id: 4, map: "/maps/map-1.png", img: "/images/vcs/vc-04.png", name: "Online Marketplace" },
+/*5*/  { id: 6, map: "/maps/manufacturing_plant.gif", img: "/images/vcs/vc-06.png", name: "Sustainability Providers" },
+/*6*/  { id: 7, map: "/maps/map-1.png", img: "/images/vcs/vc-07.png", name: "Retail & Groceries" },
+/*7*/  { id: 8, map: "/maps/map-1.png", img: "/images/vcs/vc-08.png", name: "Transport & Delivery" },
+/*8*/  { id: 9, map: "/maps/map-1.png", img: "/images/vcs/vc-09.png", name: "Restaurant" },
+/*9*/  { id: 10, map: "/maps/map-1.png", img: "/images/vcs/vc-10.png", name: "New Product Development" },
+/*10*/  { id: 11, map: "/maps/map-1.png", img: "/images/vcs/vc-11.png", name: "Jobs at Risk" },
 ];
 
 
