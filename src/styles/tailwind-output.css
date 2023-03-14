@@ -1024,6 +1024,9 @@ select {
 .border {
   border-width: 1px;
 }
+.border-0 {
+  border-width: 0px;
+}
 .border-b {
   border-bottom-width: 1px;
 }
@@ -1047,6 +1050,9 @@ select {
 }
 .border-white\/50 {
   border-color: rgb(255 255 255 / 0.5);
+}
+.border-black\/50 {
+  border-color: rgb(0 0 0 / 0.5);
 }
 .bg-black {
   --tw-bg-opacity: 1;
@@ -1236,6 +1242,12 @@ select {
 .pt-24 {
   padding-top: 6rem;
 }
+.pr-2 {
+  padding-right: 0.5rem;
+}
+.pt-10 {
+  padding-top: 2.5rem;
+}
 .text-center {
   text-align: center;
 }
@@ -1295,6 +1307,9 @@ select {
 }
 .font-semibold {
   font-weight: 600;
+}
+.font-extrabold {
+  font-weight: 800;
 }
 .uppercase {
   text-transform: uppercase;
@@ -1669,6 +1684,10 @@ select:focus, input[type="datetime-local"]:focus, input[type="text"]:focus, inpu
 
 @media (min-width: 640px) {
 
+  .sm\:fixed {
+    position: fixed;
+  }
+
   .sm\:bottom-12 {
     bottom: 3rem;
   }
@@ -1683,6 +1702,10 @@ select:focus, input[type="datetime-local"]:focus, input[type="text"]:focus, inpu
 
   .sm\:mt-0 {
     margin-top: 0px;
+  }
+
+  .sm\:block {
+    display: block;
   }
 
   .sm\:w-screen {

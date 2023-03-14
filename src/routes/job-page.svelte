@@ -94,7 +94,7 @@
         xyz="fade-100% down-3 stagger-2"
       >
         <h1
-          class="text-5xl md:text-4xl h-font uppercase mb-6 font-semibold"
+          class="text-4xl md:text-4xl h-font uppercase mb-6 font-semibold"
           use:viewport
           on:enterViewport={(e) => e.target.classList.add("xyz-in")}
           on:exitViewport={(e) => e.target.classList.remove("xyz-in")}

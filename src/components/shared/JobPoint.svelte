@@ -39,9 +39,9 @@
       left: "75",
     },
     {
-      id: 3, // Water treatment Operator
-      top: "45",
-      left: "11.75",
+      id: 3, // Water Manager
+      top: "46",
+      left: "16",
     },
     {
       id: 4, // Digital Twin Ecosystem Architect
@@ -50,8 +50,8 @@
     },
     {
       id: 5, // Digital Twin Ecosystem manager
-      top: "50",
-      left: "30",
+      top: "44",
+      left: "27.5",
     },
     {
       id: 6, // Sustainable packaging technologist
@@ -66,7 +66,7 @@
     {
       id: 8, // Circular economy designer
       top: "58.5",
-      left: "32.5",
+      left: "35",
     },
     {
       id: 9, // Food plant cybersecurity specialist
@@ -95,7 +95,7 @@
     },
     {
       id: 14, // Designer of robotic systems for plants
-      top: "52.5",
+      top: "53",
       left: "26",
     },
     {
@@ -114,14 +114,14 @@
       left: "30",
     },
     {
-      id: 18, // Agriculture sustainability analyst
-      top: "16.5",
-      left: "12.5",
+      id: 18, // FOOD SUPPLY SUSTAINABILITY ANALYST
+      top: "12.5",
+      left: "20",
     },
     {
       id: 19, // Food biochemist
-      top: "37.5",
-      left: "80",
+      top: "34",
+      left: "75",
     },
     {
       id: 20, // AI SYSTEMS RISK ANALYST
@@ -186,8 +186,8 @@
      **/
     {
       id: 29, // Operator + Artisan → Equipment Operational specialist
-      top: "24.5",
-      left: "15.5",
+      top: "22.5",
+      left: "18.5",
     },
     {
       id: 30, // Food scientist / Nutritionist
@@ -196,7 +196,7 @@
     },
     {
       id: 31, // Marketing Manager
-      top: "40",
+      top: "38",
       left: "20",
     },
     {
@@ -206,7 +206,7 @@
     },
     {
       id: 33, // Farmworker → farm technician
-      top: "27.5",
+      top: "28.5",
       left: "25",
     },
     {
@@ -242,33 +242,33 @@
   {:else}
     <ion-icon name="location" class="text-white text-2xl mr-1" />
   {/if}
-  <div class="max-w-[8.5rem] text-white font-bold !capitalize line-clamp-2">
+  <div class="max-w-[8.5rem] text-white font-semibold !capitalize line-clamp-2">
     {title.toLowerCase().split("→")[0]}
   </div>
 </a>
 
 {#if tipShow}
   <div
-    class="fixed bg-green-500 py-2 z-50"
+    class="hidden sm:block fixed bg-green-500 py-2 z-50"
     style="left: {mouseCoord.x}px; top: {mouseCoord.y}px;"
   >
     <div
       transition:fly={{ duration: 100, y: 200 }}
-      class="clippy absolute top-8 -left-10 w-[10rem] md:w-[16rem] px-2 py-2 text-xs rounded-md shadow-lg bg-black/70 text-white h-font border border-white/50"
+      class="clippy absolute top-8 -left-10 w-[10rem] md:w-[16rem] px-2 py-2 text-xs rounded-md shadow-lg black-glassmorph text-white h-font border-0 border-black/50"
     >
-      <div class="flex items-center line-clamp-6 pt-8 px-1">
+      <div class="flex items-center line-clamp-6 pt-10 px-1">
         {#if isAtRisk}
           <div class="h-font font-semibold mb-1 text-sm">
             Rationale behind the decrease:
           </div>
         {/if}
         {#if isTransforming}
-          <div class="h-font font-semibold mb-1 text-sm">
-            What is job changing into and why?
-          </div>
           {#if get(title.split("→"), `[1]`)}
-            <div class="h-font mb-1">
-              Turning into {get(title.split("→"), `[1]`)}.
+            <div class="h-font mb-1 pr-2">
+              Turning into
+              <span class="ml-1 underline capitalize">
+                {get(title.toLowerCase().split("→"), `[1]`)}.
+              </span>
             </div>
           {/if}
         {/if}

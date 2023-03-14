@@ -107,7 +107,7 @@
         />
         <div
           class="[16:9] w-[184vh] h-[103.5vh] md:w-[100vw] md:h-[56.25vw] relative bg-black/0"
-          xyz="fade-100% down-3 stagger-2"
+          xyz="fade-100% down-3 stagger-1"
         >
           <div
             class="fixed z-0 top-16 w-screen !text-gray-300 text-xs text-center animate-pulse flex lg:hidden items-center justify-center"

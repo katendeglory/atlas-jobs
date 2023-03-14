@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?&family=Rubik:wght@300&family=Poppins:wght@100;200;300;400;500&display=swap&Francois+One&family=Poppins:wght@100;200;300;400;500&display=swap&family=Rajdhani:wght@300;400;500&display=swap');
 
 html {
-  /* scroll-behavior: smooth; */
   width: 100%;
-  /* font-family: 'Inter', sans-serif !important; */
   font-family: 'Rubik', sans-serif !important;
   /* font-family: 'Poppins', sans-serif !important; */
 }
@@ -28,12 +26,9 @@ body {
   scroll-snap-align: start;
 }
 
-
 .h-font {
-  /* font-family: 'Inter', sans-serif !important; */
   /* font-family: 'Rubik', sans-serif !important; */
   /* font-family: 'Poppins', sans-serif !important; */
-  /* font-family: 'Francois One', sans-serif !important; */
   font-family: 'Rajdhani', sans-serif !important;
 }
 
@@ -124,6 +119,12 @@ body {
 .btn-sh-green {
   background-image: linear-gradient(to right, #68E4BC 0%, #4AD0D1 99%);
   box-shadow: 0 12px 12px -11px #0db4afb8;
+}
+
+.black-glassmorph {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 .glassmorph-0 {
