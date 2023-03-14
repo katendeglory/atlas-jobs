@@ -16,7 +16,6 @@
     { id: 2, name: "Manufacturing & Processing" },
     { id: 3, name: "Wholesalers" },
     { id: 4, name: "Online Marketplace" },
-    { id: 5, name: "Dark Store" },
     { id: 6, name: "Sustainability" },
     { id: 7, name: "Retail & Groceries" },
     { id: 8, name: "Transport & Delivery" },
