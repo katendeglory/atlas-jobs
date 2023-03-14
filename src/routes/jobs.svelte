@@ -62,10 +62,17 @@
             {#each $jobs.filter( (el) => el.valueChains.find((vc_id) => vc_id == vc.id) ) as job, n}
               <span class="flex items-center text-sm lg:text-base">
                 <div class="flex items-center text-sm lg:text-base">
-                  <ion-icon
-                    name="radio-button-on-outline"
-                    class="text-base md:text-lg mr-2 md:mr-4"
-                  />
+                  {#if job.isTransforming}
+                    <ion-icon
+                      name="radio-button-off-outline"
+                      class="text-base md:text-lg mr-2 md:mr-4"
+                    />
+                  {:else}
+                    <ion-icon
+                      name="radio-button-on-outline"
+                      class="text-base md:text-lg mr-2 md:mr-4"
+                    />
+                  {/if}
                 </div>
                 <div class="flex items-center line-clamp-1 capitalize">
                   {job.title.toLowerCase().split("→")[0]} —
