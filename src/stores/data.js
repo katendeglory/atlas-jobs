@@ -425,7 +425,7 @@ let jobs_ = [
 
 
 let valueChains_ = [
-/*0*/  { id: 1, map: "/farm.gif", img: "/images/vcs/vc-01.png", name: "Producers" },
+/*0*/  { id: 1, map: "/farm.gif", img: "/images/vcs/vc-01.png", name: "Raw Materials" },
 /*1*/  { id: 2, map: "/plant.gif", img: "/images/vcs/vc-02.png", name: "Manufacturing & Processing" },
 /*2*/  { id: 3, map: "/whosaler.gif", img: "/images/vcs/vc-03.png", name: "Wholesalers / Distribution" },
 /*3*/  { id: 4, map: "/retail.gif", img: "/images/vcs/vc-04.png", name: "Online Marketplace" },

@@ -171,12 +171,7 @@
       >
         <div class="circle-container">
           <VCPoint vc="-1" deg="none" icon="person" customN="Consumer" />
-          <VCPoint
-            vc="0"
-            deg={280 + 20}
-            icon="compost"
-            customN="Raw Materials"
-          />
+          <VCPoint vc="0" deg={280 + 20} icon="compost" />
           <VCPoint vc="1" deg={320 + 20} icon="settings" />
           <VCPoint vc="2" deg={0 + 10} icon="store" />
           <VCPoint vc="5" deg={40 - 0} icon="recycling" />

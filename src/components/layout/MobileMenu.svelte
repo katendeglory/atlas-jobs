@@ -12,7 +12,7 @@
   };
 
   let valueChains_ = [
-    { id: 1, name: "Producers" },
+    { id: 1, name: "Raw Materials" },
     { id: 2, name: "Manufacturing & Processing" },
     { id: 3, name: "Wholesalers" },
     { id: 4, name: "Online Marketplace" },

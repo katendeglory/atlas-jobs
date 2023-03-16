@@ -197,10 +197,10 @@ let DEFAULT = [
   },
 ];
 
-let PRODUCERS_1 = [
+let RAW_ITEM_1 = [
   {
     id: 1, // Environmental practitioner
-    top: "20", left: "33",
+    top: "21", left: "34",
   },
   {
     id: 2, // Energy Catcher
@@ -208,7 +208,7 @@ let PRODUCERS_1 = [
   },
   {
     id: 3, // Water Manager
-    top: "11", left: "35",
+    top: "12", left: "36",
   },
   {
     id: 4, // Digital Twin Ecosystem Architect
@@ -256,7 +256,7 @@ let PRODUCERS_1 = [
   },
   {
     id: 15, // Climate change data analyst
-    top: "28", left: "58.62",
+    top: "28", left: "57.82",
   },
   {
     id: 16, // Environmental evangelist
@@ -268,15 +268,15 @@ let PRODUCERS_1 = [
   },
   {
     id: 18, // FOOD SUPPLY SUSTAINABILITY ANALYST
-    top: "12.5", left: "23.5",
+    top: "14", left: "24.5",
   },
   {
     id: 19, // Food biochemist
-    top: "5", left: "66.5",
+    top: "5", left: "65.5",
   },
   {
     id: 20, // AI SYSTEMS RISK ANALYST
-    top: "25", left: "67",
+    top: "25.5", left: "66",
   },
   {
     id: 36, // ESG Specialist
@@ -327,7 +327,7 @@ let PRODUCERS_1 = [
    **/
   {
     id: 29, // Operator + Artisan → Equipment Operational specialist
-    top: "22.5", left: "24",
+    top: "23", left: "25.5",
   },
   {
     id: 30, // Food scientist / Nutritionist
@@ -343,7 +343,7 @@ let PRODUCERS_1 = [
   },
   {
     id: 33, // Farmworker → farm technician
-    top: "17", left: "76",
+    top: "18", left: "74",
   },
   {
     id: 34, // Logistics planner
@@ -967,7 +967,7 @@ let RESTAURANT_9 = [
 
 
 const MAPPER = [
-/*0*/  { id: 1, mapper: PRODUCERS_1, name: "Producers" }, // farm
+/*0*/  { id: 1, mapper: RAW_ITEM_1, name: "Producers" }, // farm
 /*1*/  { id: 2, mapper: MANUFACTURING_2, name: "Manufacturing & Processing" }, // plant
 /*2*/  { id: 3, mapper: WHOLESALERS_3, name: "Wholesalers / Distribution" }, // wholesaler
 /*3*/  { id: 4, mapper: RETAIL_4, name: "Online Marketplace" }, // retail
