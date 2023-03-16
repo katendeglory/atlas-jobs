@@ -48,9 +48,69 @@
     vid.play();
   };
 
-  onMount(() => {
-    // console.log({ valueChain, job });
+  function cancelFullScreen() {
+    var el = document;
+    var requestMethod =
+      el.cancelFullScreen ||
+      el.webkitCancelFullScreen ||
+      el.mozCancelFullScreen ||
+      el.exitFullscreen ||
+      el.webkitExitFullscreen;
+    if (requestMethod) {
+      // cancel full screen.
+      requestMethod.call(el);
+    } else if (typeof window.ActiveXObject !== "undefined") {
+      // Older IE.
+      var wscript = new ActiveXObject("WScript.Shell");
+      if (wscript !== null) {
+        wscript.SendKeys("{F11}");
+      }
+    }
+  }
 
+  function requestFullScreen(el) {
+    // Supports most browsers and their versions.
+    var requestMethod =
+      el.requestFullScreen ||
+      el.webkitRequestFullScreen ||
+      el.mozRequestFullScreen ||
+      el.msRequestFullscreen;
+
+    if (requestMethod) {
+      // Native full screen.
+      requestMethod.call(el);
+    } else if (typeof window.ActiveXObject !== "undefined") {
+      // Older IE.
+      var wscript = new ActiveXObject("WScript.Shell");
+      if (wscript !== null) {
+        wscript.SendKeys("{F11}");
+      }
+    }
+    return false;
+  }
+
+  function toggleFullScreen(el) {
+    if (!el) {
+      el = document.body; // Make the body go full screen.
+    }
+    var isInFullScreen =
+      (document.fullScreenElement && document.fullScreenElement !== null) ||
+      document.mozFullScreen ||
+      document.webkitIsFullScreen;
+
+    if (isInFullScreen) {
+      cancelFullScreen();
+    } else {
+      requestFullScreen(el);
+    }
+    return false;
+  }
+
+  const onFullScreen = () => {
+    toggleFullScreen(document.body);
+  };
+
+  onMount(() => {
     background.addEventListener("mousemove", (e) => {
       mouseCoord.x = e.clientX;
       mouseCoord.y = e.clientY;
@@ -90,9 +150,13 @@
       >
         <div class="absolute top-0 left-0 z-0 w-full h-full">
           <div class="w-full h-full">
-            <video id="hero" muted autoplay loop playsinline>
-              <source src="/images/globe-2.mp4" type="video/mp4" />
+            <video id="hero">
+              <source src="" type="video/mp4" />
+              <track kind="captions" />
             </video>
+            <!-- <video id="hero" muted autoplay loop playsinline>
+              <source src="" type="video/mp4" />
+            </video> -->
           </div>
           <div
             class="absolute top-0 left-0 z-0 w-full h-full"
@@ -101,7 +165,7 @@
         </div>
         <img
           class="[16:9] w-[184vh] h-[103.5vh] md:w-[100vw] md:h-[56.25vw] absolute top-0 left-0 right-0 bottom-0"
-          src="/images/{valueChain.map}"
+          src="/images/maps/{valueChain.map}"
           alt="map"
           style="background-image: url(/images/map.png); background-size: cover; filter: brightness(70%);"
         />
@@ -110,23 +174,26 @@
           xyz="fade-100% down-3 stagger-1"
         >
           <div
-            class="fixed z-0 top-16 w-screen !text-gray-300 text-xs text-center animate-pulse flex lg:hidden items-center justify-center"
+            class="fixed z-0 top-16 w-screen !text-gray-300 text-xs text-center animate-pulse flex items-center justify-center"
           >
-            <ion-icon name="compass-outline" class="mr-1 text-xl" /> Scroll to pan
+            <ion-icon name="compass-outline" class="mr-1 text-lg" /> Scroll to pan
             the map
           </div>
 
-          <div
-            class="fixed z-0 top-16 pl-2 text-xs flex items-center justify-start"
+          <button
+            on:click={() => window.history.back()}
+            class="fixed z-0 top-16 left-2 mb-4 flex items-center text-gray-300 !text-sm"
           >
-            <button
-              on:click={() => window.history.back()}
-              class="mb-4 flex items-center text-gray-300 !text-base"
-            >
-              <ion-icon name="chevron-back-outline" class="text-lg mr-1" />
-              Back
-            </button>
-          </div>
+            <ion-icon name="chevron-back-outline" class="text-lg mr-1" />
+            Back
+          </button>
+
+          <button
+            on:click={onFullScreen}
+            class="fixed z-0 top-16 right-4 mb-4 flex items-center text-gray-300 !text-sm"
+          >
+            <ion-icon name="scan-outline" class="text-lg" />
+          </button>
 
           {#each job as j}
             <JobPoint {...j} {mouseCoord} ecosystem={id} />
@@ -136,13 +203,3 @@
     </div>
   </div>
 {/if}
-
-<style>
-  .gradient {
-    background-image: linear-gradient(
-      81.48deg,
-      #000000 27.21%,
-      #8ef680 104.74%
-    );
-  }
-</style>

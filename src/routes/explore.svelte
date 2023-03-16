@@ -27,6 +27,68 @@
       }
     );
   });
+
+  function cancelFullScreen() {
+    var el = document;
+    var requestMethod =
+      el.cancelFullScreen ||
+      el.webkitCancelFullScreen ||
+      el.mozCancelFullScreen ||
+      el.exitFullscreen ||
+      el.webkitExitFullscreen;
+    if (requestMethod) {
+      // cancel full screen.
+      requestMethod.call(el);
+    } else if (typeof window.ActiveXObject !== "undefined") {
+      // Older IE.
+      var wscript = new ActiveXObject("WScript.Shell");
+      if (wscript !== null) {
+        wscript.SendKeys("{F11}");
+      }
+    }
+  }
+
+  function requestFullScreen(el) {
+    // Supports most browsers and their versions.
+    var requestMethod =
+      el.requestFullScreen ||
+      el.webkitRequestFullScreen ||
+      el.mozRequestFullScreen ||
+      el.msRequestFullscreen;
+
+    if (requestMethod) {
+      // Native full screen.
+      requestMethod.call(el);
+    } else if (typeof window.ActiveXObject !== "undefined") {
+      // Older IE.
+      var wscript = new ActiveXObject("WScript.Shell");
+      if (wscript !== null) {
+        wscript.SendKeys("{F11}");
+      }
+    }
+    return false;
+  }
+
+  function toggleFullScreen(el) {
+    if (!el) {
+      el = document.body; // Make the body go full screen.
+    }
+    var isInFullScreen =
+      (document.fullScreenElement && document.fullScreenElement !== null) ||
+      document.mozFullScreen ||
+      document.webkitIsFullScreen;
+
+    if (isInFullScreen) {
+      cancelFullScreen();
+    } else {
+      requestFullScreen(el);
+    }
+    return false;
+  }
+
+  const onFullScreen = () => {
+    toggleFullScreen(document.body);
+  };
 </script>
 
 <svelte:head>
@@ -55,11 +117,18 @@
     >
       <!-- Tips -->
       <div
-        class="absolute z-0 top-20 w-screen !text-gray-300 text-xs text-center animate-pulse flex md:hidden items-center justify-center"
+        class="absolute z-0 top-[4.5rem] w-screen !text-gray-300 text-xs text-center animate-pulse flex md:hidden items-center justify-center"
       >
         <ion-icon name="compass-outline" class="mr-1 text-xl" />
         Scroll to pan the diagram
       </div>
+
+      <button
+        on:click={onFullScreen}
+        class="absolute z-0 top-[4.75rem] right-4 mb-4 flex items-center text-gray-300 !text-sm"
+      >
+        <ion-icon name="scan-outline" class="text-lg" />
+      </button>
 
       <button
         on:click={() => (window.location = "/ecosystem?id=11")}

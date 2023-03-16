@@ -59,9 +59,9 @@
           blanditiis itaque ut! Sequi impedit harum commodi hic! Tempore ipsum quam
           laboriosam. Eligendi, vel, consectetur quos omnis non cumque neque ea iste
           mollitia aspernatur nulla hic? Culpa animi dicta consectetur!
-          <br />
-          <br />
-          <button
+          <!-- <br /> -->
+          <!-- <br /> -->
+          <!-- <button
             class="btn btn-black !w-full"
             data-aos="fade-left"
             data-aos-anchor-placement="top-bottom"
@@ -74,7 +74,7 @@
             <span class="material-symbols-outlined text-xl ml-2">
               trending_flat
             </span>
-          </button>
+          </button> -->
         </div>
       </div>
     </div>
@@ -112,8 +112,8 @@
           blanditiis itaque ut! Sequi impedit harum commodi hic! Tempore ipsum quam
           laboriosam. Eligendi, vel, consectetur quos omnis non cumque neque ea iste
           mollitia aspernatur nulla hic? Culpa animi dicta consectetur!
-          <br />
-          <br />
+          <!-- <br /> -->
+          <!-- <br /> -->
           <!-- <button
             data-aos="fade-right"
             data-aos-anchor-placement="top-bottom"
