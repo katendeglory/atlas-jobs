@@ -1757,6 +1757,22 @@ select:focus, input[type="datetime-local"]:focus, input[type="text"]:focus, inpu
     bottom: 1rem;
   }
 
+  .sm\:bottom-\[50\%\] {
+    bottom: 50%;
+  }
+
+  .sm\:bottom-\[50vh\] {
+    bottom: 50vh;
+  }
+
+  .sm\:bottom-\[54\%\] {
+    bottom: 54%;
+  }
+
+  .sm\:bottom-\[45\%\] {
+    bottom: 45%;
+  }
+
   .sm\:col-span-1 {
     grid-column: span 1 / span 1;
   }
