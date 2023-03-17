@@ -31,6 +31,10 @@
   export let qs;
   export let ecosystem;
 
+  let job = $jobs.find((el) => el.id == id);
+  let valueChain = $valueChains.find((el) => el.id == ecosystem);
+  let vcCount = job.valueChains.length;
+
   onMount(() => {
     particlesJS.load(
       "particles-js2",
@@ -40,9 +44,6 @@
       }
     );
   });
-
-  let job = $jobs.find((el) => el.id == id);
-  let valueChain = $valueChains.find((el) => el.id == ecosystem);
 </script>
 
 <svelte:head>
@@ -69,17 +70,19 @@
 
   <div class="pt-0 min-h-screen text-gray-300">
     <button
-      class="fixed top-16 left-2 mb-4 flex items-center !z-30 !text-sm"
+      class="fixed top-16 left-2 mb-2 flex items-center !z-30 !text-sm"
       on:click={() => history.back()}
     >
       <ion-icon name="chevron-back-outline" class="text-lg mr-1" />
       Back
     </button>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 min-h-screen">
+    <div
+      class="grid grid-cols-1 md:grid-cols-12 min-h-screen text-[0.9rem] leading-[1.3rem]"
+    >
       <!-- Left -->
       <div
-        class="frame-parent bg-gray-800/50 bg-blend-overlay flex justify-center items-center relative min-h-[75vh]"
+        class="col-span-6 frame-parent bg-gray-800/50 bg-blend-overlay flex justify-center items-center relative min-h-[75vh]"
       >
         <div
           id="particles-js2"
@@ -90,20 +93,25 @@
       </div>
       <!-- Right -->
       <div
-        class="pt-5 md:pt-20 pb-4 px-2 md:px-4 bg-black"
+        class="col-span-6 pt-5 md:pt-20 pb-4 px-2 md:px-4 bg-black"
         xyz="fade-100% down-3 stagger-2"
       >
         <h1
-          class="text-4xl md:text-4xl h-font uppercase mb-6 font-semibold"
+          class="text-[2.1rem] leading-[2.25rem] h-font uppercase mb-3 font-semibold"
           use:viewport
           on:enterViewport={(e) => e.target.classList.add("xyz-in")}
           on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
         >
-          {job.title}
+          {#if vcCount > 1}
+            <div class="!text-sm mb-1 !normal-case text-gray-300 !font-normal">
+              “Appears across the Ecosystem in multiple maps”
+            </div>
+          {/if}
+          {job.title.toLowerCase().split("→")[0]}
         </h1>
 
         <h1
-          class="text-2xl h-font uppercase mb-2 font-semibold"
+          class="text-[1.4rem] leading-[1.75rem] h-font uppercase mb-2 font-semibold"
           use:viewport
           on:enterViewport={(e) => e.target.classList.add("xyz-in")}
           on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
@@ -111,23 +119,31 @@
           {#if job.isAtRisk}
             The rationale behind the decrease
           {:else if job.isTransforming}
-            What is changing?
+            What is changing ?
           {:else}
             JOB DESCRIPTION
           {/if}
         </h1>
         <div
-          class="mb-4"
+          class="mb-2"
           use:viewport
           on:enterViewport={(e) => e.target.classList.add("xyz-in")}
           on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
         >
+          {#if job.isTransforming}
+            <div class="mb-1">
+              Changing into
+              <span class="font-semibold">
+                {job.title.toLowerCase().split("→")[1]}.
+              </span>
+            </div>
+          {/if}
           {job.desc}
         </div>
 
         {#if job.isTransforming}
           <h1
-            class="mt-6 text-2xl h-font uppercase font-semibold"
+            class="mt-4 text-[1.4rem] leading-[1.75rem] h-font uppercase font-semibold"
             use:viewport
             on:enterViewport={(e) => e.target.classList.add("xyz-in")}
             on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
@@ -135,7 +151,7 @@
             Why?
           </h1>
           <div
-            class="mb-4"
+            class="mb-2"
             use:viewport
             on:enterViewport={(e) => e.target.classList.add("xyz-in")}
             on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
@@ -145,13 +161,13 @@
         {/if}
 
         {#if !job.isAtRisk}
-          <h2 class="text-2xl h-font font-semibold mb-2">
+          <h2 class="text-[1.4rem] leading-[1.75rem] h-font font-semibold mb-2">
             {job.isTransforming ? "New" : ""} Hard Skills
           </h2>
           <div class="flex items-center flex-wrap">
             {#each job.hardSkills as hs}
               <div
-                class="mr-2 mb-2 inline-block capitalize bg-gray-200 px-3 py-2 text-black shadow-md text-sm rounded-xl"
+                class="mr-2 mb-2 inline-block capitalize bg-gray-200 px-3 py-[0.35rem] text-black shadow-md text-sm rounded-xl"
                 use:viewport
                 on:enterViewport={(e) => e.target.classList.add("xyz-in")}
                 on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
@@ -160,13 +176,15 @@
               </div>
             {/each}
           </div>
-          <h2 class="text-2xl h-font font-semibold mt-6 mb-2">
+          <h2
+            class="text-[1.4rem] leading-[1.75rem] h-font font-semibold mt-2 mb-2"
+          >
             {job.isTransforming ? "New" : ""} Soft Skills
           </h2>
           <div class="flex items-center flex-wrap">
             {#each job.softSkills as hs}
               <div
-                class="mr-2 mb-2 inline-block capitalize bg-gray-200 px-3 py-2 text-black shadow-md text-sm rounded-xl"
+                class="mr-2 mb-2 inline-block capitalize bg-gray-200 px-3 py-[0.35rem] text-black shadow-md text-sm rounded-xl"
                 use:viewport
                 on:enterViewport={(e) => e.target.classList.add("xyz-in")}
                 on:exitViewport={(e) => e.target.classList.remove("xyz-in")}

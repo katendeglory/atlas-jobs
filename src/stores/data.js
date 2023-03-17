@@ -96,7 +96,8 @@ let jobs_ = [
   },
   {
     id: 9,
-    title: "Food manufacturing cybersecurity specialist",
+    // title: "Food manufacturing cybersecurity specialist",
+    title: "cybersecurity specialist",
     img: "/images/jobs/job-09.png",
     valueChains: [1, 2, 6, 8, 10, 4],
     desc: `Evaluates cybersecurity risks concerning the safety of food processing and leakage of information about patented technologies, new product development as well as data breaches around consumers and customers.`,
@@ -129,7 +130,8 @@ let jobs_ = [
   },
   {
     id: 12,
-    title: "BLOCKCHAIN PLATFORM ARCHITECT FOR THE FOOD AND BEVERAGE MANUFACTURING INDUSTRY",
+    // title: "BLOCKCHAIN PLATFORM ARCHITECT FOR THE FOOD AND BEVERAGE MANUFACTURING INDUSTRY",
+    title: "BLOCKCHAIN PLATFORM ARCHITECT",
     img: "/images/jobs/job-12.png",
     valueChains: [2, 4, 8, 10, 6, 3],
     desc: `A specialist who creates blockchain platforms under the requests of the food and beverages industry to make the processes of creating and logistics of food and beverage products more transparent for consumers. And also to prove their high quality.`,
@@ -151,7 +153,7 @@ let jobs_ = [
   },
   {
     id: 14,
-    title: "ROBOTIC SYSTEM DESIGNER FOR PLANTS",
+    title: "PLANTS ROBOTIC SYSTEM DESIGNER",
     img: "/images/jobs/job-14.png",
     valueChains: [2, 6, 10],
     desc: `An IT specialist who designs industrial robots and cyber-physical systems for food and beverage plants and warehouses to optimize the process of production and logistics.`,

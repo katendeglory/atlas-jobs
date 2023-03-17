@@ -1,4 +1,5 @@
 <script>
+  import { valueChains } from "../../stores/data";
   import { fly } from "svelte/transition";
 
   let menuVisible = false;
@@ -10,18 +11,6 @@
   let hideMenu = () => {
     menuVisible = false;
   };
-
-  let valueChains_ = [
-    { id: 1, name: "Raw Materials" },
-    { id: 2, name: "Manufacturing & Processing" },
-    { id: 3, name: "Wholesalers" },
-    { id: 4, name: "Online Marketplace" },
-    { id: 6, name: "Sustainability" },
-    { id: 7, name: "Retail & Groceries" },
-    { id: 8, name: "Transport & Delivery" },
-    { id: 9, name: "Restaurant" },
-    { id: 10, name: "New Product Development" },
-  ];
 </script>
 
 {#if menuVisible}
@@ -71,7 +60,7 @@
             class="submenu absolute right-0 translate-x-[-16rem] md:translate-x-[-20rem] px-2 py-2 hidden"
           >
             <div class="bg-black px-4 py-4 flex flex-col shadow-md">
-              {#each valueChains_ as v}
+              {#each $valueChains as v}
                 <button
                   class="a-nav text-sm tracking-wider py-1 text-right"
                   on:click={() => (window.location = `/ecosystem?id=${v.id}`)}
