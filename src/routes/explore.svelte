@@ -170,16 +170,16 @@
         xyz="fade-100% down-3 stagger-3"
       >
         <div class="circle-container">
-          <VCPoint vc="-1" deg="none" icon="person" customN="Consumer" />
-          <VCPoint vc="0" deg={280 + 20} icon="compost" />
-          <VCPoint vc="1" deg={320 + 20} icon="settings" />
-          <VCPoint vc="2" deg={0 + 10} icon="store" />
-          <VCPoint vc="5" deg={40 - 0} icon="recycling" />
-          <VCPoint vc="7" deg={80 + 10} icon="local_shipping" />
-          <VCPoint vc="3" deg={120 + 20} icon="shopping_cart" />
-          <VCPoint vc="9" deg={160 + 10} icon="tips_and_updates" />
-          <VCPoint vc="6" deg={200 - 0} icon="storefront" />
-          <VCPoint vc="8" deg={240 - 0} icon="restaurant" />
+          <VCPoint vc_id="-1" deg="none" icon="person" customN="Consumer" />
+          <VCPoint vc_id="1" deg={280 + 20} icon="compost" />
+          <VCPoint vc_id="2" deg={320 + 20} icon="settings" />
+          <VCPoint vc_id="3" deg={0 + 10} icon="store" />
+          <VCPoint vc_id="6" deg={40 - 0} icon="recycling" />
+          <VCPoint vc_id="8" deg={80 + 10} icon="local_shipping" />
+          <VCPoint vc_id="4" deg={120 + 20} icon="shopping_cart" />
+          <VCPoint vc_id="10" deg={160 + 10} icon="tips_and_updates" />
+          <VCPoint vc_id="7" deg={200 - 0} icon="storefront" />
+          <VCPoint vc_id="9" deg={240 - 0} icon="restaurant" />
         </div>
       </div>
     </div>
