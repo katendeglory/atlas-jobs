@@ -132,7 +132,7 @@
 
       <button
         on:click={() => (window.location = "/ecosystem?id=11")}
-        class="absolute z-0 bottom-[50%] sm:bottom-[45%] right-4 px-2 py-1 text-xs bg-black/80 rounded-md flex items-center shadow-xl border border-white/10"
+        class="absolute z-0 bottom-4 sm:bottom-[45%] right-4 px-2 py-1 text-xs bg-black/80 rounded-md flex items-center shadow-xl border border-white/10"
       >
         What jobs are at risk
         <ion-icon name="help-circle" class="ml-1 text-xl" />
