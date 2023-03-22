@@ -11,7 +11,7 @@
   import get from "lodash.get";
   import Loading from "../components/utils/Loading.svelte";
   import { valueChains, jobs } from "../stores/data";
-  import { CONFIG, JOBS, VALUE_CHAINS } from "../stores/seed";
+  import { CONFIG } from "../stores/seed";
 
   let BACKEND = false;
 
