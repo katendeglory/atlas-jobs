@@ -2,6 +2,7 @@
   import SmallContainer from "../utils/SmallContainer.svelte";
   import { onMount } from "svelte";
   import viewport from "../../utils/useViewportAction";
+  import config from "../../stores/config";
 
   let anim_class = [Array.from(Array(20).keys())];
 
@@ -17,48 +18,22 @@
 </script>
 
 <div class="grid grid-cols-1 md:grid-cols-3">
-  <button
-    on:click={() => (window.location = "/job-page?id=19")}
-    class="image_container {anim_class[1]} h-[60vh] w-full | gallery-parent flex items-center justify-center text-center"
-    use:viewport
-    on:enterViewport={() => do_animation(1)}
-  >
-    <img src="/images/home/job-01.jpg" alt="background" />
-    <div class="overlay" />
-    <div
-      class="gallery-text text-white drop-shadow-lg opacity-0 transition-all text-4xl font-bold"
+  {#each $config.hGal as job}
+    <button
+      on:click={() => (window.location = `/job-page?id=${job.id}`)}
+      class="image_container {anim_class[1]} h-[60vh] w-full | gallery-parent flex items-center justify-center text-center"
+      use:viewport
+      on:enterViewport={() => do_animation(1)}
     >
-      Food Biochemist
-    </div>
-  </button>
-  <button
-    on:click={() => (window.location = "/job-page?id=14")}
-    class="image_container {anim_class[2]} h-[60vh] w-full | gallery-parent flex items-center justify-center text-center"
-    use:viewport
-    on:enterViewport={() => do_animation(2)}
-  >
-    <img src="/images/home/job-03.jpg" class="slow-1" alt="background" />
-    <div class="overlay slow-1" />
-    <div
-      class="gallery-text text-white drop-shadow-lg opacity-0 transition-all text-4xl font-bold"
-    >
-      Designer Robotic
-    </div>
-  </button>
-  <button
-    on:click={() => (window.location = "/job-page?id=17")}
-    class="image_container {anim_class[3]} h-[60vh] w-full | gallery-parent flex items-center justify-center text-center"
-    use:viewport
-    on:enterViewport={() => do_animation(3)}
-  >
-    <img src="/images/home/job-02.jpg" class="slow-3" alt="background" />
-    <div class="overlay slow-2" />
-    <div
-      class="gallery-text text-white drop-shadow-lg opacity-0 transition-all text-4xl font-bold"
-    >
-      Carbon Cost accounting manager
-    </div>
-  </button>
+      <img src={job.JobImage} alt="background" />
+      <div class="overlay" />
+      <div
+        class="gallery-text text-white drop-shadow-lg opacity-0 transition-all text-4xl font-bold"
+      >
+        {job.Job}
+      </div>
+    </button>
+  {/each}
 </div>
 
 <style>

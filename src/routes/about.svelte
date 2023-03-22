@@ -1,5 +1,11 @@
 <script>
+  import { onMount } from "svelte";
+  import config from "../stores/config";
   import Container from "../components/utils/Container.svelte";
+
+  onMount(() => {
+    console.log($config.aboutUs);
+  });
 </script>
 
 <svelte:head>
@@ -43,38 +49,13 @@
           data-aos-duration="500"
         >
           <div class="text-3xl uppercase tracking-wider flex items-center mb-4">
-            Lorem ipsum dolor sit amet
+            {$config.aboutUs.FirstMainTitle}
           </div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident vel
-          harum hic velit assumenda sequi debitis eius rem vero a. Lorem ipsum dolor
-          sit amet.
-          <br />
-          <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias laboriosam
-          ipsum minus hic fuga fugit. Fugiat quaerat reiciendis corporis, eum ullam
-          ratione! Rerum corrupti repellat alias ab odit illum itaque.
-          <br />
-          <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores laborum
-          blanditiis itaque ut! Sequi impedit harum commodi hic! Tempore ipsum quam
-          laboriosam. Eligendi, vel, consectetur quos omnis non cumque neque ea iste
-          mollitia aspernatur nulla hic? Culpa animi dicta consectetur!
-          <!-- <br /> -->
-          <!-- <br /> -->
-          <!-- <button
-            class="btn btn-black !w-full"
-            data-aos="fade-left"
-            data-aos-anchor-placement="top-bottom"
-            data-aos-delay="600"
-            data-aos-offset="0"
-            data-aos-duration="500"
-            on:click={() => (window.location = "/explore")}
-          >
-            Explore
-            <span class="material-symbols-outlined text-xl ml-2">
-              trending_flat
-            </span>
-          </button> -->
+
+          {@html $config.aboutUs.FirstBlockOfText.replaceAll(
+            "\n",
+            `<div class="py-2" />`
+          )}
         </div>
       </div>
     </div>
@@ -96,38 +77,13 @@
           data-aos-duration="500"
         >
           <div class="text-3xl uppercase tracking-wider flex items-center mb-4">
-            Lorem ipsum dolor sit amet
+            {$config.aboutUs.SecondMainTitle}
           </div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident vel
-          harum hic velit assumenda sequi debitis eius rem vero a. Lorem ipsum dolor
-          sit amet.
-          <br />
-          <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias laboriosam
-          ipsum minus hic fuga fugit. Fugiat quaerat reiciendis corporis, eum ullam
-          ratione! Rerum corrupti repellat alias ab odit illum itaque.
-          <br />
-          <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores laborum
-          blanditiis itaque ut! Sequi impedit harum commodi hic! Tempore ipsum quam
-          laboriosam. Eligendi, vel, consectetur quos omnis non cumque neque ea iste
-          mollitia aspernatur nulla hic? Culpa animi dicta consectetur!
-          <!-- <br /> -->
-          <!-- <br /> -->
-          <!-- <button
-            data-aos="fade-right"
-            data-aos-anchor-placement="top-bottom"
-            data-aos-delay="600"
-            data-aos-offset="0"
-            data-aos-duration="500"
-            class="btn btn-primary !w-full !rounded-2xl"
-            on:click={() => (window.location = "/explore")}
-          >
-            Explore
-            <span class="material-symbols-outlined text-xl ml-2">
-              trending_flat
-            </span>
-          </button> -->
+
+          {@html $config.aboutUs.SecondBlockOfText.replaceAll(
+            "\n",
+            `<div class="py-2" />`
+          )}
         </div>
       </div>
       <div class="flex items-center rounded-xl">

@@ -38,9 +38,18 @@
           `${$config.backendURL}/jobs?populate=img,hardSkills,softSkills,valueChains&${PAGE}`
         ),
         axios.get(`${$config.backendURL}/about-us`),
+        axios.get(
+          `${$config.backendURL}/home-ecosystems?populate=EcosystemImage,value_chain&${PAGE}`
+        ),
+        axios.get(
+          `${$config.backendURL}/home-jobs?populate=JobImage,job&${PAGE}`
+        ),
+        axios.get(
+          `${$config.backendURL}/home-job-galleries?populate=JobImage,job_relation&${PAGE}`
+        ),
       ]);
 
-      // VCS
+      // VCS ..................................................
       let vcs = get(response[0], "data.data");
       vcs = vcs.map((vc) => ({
         id: vc.id,
@@ -49,7 +58,7 @@
         map: getImg(vc, "map"),
       }));
 
-      // JOBS
+      // JOBS ..................................................
       let jbs = get(response[1], "data.data");
       jbs = jbs.map((job) => ({
         id: job.id,
@@ -63,18 +72,45 @@
           ({ attributes }) => attributes.skill
         ),
       }));
-
       valueChains.update((prev) => vcs);
       jobs.update((prev) => jbs);
 
-      // About US
+      // About US ..................................................
       let aboutUs = get(response[2], "data.data");
       aboutUs = { id: aboutUs.id, ...prune(aboutUs) };
-      console.log(aboutUs);
 
-      config.set((prev) => ({
+      // Home Ecosystems .............................................
+      let hVcs = get(response[3], "data.data");
+      hVcs = hVcs.map((vc) => ({
+        ...prune(vc),
+        EcosystemImage: getImg(vc, "EcosystemImage"),
+        id: prune(vc).value_chain.data.id,
+      }));
+
+      // Home Jobs ..................................................
+      let hJbs = get(response[4], "data.data");
+      hJbs = hJbs.map((jb) => ({
+        ...prune(jb),
+        JobImage: getImg(jb, "JobImage"),
+        id: prune(jb).job.data.id,
+      }));
+
+      // Home Gallery ..................................................
+      let hGal = get(response[5], "data.data");
+      hGal = hGal.map((jb) => ({
+        ...prune(jb),
+        JobImage: getImg(jb, "JobImage"),
+        id: prune(jb).job_relation.data.id,
+      }));
+
+      console.log(hGal);
+
+      config.update((prev) => ({
         ...prev,
         aboutUs,
+        hVcs,
+        hJbs,
+        hGal,
       }));
 
       loading = false;

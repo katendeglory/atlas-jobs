@@ -1,7 +1,7 @@
 <script>
-  import Container from "./../utils/Container.svelte";
   import { onMount } from "svelte";
   import Slide from "./Slide.svelte";
+  import config from "../../stores/config";
 
   onMount(() => {
     const swiper = new Swiper(".swiper-container", {
@@ -27,46 +27,18 @@
   <div class="relative">
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide min-h-screen w-full">
-          <Slide
-            subtitle="Manufacturing and Processing"
-            title="Explore the opportunities"
-            title2="In each step of the Food & Beverage Manufacturing Ecosystem"
-            img="/images/home/2.jpg"
-            link="/ecosystem?id=2"
-            desc=""
-          />
-        </div>
-        <div class="swiper-slide min-h-screen w-full">
-          <Slide
-            subtitle="Transport and Delivery"
-            title="Explore the opportunities"
-            title2="In each step of the Food & Beverage Manufacturing Ecosystem"
-            img="/images/home/1.jpg"
-            link="/ecosystem?id=8"
-            desc=""
-          />
-        </div>
-        <div class="swiper-slide min-h-screen w-full">
-          <Slide
-            subtitle="New Product Development"
-            title="Explore the opportunities"
-            title2="In each step of the Food & Beverage Manufacturing Ecosystem"
-            img="/images/home/3.jpg"
-            link="/ecosystem?id=10"
-            desc=""
-          />
-        </div>
-        <div class="swiper-slide min-h-screen w-full">
-          <Slide
-            subtitle="Online Marketplace"
-            title="Explore the opportunities"
-            title2="In each step of the Food & Beverage Manufacturing Ecosystem"
-            img="/images/home/4.jpg"
-            link="/ecosystem?id=4"
-            desc=""
-          />
-        </div>
+        {#each $config.hVcs as vc}
+          <div class="swiper-slide min-h-screen w-full">
+            <Slide
+              subtitle={vc.Ecosystem}
+              title={vc.PrimaryTitle}
+              title2={vc.SecondaryTitle}
+              img={vc.EcosystemImage}
+              link={`/ecosystem?id=${vc.id}`}
+              desc=""
+            />
+          </div>
+        {/each}
       </div>
 
       <div
@@ -88,54 +60,20 @@
   <div class="relative">
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide min-h-screen w-full">
-          <Slide
-            class_="bg-white text-gray-800"
-            reversed
-            title="Explore the Future Jobs"
-            title2="In the Food & Beverage Manufacturing Ecosystem"
-            subtitle="Carbon Cost accounting manager"
-            img="/images/home/job-02.jpg"
-            desc="A professional who develops cost standards for materials and labor, etc., designs and implements cost accounting systems, analyzes production costs and recommends changes, and oversees annual physical inventory. He also hires, trains, and supervises cost and inventory accounting staff."
-            link="/job-page?id=17"
-          />
-        </div>
-        <div class="swiper-slide min-h-screen w-full">
-          <Slide
-            class_="bg-white text-gray-800"
-            reversed
-            title="Explore the Future Jobs"
-            title2="In the Food & Beverage Manufacturing Ecosystem"
-            subtitle="robotic systems designer for plants"
-            img="/images/home/job-03.jpg"
-            desc="An IT specialist who designs industrial robots and cyber-physical systems for food and beverage plants to optimize the process of production"
-            link="/job-page?id=14"
-          />
-        </div>
-        <div class="swiper-slide min-h-screen w-full">
-          <Slide
-            class_="bg-white text-gray-800"
-            reversed
-            title="Explore the Future Jobs"
-            title2="In the Food & Beverage Manufacturing Ecosystem"
-            subtitle="Food biochemist"
-            img="/images/home/job-04.jpg"
-            desc="Plans and conducts complex projects in basic and applied research of organic substances used for food and beverage preparation, manages laboratory teams and monitors the quality of their work, and presents new solutions to food technologists and management."
-            link="/job-page?id=19"
-          />
-        </div>
-        <div class="swiper-slide min-h-screen w-full">
-          <Slide
-            class_="bg-white text-gray-800"
-            reversed
-            title="Explore the Future Jobs"
-            title2="In the Food & Beverage Manufacturing Ecosystem"
-            subtitle="Energy Catcher"
-            img="/images/home/job-05.jpg"
-            desc="A professional who advises on how to capture and use the energy from alternative sources (solar, wind, hydro, kinetic, etc.) effectively."
-            link="/job-page?id=2"
-          />
-        </div>
+        {#each $config.hJbs as jb}
+          <div class="swiper-slide min-h-screen w-full">
+            <Slide
+              class_="bg-white text-gray-800"
+              reversed
+              title={jb.PrimaryTitle}
+              title2={jb.SecondaryTitle}
+              subtitle={jb.JobTitle}
+              img={jb.JobImage}
+              desc={jb.JobDescription}
+              link={`/job-page?id=${jb.id}`}
+            />
+          </div>
+        {/each}
       </div>
 
       <div
