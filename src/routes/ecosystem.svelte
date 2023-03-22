@@ -1,6 +1,5 @@
 <script context="module">
   import queryString from "query-string";
-  import axios from "axios";
 
   /**
    * @type {import('@sveltejs/kit').Load}
@@ -154,9 +153,6 @@
               <source src="" type="video/mp4" />
               <track kind="captions" />
             </video>
-            <!-- <video id="hero" muted autoplay loop playsinline>
-              <source src="" type="video/mp4" />
-            </video> -->
           </div>
           <div
             class="absolute top-0 left-0 z-0 w-full h-full"
@@ -165,7 +161,7 @@
         </div>
         <img
           class="[16:9] w-[184vh] h-[103.5vh] md:w-[100vw] md:h-[56.25vw] absolute top-0 left-0 right-0 bottom-0"
-          src="/images/maps/{valueChain.map}"
+          src={valueChain.map}
           alt="map"
           style="background-image: url(/images/map.png); background-size: cover; filter: brightness(70%);"
         />
@@ -188,12 +184,12 @@
             Back
           </button>
 
-          <button
+          <!-- <button
             on:click={onFullScreen}
             class="fixed z-0 top-16 right-4 mb-4 flex items-center text-gray-300 !text-sm"
           >
             <ion-icon name="scan-outline" class="text-lg" />
-          </button>
+          </button> -->
 
           {#each job as j}
             <JobPoint {...j} {mouseCoord} ecosystem={id} />

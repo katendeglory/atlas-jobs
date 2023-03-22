@@ -12,17 +12,12 @@
     vc_id = Number.parseInt(vc_id);
     vc = $valueChains.find(({ id }) => id == vc_id);
   });
-
-  const go = () => {
-    if (vc_id > 0) window.location = `/ecosystem?id=${vc_id}`;
-    else console.log("Nowhere to go");
-  };
 </script>
 
-{#if vc || vc_id == -1}
+{#if vc && vc_id > 0}
   <div class="!hidden md:!block">
-    <div
-      on:click={go}
+    <a
+      href={`/ecosystem?id=${vc_id}`}
       class="vc-box xyz-in deg{deg}"
       style="transform: rotate({deg}deg) translate(37.5vh) rotate(-{deg}deg);"
     >
@@ -32,12 +27,12 @@
         </span>
       </span>
       {customN || vc.name}
-    </div>
+    </a>
   </div>
 
   <div class="block md:!hidden">
-    <div
-      on:click={go}
+    <a
+      href={`/ecosystem?id=${vc_id}`}
       class="vc-box xyz-in deg{deg}"
       style="transform: rotate({deg}deg) translate(45vw) rotate(-{deg}deg);"
     >
@@ -47,6 +42,6 @@
         </span>
       </span>
       {customN || vc.name}
-    </div>
+    </a>
   </div>
 {/if}

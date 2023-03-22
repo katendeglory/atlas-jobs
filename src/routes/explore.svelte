@@ -1,10 +1,10 @@
 <script>
-  import VCRotator from "./../components/shared/VCRotator.svelte";
+  // https://stackoverflow.com/questions/12813573/position-icons-into-circle
+  import VcCenter from "../components/shared/VCCenter.svelte";
+  import VCRotator from "../components/shared/VCRotator.svelte";
   import VCPoint from "../components/shared/VCPoint.svelte";
   import { onMount } from "svelte";
-  // https://stackoverflow.com/questions/12813573/position-icons-into-circle
 
-  // let is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   const playVideo = (id) => {
     let vid = document.getElementById(id);
     vid.src = "/images/globe-1.mp4";
@@ -123,12 +123,12 @@
         Scroll to pan the diagram
       </div>
 
-      <button
+      <!-- <button
         on:click={onFullScreen}
         class="absolute z-0 top-[4.75rem] right-4 mb-4 flex items-center text-gray-300 !text-sm"
       >
         <ion-icon name="scan-outline" class="text-lg" />
-      </button>
+      </button> -->
 
       <button
         on:click={() => (window.location = "/ecosystem?id=11")}
@@ -170,7 +170,7 @@
         xyz="fade-100% down-3 stagger-3"
       >
         <div class="circle-container">
-          <VCPoint vc_id="-1" deg="none" icon="person" customN="Consumer" />
+          <VcCenter vc_id="0" deg="none" icon="person" customN="Consumer" />
           <VCPoint vc_id="1" deg={280 + 20} icon="compost" />
           <VCPoint vc_id="2" deg={320 + 20} icon="settings" />
           <VCPoint vc_id="3" deg={0 + 10} icon="store" />

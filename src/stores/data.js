@@ -1,3 +1,5 @@
+// https://gist.github.com/katendeglory/fb6392f914df31b5b75ab014ff12b369
+
 import { writable } from 'svelte/store'
 
 let jobs_ = [
@@ -177,7 +179,7 @@ let jobs_ = [
     id: 16,
     title: "Environmental evangelist",
     img: "/images/jobs/job-16.png",
-    valueChains: [1, 2, 6, 0],
+    valueChains: [1, 2, 6],
     desc: `A professional who promotes ecological responsibility on behalf of the FoodBev companies and encourages different stakeholders (including the government) to collaborate. Analyzes existing climate or environmental management legislation, regulations, policies, and practices to determine actual and potential environmental impacts. Communicates research findings to legislators, regulatory agencies, or other stakeholders and recommends new or adapted social and business initiatives, laws, and policies.`,
     hardSkills: ["Ecology", "law", "Food and Beverage Manufacturing"],
     softSkills: ["Communication", "negotiation", "leadership"],
@@ -424,23 +426,7 @@ let jobs_ = [
   },
 ];
 
-
-
-let valueChains_ = [
-/*0*/  { id: 1, map: "/farm.gif", img: "/images/vcs/vc-01.png", name: "Raw Materials" },
-/*1*/  { id: 2, map: "/plant.gif", img: "/images/vcs/vc-02.png", name: "Manufacturing & Processing" },
-/*2*/  { id: 3, map: "/whosaler.gif", img: "/images/vcs/vc-03.png", name: "Wholesalers / Distribution" },
-/*3*/  { id: 4, map: "/retail.gif", img: "/images/vcs/vc-04.png", name: "Online Marketplace" },
-/*5*/  { id: 6, map: "/plant.gif", img: "/images/vcs/vc-06.png", name: "Sustainability Providers" },
-/*6*/  { id: 7, map: "/retail.gif", img: "/images/vcs/vc-07.png", name: "Retail & Groceries" },
-/*7*/  { id: 8, map: "/retail.gif", img: "/images/vcs/vc-08.png", name: "Transport & Delivery" },
-/*8*/  { id: 9, map: "/restaurant.gif", img: "/images/vcs/vc-09.png", name: "Restaurant" },
-/*9*/  { id: 10, map: "/restaurant.gif", img: "/images/vcs/vc-10.png", name: "New Product Development" },
-/*10*/  { id: 11, map: "/map-1.png", img: "/images/vcs/vc-11.png", name: "Jobs at Risk" },
-];
-
-
-const valueChains = writable(valueChains_);
+const valueChains = writable({});
 const jobs = writable(jobs_);
 
 export { valueChains, jobs };

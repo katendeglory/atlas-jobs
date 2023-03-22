@@ -36,11 +36,15 @@
   let vcCount = job.valueChains.length;
 
   onMount(() => {
+    // job.valueChains.forEach((vc_id) => {
+    //   console.log($valueChains.find((el) => el.id == vc_id).name);
+    // });
+
     particlesJS.load(
       "particles-js2",
       "/js/particlesjs-config-2.json",
       function () {
-        console.log("particles.js loaded - callback");
+        // console.log("particles.js loaded - callback");
       }
     );
   });
@@ -64,6 +68,7 @@
   {:else}
     <TopNav
       subtitle=""
+      `
       crumb_last_child={job.title.toLowerCase().split("→")[0]}
     />
   {/if}

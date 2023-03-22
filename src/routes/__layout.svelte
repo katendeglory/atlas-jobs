@@ -5,50 +5,86 @@
   import "../styles/tailwind-output.css";
   /* JS IMPORTS */
   import NavBar from "../components/layout/NavBar.svelte";
-  import Footer from "../components/layout/Footer.svelte";
   import config from "../stores/config";
   import { onMount } from "svelte";
   import axios from "axios";
   import get from "lodash.get";
+  import Loading from "../components/utils/Loading.svelte";
+  import { valueChains, jobs } from "../stores/data";
+
   let loading = true;
 
-  // if (!localStorage.getItem("jwt")) window.location = "/login";
+  const PAGE = "&pagination[pageSize]=100";
+
+  const getImg = (el, property) => {
+    return (
+      $config.backendURL.replaceAll("/api", "") +
+      el.attributes[property].data.attributes.url
+    );
+  };
+
+  const prune = (el) => {
+    let { createdAt, publishedAt, updatedAt, JobUrl, ...rest } = el;
+    return { ...rest };
+  };
 
   onMount(async () => {
-    // if (!get($config, "currentUser.username")) {
-    //   try {
-    //     let response = await Promise.all([
-    //       axios.get(`${$config.backendURL}/settings`),
-    //       axios.get(`${$config.backendURL}/items/categories`),
-    //       axios.get(`${$config.backendURL}/me`, {
-    //         headers: { authorization: localStorage.getItem("jwt") },
-    //       }),
-    //     ]);
-    //     config.update((prev) => ({
-    //       ...prev,
-    //       settings: response[0].data,
-    //       categories: response[1].data,
-    //       currentUser: response[2].data,
-    //     }));
-    //     loading = false;
-    //   } catch (error) {
-    //     loading = false;
-    //     console.log(error);
-    //   }
-    // } else {
-    //   loading = false;
-    // }
+    try {
+      let response = await Promise.all([
+        axios.get(
+          `${$config.backendURL}/value-chains?populate=img,map&${PAGE}`
+        ),
+        axios.get(
+          `${$config.backendURL}/jobs?populate=img,hardSkills,softSkills,valueChains&${PAGE}`
+        ),
+      ]);
+
+      // VCS
+      let vcs = get(response[0], "data.data");
+      vcs = vcs.map((vc) => ({
+        id: vc.id,
+        ...prune(vc.attributes),
+        img: getImg(vc, "img"),
+        map: getImg(vc, "map"),
+      }));
+
+      // JOBS
+      let jbs = get(response[1], "data.data");
+      jbs = jbs.map((job) => ({
+        id: job.id,
+        ...prune(job.attributes),
+        img: getImg(job, "img"),
+        valueChains: job.attributes.valueChains.data.map(({ id }) => id),
+        softSkills: job.attributes.softSkills.data.map(
+          ({ attributes }) => attributes.skill
+        ),
+        hardSkills: job.attributes.hardSkills.data.map(
+          ({ attributes }) => attributes.skill
+        ),
+      }));
+
+      valueChains.update((prev) => vcs);
+      jobs.update((prev) => jbs);
+
+      loading = false;
+    } catch (error) {
+      loading = false;
+      console.log(error);
+    }
   });
 </script>
 
-<!-- style="background-image: url(./images/pattern.svg);" -->
 <div
   class={`bg-brand-white text-gray-600 tracking-wide w-full layout`}
   id="home"
 >
-  <NavBar />
-  <slot />
-  <!-- <Footer /> -->
+  <!-- {#if loading || true} -->
+  {#if loading}
+    <Loading />
+  {:else}
+    <NavBar />
+    <slot />
+  {/if}
 </div>
 
 <!-- For tailwind purge -->

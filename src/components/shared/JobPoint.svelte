@@ -24,8 +24,9 @@
   let left;
 
   onMount(() => {
-    let C = MAPPER.find((x) => x.id == ecosystem)
-    .mapper.find((m) => m.id == id);
+    let C = MAPPER.find((x) => x.id == ecosystem).mapper.find(
+      (m) => m.id == id
+    );
 
     top = C.top;
     left = C.left;
@@ -52,7 +53,7 @@
   </div>
 </a>
 
-{#if tipShow}
+{#if tipShow && Number.parseInt(top) < 50}
   <div
     class="hidden sm:block fixed bg-green-500 py-2 z-50"
     style="left: {mouseCoord.x}px; top: {mouseCoord.y}px;"
@@ -77,7 +78,40 @@
             </div>
           {/if}
         {/if}
-        {desc}
+        <div class="line-clamp-6">
+          {desc}
+        </div>
+      </div>
+    </div>
+  </div>
+{:else if tipShow && Number.parseInt(top) >= 50}
+  <div
+    class="hidden sm:block fixed bg-green-500 py-2 z-50"
+    style="left: {mouseCoord.x}px; top: {mouseCoord.y}px;"
+  >
+    <div
+      transition:fly={{ duration: 100, y: -200 }}
+      class="clippy-inversed absolute top-[-12rem] -left-10 w-[10rem] md:w-[16rem] px-2 py-2 text-xs rounded-md shadow-lg black-glassmorph text-white h-font border-0 border-black/50"
+    >
+      <div class="flex items-center line-clamp-6 pb-10 px-1">
+        {#if isAtRisk}
+          <div class="h-font font-semibold mb-1 text-sm">
+            Rationale behind the decrease:
+          </div>
+        {/if}
+        {#if isTransforming}
+          {#if get(title.split("→"), `[1]`)}
+            <div class="h-font mb-1 pr-2">
+              Turning into
+              <span class="ml-1 underline capitalize">
+                {get(title.toLowerCase().split("→"), `[1]`)}.
+              </span>
+            </div>
+          {/if}
+        {/if}
+        <div class="line-clamp-6">
+          {desc}
+        </div>
       </div>
     </div>
   </div>
@@ -93,5 +127,9 @@
 
   .clippy {
     clip-path: polygon(18% 0, 96% 31%, 100% 100%, 0 100%, 0 26%);
+  }
+
+  .clippy-inversed {
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 18% 100%, 0 75%);
   }
 </style>

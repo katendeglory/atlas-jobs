@@ -69,18 +69,12 @@
       PAUSED = false;
     }, 10);
   };
-
-  const togglePause = () => {
-    // if (PAUSED) onPlayVideo();
-    // else onPauseVideo();
-  };
 </script>
 
 <section
   bind:this={parent}
   class="showcase overflow-x-hidden h-screen overflow-hidden"
   id="home"
-  on:click={togglePause}
 >
   <div class="video-container">
     {#key RE_RENDER}
@@ -120,8 +114,8 @@
               you prepare for the future skills needed in the marketplace.
             </div>
 
-            <button
-              on:click={() => (window.location = "/explore")}
+            <a
+              href="/explore"
               on:click={onPauseVideo}
               class="btn btn-primary"
               data-aos="fade-up"
@@ -134,7 +128,7 @@
               <span class="material-symbols-outlined text-xl ml-2">
                 trending_flat
               </span>
-            </button>
+            </a>
           </div>
           <div
             class="w-full pb-12 md:pb-0 md:h-screen lg:w-5/12 flex items-center justify-center relative z-10"
@@ -157,8 +151,6 @@
           class="flex items-center justify-center cursor-pointer"
           on:click={onPlayVideo}
         >
-          <!-- <ion-icon name="play-circle" class="text-9xl" /> -->
-          <!-- <img class="w-[15rem]" src="/images/play.gif" alt="arrow" /> -->
           <button class="ripple-block">
             <ion-icon name="play-circle" class="fa-play-circle" />
             <div class="ripple ripple-1" />

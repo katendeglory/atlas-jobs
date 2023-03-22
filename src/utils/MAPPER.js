@@ -335,11 +335,11 @@ let RAW_ITEM_1 = [
   },
   {
     id: 31, // Marketing Manager
-    top: "65", left: "70",
+    top: "60", left: "75",
   },
   {
     id: 32, // E-commerce designer → Integration software engineer
-    top: "65", left: "53",
+    top: "60", left: "55",
   },
   {
     id: 33, // Farmworker → farm technician
@@ -347,11 +347,11 @@ let RAW_ITEM_1 = [
   },
   {
     id: 34, // Logistics planner
-    top: "65", left: "38",
+    top: "60", left: "38",
   },
   {
     id: 35, // R&D Manager
-    top: "65", left: "20",
+    top: "60", left: "20",
   },
 ];
 
@@ -414,7 +414,7 @@ let MANUFACTURING_2 = [
   },
   {
     id: 15, // Climate change data analyst
-    top: "75", left: "58.62",
+    top: "35", left: "78",
   },
   {
     id: 16, // Environmental evangelist
@@ -485,7 +485,7 @@ let MANUFACTURING_2 = [
    **/
   {
     id: 29, // Operator + Artisan → Equipment Operational specialist
-    top: "77.5", left: "30",
+    top: "20", left: "25",
   },
   {
     id: 30, // Food scientist / Nutritionist
@@ -497,7 +497,7 @@ let MANUFACTURING_2 = [
   },
   {
     id: 32, // E-commerce designer → Integration software engineer
-    top: "75", left: "45",
+    top: "35", left: "15",
   },
   {
     id: 33, // Farmworker → farm technician
@@ -655,7 +655,7 @@ let WHOLESALERS_3 = [
   },
   {
     id: 32, // E-commerce designer → Integration software engineer
-    top: "75", left: "45",
+    top: "30", left: "15",
   },
   {
     id: 33, // Farmworker → farm technician
@@ -873,7 +873,7 @@ let RESTAURANT_9 = [
   },
   {
     id: 14, // Designer of robotic systems for plants
-    top: "70", left: "80",
+    top: "45", left: "35",
   },
   {
     id: 15, // Climate change data analyst
@@ -941,7 +941,7 @@ let RESTAURANT_9 = [
   },
   {
     id: 30, // Food scientist / Nutritionist
-    top: "70", left: "15",
+    top: "45", left: "62.5",
   },
   {
     id: 31, // Marketing Manager
