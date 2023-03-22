@@ -128,8 +128,6 @@
       }
     } else {
       config.update(() => CONFIG);
-      valueChains.update(() => VALUE_CHAINS);
-      jobs.update(() => JOBS);
       loading = false;
     }
   });
