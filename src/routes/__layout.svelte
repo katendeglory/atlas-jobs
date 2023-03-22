@@ -24,7 +24,7 @@
   };
 
   const prune = (el) => {
-    let { createdAt, publishedAt, updatedAt, JobUrl, ...rest } = el;
+    let { createdAt, publishedAt, updatedAt, JobUrl, ...rest } = el.attributes;
     return { ...rest };
   };
 
@@ -37,13 +37,14 @@
         axios.get(
           `${$config.backendURL}/jobs?populate=img,hardSkills,softSkills,valueChains&${PAGE}`
         ),
+        axios.get(`${$config.backendURL}/about-us`),
       ]);
 
       // VCS
       let vcs = get(response[0], "data.data");
       vcs = vcs.map((vc) => ({
         id: vc.id,
-        ...prune(vc.attributes),
+        ...prune(vc),
         img: getImg(vc, "img"),
         map: getImg(vc, "map"),
       }));
@@ -52,7 +53,7 @@
       let jbs = get(response[1], "data.data");
       jbs = jbs.map((job) => ({
         id: job.id,
-        ...prune(job.attributes),
+        ...prune(job),
         img: getImg(job, "img"),
         valueChains: job.attributes.valueChains.data.map(({ id }) => id),
         softSkills: job.attributes.softSkills.data.map(
@@ -65,6 +66,16 @@
 
       valueChains.update((prev) => vcs);
       jobs.update((prev) => jbs);
+
+      // About US
+      let aboutUs = get(response[2], "data.data");
+      aboutUs = { id: aboutUs.id, ...prune(aboutUs) };
+      console.log(aboutUs);
+
+      config.set((prev) => ({
+        ...prev,
+        aboutUs,
+      }));
 
       loading = false;
     } catch (error) {

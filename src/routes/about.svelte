@@ -25,7 +25,7 @@
       <div class="flex items-center rounded-xl">
         <div
           class="w-full h-[25rem] relative rounded-md bg-center"
-          style="background-image: url(/images/vcs/vc-06.png); background-size: cover;"
+          style="background-image: url(http://3.253.128.228:1337/uploads/vc_06_22672d62db.png); background-size: cover;"
           data-aos="fade-right"
           data-aos-anchor-placement="top-bottom"
           data-aos-delay="500"
@@ -138,7 +138,7 @@
           data-aos-offset="0"
           data-aos-duration="500"
           class="w-full h-[25rem] relative rounded-md bg-center"
-          style="background-image: url(/images/vcs/vc-01.png); background-size: cover;"
+          style="background-image: url(http://3.253.128.228:1337/uploads/vc_01_9490c729db.png); background-size: cover;"
         />
       </div>
     </div>
