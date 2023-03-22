@@ -13,7 +13,7 @@ const CONFIG = {
       "PrimaryTitle": "Explore the opportunities",
       "SecondaryTitle": "In each step of the Food & Beverage Manufacturing Ecosystem",
       "Ecosystem": "Manufacturing and Processing",
-      "EcosystemImage": "http://3.253.128.228:1337/uploads/vc_02_671a3317b6.png",
+      "EcosystemImage": "/images/home/2.jpg",
       "value_chain": {
         "data": {
           "id": 2,
@@ -31,7 +31,7 @@ const CONFIG = {
       "PrimaryTitle": "Explore the opportunities",
       "SecondaryTitle": "In each step of the Food & Beverage Manufacturing Ecosystem",
       "Ecosystem": "Transport & Delivery",
-      "EcosystemImage": "http://3.253.128.228:1337/uploads/vc_08_96385d877e.png",
+      "EcosystemImage": "/images/home/1.jpg",
       "value_chain": {
         "data": {
           "id": 8,
@@ -49,7 +49,7 @@ const CONFIG = {
       "PrimaryTitle": "Explore the opportunities",
       "SecondaryTitle": "In each step of the Food & Beverage Manufacturing Ecosystem",
       "Ecosystem": "New Product Development",
-      "EcosystemImage": "http://3.253.128.228:1337/uploads/vc_10_866cac4757.png",
+      "EcosystemImage": "/images/home/3.jpg",
       "value_chain": {
         "data": {
           "id": 10,
@@ -67,7 +67,7 @@ const CONFIG = {
       "PrimaryTitle": "Explore the opportunities",
       "SecondaryTitle": "In each step of the Food & Beverage Manufacturing Ecosystem",
       "Ecosystem": "Online Marketplace",
-      "EcosystemImage": "http://3.253.128.228:1337/uploads/vc_04_2655403cd5.png",
+      "EcosystemImage": "/images/home/4.jpg",
       "value_chain": {
         "data": {
           "id": 4,
@@ -88,7 +88,7 @@ const CONFIG = {
       "SecondaryTitle": "In the Food & Beverage Manufacturing Ecosystem",
       "JobTitle": "Carbon Cost Accounting Manager",
       "JobDescription": "Develops cost standards for materials & labor, designs & implements cost accounting systems,analyzes production costs...",
-      "JobImage": "http://3.253.128.228:1337/uploads/job_17_681634a6fa.png",
+      "JobImage": "images/home/job-02.jpg",
       "job": {
         "data": {
           "id": 17,
@@ -112,7 +112,7 @@ const CONFIG = {
       "SecondaryTitle": "In the Food & Beverage Manufacturing Ecosystem",
       "JobTitle": "Plants Robotic System Designer",
       "JobDescription": "An IT specialist who designs industrial robots and cyber-physical systems for food and beverage plants and warehouses...",
-      "JobImage": "http://3.253.128.228:1337/uploads/home_job_02_3f54c95049.jpg",
+      "JobImage": "images/home/job-03.jpg",
       "job": {
         "data": {
           "id": 14,
@@ -136,7 +136,7 @@ const CONFIG = {
       "SecondaryTitle": "In the Food & Beverage Manufacturing Ecosystem",
       "JobTitle": "Food Biochemist",
       "JobDescription": "Develops cost standards for materials & labor, designs & implements cost accounting systems,analyzes production costs...",
-      "JobImage": "http://3.253.128.228:1337/uploads/home_job_02_8e38995dcc.jpg",
+      "JobImage": "images/home/job-04.jpg",
       "job": {
         "data": {
           "id": 19,
@@ -160,7 +160,7 @@ const CONFIG = {
       "SecondaryTitle": "In the Food & Beverage Manufacturing Ecosystem",
       "JobTitle": "Energy Catcher",
       "JobDescription": "Advises on how to capture and use the energy from alternative sources (solar, wind, hydro, kinetic, etc.) effectively.",
-      "JobImage": "http://3.253.128.228:1337/uploads/job_02_316f8236a4.png",
+      "JobImage": "images/home/job-05.jpg",
       "job": {
         "data": {
           "id": 2,
@@ -183,7 +183,7 @@ const CONFIG = {
   "hGal": [
     {
       "Job": "Food Biochemist",
-      "JobImage": "http://3.253.128.228:1337/uploads/home_job_03_d299016ccc.jpg",
+      "JobImage": "/images/home/job-01.jpg",
       "job_relation": {
         "data": {
           "id": 19,
@@ -204,7 +204,7 @@ const CONFIG = {
     },
     {
       "Job": "Plants Robotics System Designer",
-      "JobImage": "http://3.253.128.228:1337/uploads/home_job_02_3f54c95049.jpg",
+      "JobImage": "/images/home/job-03.jpg",
       "job_relation": {
         "data": {
           "id": 14,
@@ -225,7 +225,7 @@ const CONFIG = {
     },
     {
       "Job": "Carbon Cost Accounting Manager",
-      "JobImage": "http://3.253.128.228:1337/uploads/job_17_681634a6fa.png",
+      "JobImage": "/images/home/job-02.jpg",
       "job_relation": {
         "data": {
           "id": 17,
