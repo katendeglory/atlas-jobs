@@ -429,16 +429,16 @@ let jobs_ = [
 // console.log(new Set(mapped));
 
 let valueChains_ = [
-/*0*/  { id: 1, map: "/farm.gif", img: "/images/vcs/vc-01.png", name: "Raw Materials" },
-/*1*/  { id: 2, map: "/plant.gif", img: "/images/vcs/vc-02.png", name: "Manufacturing & Processing" },
-/*2*/  { id: 3, map: "/whosaler.gif", img: "/images/vcs/vc-03.png", name: "Wholesalers / Distribution" },
-/*3*/  { id: 4, map: "/retail.gif", img: "/images/vcs/vc-04.png", name: "Online Marketplace" },
-/*5*/  { id: 6, map: "/plant.gif", img: "/images/vcs/vc-06.png", name: "Sustainability Providers" },
-/*6*/  { id: 7, map: "/retail.gif", img: "/images/vcs/vc-07.png", name: "Retail & Groceries" },
-/*7*/  { id: 8, map: "/retail.gif", img: "/images/vcs/vc-08.png", name: "Transport & Delivery" },
-/*8*/  { id: 9, map: "/restaurant.gif", img: "/images/vcs/vc-09.png", name: "Restaurant" },
-/*9*/  { id: 10, map: "/restaurant.gif", img: "/images/vcs/vc-10.png", name: "New Product Development" },
-/*10*/  { id: 11, map: "/map-1.png", img: "/images/vcs/vc-11.png", name: "Jobs at Risk" },
+/*0*/  { id: 1, map: "/images/maps/farm.gif", img: "/images/vcs/vc-01.png", name: "Raw Materials" },
+/*1*/  { id: 2, map: "/images/maps/plant.gif", img: "/images/vcs/vc-02.png", name: "Manufacturing & Processing" },
+/*2*/  { id: 3, map: "/images/maps/whosaler.gif", img: "/images/vcs/vc-03.png", name: "Wholesalers / Distribution" },
+/*3*/  { id: 4, map: "/images/maps/retail.gif", img: "/images/vcs/vc-04.png", name: "Online Marketplace" },
+/*5*/  { id: 6, map: "/images/maps/plant.gif", img: "/images/vcs/vc-06.png", name: "Sustainability Providers" },
+/*6*/  { id: 7, map: "/images/maps/retail.gif", img: "/images/vcs/vc-07.png", name: "Retail & Groceries" },
+/*7*/  { id: 8, map: "/images/maps/retail.gif", img: "/images/vcs/vc-08.png", name: "Transport & Delivery" },
+/*8*/  { id: 9, map: "/images/maps/restaurant.gif", img: "/images/vcs/vc-09.png", name: "Restaurant" },
+/*9*/  { id: 10, map: "/images/maps/restaurant.gif", img: "/images/vcs/vc-10.png", name: "New Product Development" },
+/*10*/  { id: 11, map: "/images/maps/map-1.png", img: "/images/vcs/vc-11.png", name: "Jobs at Risk" },
 ];
 
 
