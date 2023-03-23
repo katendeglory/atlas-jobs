@@ -76,9 +76,13 @@
   class="showcase overflow-x-hidden h-screen overflow-hidden"
   id="home"
 >
-  <div class="video-container">
+  <div class="video-container !bg-black">
     {#key RE_RENDER}
-      <video id="hero" poster="/images/neon-city.jpg">
+      <video
+        id="hero"
+        poster="/images/neon-city.jpg"
+        class:add-ratio={PAUSED == false}
+      >
         <track kind="captions" />
         <source src="/images/farm-vid.mp4" type="video/mp4" />
       </video>
@@ -219,6 +223,8 @@
   </button>
 </section>
 
+<div class="hidden add-ratio" />
+
 <!-- {/if} -->
 <style>
   .showcase {
@@ -236,14 +242,32 @@
       url("./https://traversymedia.com/downloads/cover.jpg") no-repeat center
       center/cover;
   }
+
   .video-container video {
     min-width: 100%;
     min-height: 100%;
+    aspect-ratio: 16 / 9 !important;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     object-fit: cover;
+  }
+
+  /* Desktop */
+  @media (min-width: 700px) {
+    .add-ratio {
+      min-height: 100% !important;
+      min-width: auto !important;
+    }
+  }
+
+  /* Mobile */
+  @media (max-width: 699px) {
+    .add-ratio {
+      min-height: auto !important;
+      min-width: 100% !important;
+    }
   }
 
   .video-container:after {
