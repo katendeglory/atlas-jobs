@@ -132,14 +132,14 @@
 
       <button
         on:click={() => (window.location = "/ecosystem?id=11")}
-        class="absolute z-0 bottom-4 sm:bottom-[45%] right-4 px-2 py-1 text-xs bg-black/80 rounded-md flex items-center shadow-xl border border-white/10"
+        class="absolute z-0 bottom-4 lg:bottom-[45%] right-4 px-2 py-1 text-xs bg-black/80 rounded-md flex items-center shadow-xl border border-white/10"
       >
         What jobs are at risk
         <ion-icon name="help-circle" class="ml-1 text-xl" />
       </button>
 
       <div
-        class="absolute text-gray-400 text-xs z-0 bottom-16 sm:bottom-4 left-0 right-0 hidden md:flex items-center justify-center"
+        class="hidden lg:flex absolute text-gray-400 text-xs z-0 bottom-16 sm:bottom-4 left-0 right-0 items-center justify-center"
       >
         This diagram shows the Food & Beverage Manufacturing Ecosystem. Each box
         represents elements in the journey “from farm to fork”

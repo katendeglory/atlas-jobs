@@ -15,7 +15,7 @@
 </script>
 
 {#if vc && vc_id > 0}
-  <div class="!hidden md:!block">
+  <div class="!hidden sm:!block">
     <a
       href={`/ecosystem?id=${vc_id}`}
       class="vc-box xyz-in deg{deg}"
@@ -30,7 +30,7 @@
     </a>
   </div>
 
-  <div class="block md:!hidden">
+  <div class="block sm:!hidden">
     <a
       href={`/ecosystem?id=${vc_id}`}
       class="vc-box xyz-in deg{deg}"

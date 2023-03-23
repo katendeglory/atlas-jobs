@@ -1706,6 +1706,14 @@ select:focus, input[type="datetime-local"]:focus, input[type="text"]:focus, inpu
     display: block;
   }
 
+  .sm\:\!block {
+    display: block !important;
+  }
+
+  .sm\:\!hidden {
+    display: none !important;
+  }
+
   .sm\:w-screen {
     width: 100vw;
   }
@@ -1741,6 +1749,10 @@ select:focus, input[type="datetime-local"]:focus, input[type="text"]:focus, inpu
 
   .md\:left-0 {
     left: 0px;
+  }
+
+  .md\:bottom-\[45\%\] {
+    bottom: 45%;
   }
 
   .md\:mr-4 {
@@ -1908,6 +1920,10 @@ select:focus, input[type="datetime-local"]:focus, input[type="text"]:focus, inpu
 
   .lg\:left-2 {
     left: 0.5rem;
+  }
+
+  .lg\:bottom-\[45\%\] {
+    bottom: 45%;
   }
 
   .lg\:mr-0 {
