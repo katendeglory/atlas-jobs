@@ -68,7 +68,6 @@
   {:else}
     <TopNav
       subtitle=""
-      `
       crumb_last_child={job.title.toLowerCase().split("→")[0]}
     />
   {/if}
@@ -122,7 +121,7 @@
           on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
         >
           {#if job.isAtRisk}
-            The rationale behind the decrease
+            DESCRIPTION OF CURRENT JOB
           {:else if job.isTransforming}
             What is changing ?
           {:else}
@@ -145,6 +144,41 @@
           {/if}
           {job.desc}
         </div>
+
+        {#if job.isAtRisk}
+          <h1
+            class="mt-4 text-[1.4rem] leading-[1.75rem] h-font uppercase font-semibold"
+            use:viewport
+            on:enterViewport={(e) => e.target.classList.add("xyz-in")}
+            on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
+          >
+            Why is this Job at Risk?
+          </h1>
+          <div
+            class="mb-2"
+            use:viewport
+            on:enterViewport={(e) => e.target.classList.add("xyz-in")}
+            on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
+          >
+            {job.why}
+          </div>
+          <h1
+            class="mt-4 text-[1.4rem] leading-[1.75rem] h-font uppercase font-semibold"
+            use:viewport
+            on:enterViewport={(e) => e.target.classList.add("xyz-in")}
+            on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
+          >
+            Possible Alternative Jobs to reskill for
+          </h1>
+          <div
+            class="mb-2"
+            use:viewport
+            on:enterViewport={(e) => e.target.classList.add("xyz-in")}
+            on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
+          >
+            {job.desc}
+          </div>
+        {/if}
 
         {#if job.isTransforming}
           <h1
