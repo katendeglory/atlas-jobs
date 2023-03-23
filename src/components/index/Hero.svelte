@@ -264,16 +264,16 @@
   /* Desktop */
   @media (min-width: 700px) {
     .add-ratio {
-      height: 100% !important;
-      width: auto !important;
+      min-height: 100% !important;
+      min-width: auto !important;
     }
   }
 
   /* Mobile */
   @media (max-width: 699px) {
     .add-ratio {
-      height: auto !important;
-      width: 100% !important;
+      min-height: auto !important;
+      min-width: 100% !important;
     }
   }
 
