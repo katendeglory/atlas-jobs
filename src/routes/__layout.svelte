@@ -142,9 +142,9 @@
   {#if loading}
     <Loading />
   {:else}
-    {#if $utils.PAUSED}
+    <!-- {#if $utils.PAUSED} -->
       <NavBar />
-    {/if}
+    <!-- {/if} -->
     <slot />
   {/if}
 </div>
