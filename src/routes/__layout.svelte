@@ -13,7 +13,7 @@
   import { valueChains, jobs } from "../stores/data";
   import { CONFIG } from "../stores/seed";
 
-  let BACKEND = true;
+  let BACKEND = false;
 
   let loading = true;
 

@@ -81,6 +81,7 @@
   bind:this={parent}
   class="showcase overflow-x-hidden h-screen overflow-hidden"
   id="home"
+  class:add-index={$utils.PAUSED == false}
 >
   <div class="video-container !bg-black flex items-end">
     {#key RE_RENDER}
@@ -231,11 +232,11 @@
 
 <div class="hidden add-ratio" />
 
-<!-- {/if} -->
 <style>
   .showcase {
     position: relative;
   }
+
   /* TODO, Fallback background here */
   .video-container {
     position: absolute;
@@ -263,17 +264,21 @@
   /* Desktop */
   @media (min-width: 700px) {
     .add-ratio {
-      min-height: 100% !important;
-      min-width: auto !important;
+      height: 100% !important;
+      width: auto !important;
     }
   }
 
   /* Mobile */
   @media (max-width: 699px) {
     .add-ratio {
-      min-height: auto !important;
-      min-width: 100% !important;
+      height: auto !important;
+      width: 100% !important;
     }
+  }
+
+  .add-index {
+    z-index: 2000 !important;
   }
 
   .video-container:after {
