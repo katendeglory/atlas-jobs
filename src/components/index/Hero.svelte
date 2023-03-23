@@ -1,4 +1,5 @@
 <script>
+  import utils from "../../stores/utils";
   import { fly } from "svelte/transition";
   import { onMount } from "svelte";
   import Container from "../utils/Container.svelte";
@@ -26,7 +27,6 @@
   };
 
   let RE_RENDER = Math.random();
-  let PAUSED = true;
   let mouseCoord = { x: -100, y: -100 };
   let parent;
 
@@ -58,7 +58,10 @@
   const onPauseVideo = () => {
     setTimeout(() => {
       pauseVideo();
-      PAUSED = true;
+      utils.update((prev) => ({
+        ...prev,
+        PAUSED: true,
+      }));
       RE_RENDER = Math.random();
     }, 10);
   };
@@ -66,7 +69,10 @@
   const onPlayVideo = () => {
     setTimeout(() => {
       playVideo();
-      PAUSED = false;
+      utils.update((prev) => ({
+        ...prev,
+        PAUSED: false,
+      }));
     }, 10);
   };
 </script>
@@ -76,12 +82,12 @@
   class="showcase overflow-x-hidden h-screen overflow-hidden"
   id="home"
 >
-  <div class="video-container !bg-black">
+  <div class="video-container !bg-black flex items-end">
     {#key RE_RENDER}
       <video
         id="hero"
         poster="/images/neon-city.jpg"
-        class:add-ratio={PAUSED == false}
+        class:add-ratio={$utils.PAUSED == false}
       >
         <track kind="captions" />
         <source src="/images/farm-vid.mp4" type="video/mp4" />
@@ -89,10 +95,10 @@
     {/key}
   </div>
 
-  {#if PAUSED}
+  {#if $utils.PAUSED}
     <div
       transition:fly={{ duration: 200, y: 200, delay: 50 }}
-      class:some-hidden={!PAUSED}
+      class:some-hidden={!$utils.PAUSED}
       class="content text-white"
     >
       <Container>
@@ -150,7 +156,7 @@
     <div
       class="play_button hidden md:flex items-center justify-center text-gray-300 text-sm"
     >
-      {#if PAUSED}
+      {#if $utils.PAUSED}
         <div
           class="flex items-center justify-center cursor-pointer"
           on:click={onPlayVideo}
@@ -176,7 +182,7 @@
   </div>
 
   <div class="absolute left-[50%] translate-x-[-50%] bottom-8 z-[20]">
-    {#if PAUSED}
+    {#if $utils.PAUSED}
       <div
         class="md:hidden flex cursor-pointer items-center justify-center text-gray-500 text-sm animate-pulse mb-4"
         on:click={onPlayVideo}
@@ -209,7 +215,7 @@
     style="left: {mouseCoord.x - 50}px; top: {mouseCoord.y - 0}px;"
   >
     <div class="flex items-center text-black font-semibold text-base">
-      {#if PAUSED}
+      {#if $utils.PAUSED}
         <ion-icon name="play-circle" class="text-3xl mr-2 text-brand-green-1" />
         What does this future look like?
       {:else}

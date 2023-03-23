@@ -12,6 +12,7 @@
   import Loading from "../components/utils/Loading.svelte";
   import { valueChains, jobs } from "../stores/data";
   import { CONFIG } from "../stores/seed";
+  import utils from "../stores/utils";
 
   let BACKEND = false;
 
@@ -141,7 +142,9 @@
   {#if loading}
     <Loading />
   {:else}
-    <NavBar />
+    {#if $utils.PAUSED}
+      <NavBar />
+    {/if}
     <slot />
   {/if}
 </div>

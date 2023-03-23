@@ -2,6 +2,7 @@
   import Container from "../utils/Container.svelte";
   import MobileMenu from "./MobileMenu.svelte";
   import { onMount } from "svelte";
+  import { fly } from "svelte/transition";
 
   let PWAInstallBtn;
   // let is_chrome = !!window.chrome;
@@ -76,6 +77,7 @@
 </script>
 
 <div
+transition:fly={{ duration: 250, y: -200, delay: 250 }}
   id="header"
   class="navbar here here bg-black text-white fixed top-0 left-0 w-full z-50 transition-all
     duration-250"
