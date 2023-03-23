@@ -117,7 +117,7 @@
     >
       <!-- Tips -->
       <div
-        class="absolute z-0 top-[4.5rem] w-screen !text-gray-300 text-xs text-center animate-pulse flex md:hidden items-center justify-center"
+        class="absolute z-0 top-[4.5rem] w-screen !text-white text-sm text-center animate-pulse flex md:hidden items-center justify-center"
       >
         <ion-icon name="compass-outline" class="mr-1 text-xl" />
         Scroll to pan the diagram

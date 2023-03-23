@@ -170,9 +170,9 @@
           xyz="fade-100% down-3 stagger-1"
         >
           <div
-            class="fixed z-0 top-16 w-screen !text-gray-300 text-xs text-center animate-pulse flex items-center justify-center"
+            class="fixed z-0 top-16 w-screen !text-white text-sm text-center animate-pulse flex items-center justify-center"
           >
-            <ion-icon name="compass-outline" class="mr-1 text-lg" /> Scroll to pan
+            <ion-icon name="compass-outline" class="mr-1 text-xl" /> Scroll to pan
             the map
           </div>
 

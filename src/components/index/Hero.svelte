@@ -83,7 +83,7 @@
   id="home"
   class:add-index={$utils.PAUSED == false}
 >
-  <div class="video-container !bg-black flex items-end">
+  <div class="video-container !bg-black flex justify-center items-center">
     {#key RE_RENDER}
       <video
         id="hero"
@@ -250,21 +250,27 @@
       center/cover;
   }
 
-  .video-container video {
-    min-width: 100%;
-    min-height: 100%;
-    aspect-ratio: 16 / 9 !important;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
+  @media (min-width: 700px) {
+    .video-container video {
+      min-width: 100%;
+      min-height: 100%;
+      aspect-ratio: 16 / 9 !important;
+    }
+  }
+
+  @media (max-width: 699px) {
+    .video-container video {
+      min-width: 215vh;
+      min-height: 100%;
+      aspect-ratio: 16 / 9 !important;
+    }
   }
 
   /* Desktop */
   @media (min-width: 700px) {
     .add-ratio {
-      min-height: 100% !important;
+      min-height: 99vh !important;
+      height: 99vh !important;
       min-width: auto !important;
     }
   }
@@ -274,6 +280,7 @@
     .add-ratio {
       min-height: auto !important;
       min-width: 100% !important;
+      width: 100% !important;
     }
   }
 
