@@ -23,7 +23,14 @@
     let url =
       $config.backendURL.replaceAll("/api", "") +
       el.attributes[property].data.attributes.url;
-    return url.replaceAll("https:/.", "https://api.");
+
+    if (!url.includes("amazon"))
+      url = url.replaceAll("https:/.", "https://api.");
+
+    if (url.includes("https:/.futurejobs-foodbev.co.za"))
+      url = url.replaceAll("https:/.futurejobs-foodbev.co.za", "");
+
+    return url;
   };
 
   const prune = (el) => {
@@ -137,7 +144,6 @@
   class={`bg-brand-white text-gray-600 tracking-wide w-full layout`}
   id="home"
 >
-
   {#if loading}
     <Loading />
   {:else}

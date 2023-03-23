@@ -36,10 +36,6 @@
   let vcCount = job.valueChains.length;
 
   onMount(() => {
-    // job.valueChains.forEach((vc_id) => {
-    //   console.log($valueChains.find((el) => el.id == vc_id).name);
-    // });
-
     particlesJS.load(
       "particles-js2",
       "/js/particlesjs-config-2.json",
