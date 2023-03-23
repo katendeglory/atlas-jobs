@@ -12,19 +12,18 @@
   import Loading from "../components/utils/Loading.svelte";
   import { valueChains, jobs } from "../stores/data";
   import { CONFIG } from "../stores/seed";
-  import utils from "../stores/utils";
 
-  let BACKEND = false;
+  let BACKEND = true;
 
   let loading = true;
 
   const PAGE = "&pagination[pageSize]=100";
 
   const getImg = (el, property) => {
-    return (
+    let url =
       $config.backendURL.replaceAll("/api", "") +
-      el.attributes[property].data.attributes.url
-    );
+      el.attributes[property].data.attributes.url;
+    return url.replaceAll("https:/.", "https://api.");
   };
 
   const prune = (el) => {
@@ -143,7 +142,7 @@
     <Loading />
   {:else}
     <!-- {#if $utils.PAUSED} -->
-      <NavBar />
+    <NavBar />
     <!-- {/if} -->
     <slot />
   {/if}

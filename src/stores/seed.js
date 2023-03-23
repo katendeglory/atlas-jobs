@@ -1,5 +1,5 @@
 const CONFIG = {
-  "backendURL": "http://3.253.128.228:1337/api",
+  "backendURL": "https://api.futurejobs-foodbev.co.za/api",
   "currentUser": null,
   "aboutUs": {
     "id": 1,
