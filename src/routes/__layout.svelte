@@ -13,7 +13,7 @@
   import { valueChains, jobs } from "../stores/data";
   import { CONFIG } from "../stores/seed";
 
-  let BACKEND = false;
+  let BACKEND = true;
 
   let loading = true;
 
@@ -137,13 +137,11 @@
   class={`bg-brand-white text-gray-600 tracking-wide w-full layout`}
   id="home"
 >
-  <!-- {#if loading || true} -->
+
   {#if loading}
     <Loading />
   {:else}
-    <!-- {#if $utils.PAUSED} -->
     <NavBar />
-    <!-- {/if} -->
     <slot />
   {/if}
 </div>
