@@ -17,6 +17,8 @@
     vid.play();
   };
 
+  let sectionEL;
+
   onMount(() => {
     playVideo("hero");
     particlesJS.load(
@@ -26,6 +28,7 @@
         console.log("particles.js loaded - callback");
       }
     );
+    // sectionEL.scrollBy(window.innerWidth / 2, 0);
   });
 
   function cancelFullScreen() {
@@ -106,7 +109,11 @@
       <source src="/images/globe-1.mp4" type="video/mp4" />
     </video>
   </div>
-  <div class="content text-gray-50 overflow-x-auto overflow-y-hidden">
+  <div
+    class="content text-gray-50 overflow-x-auto overflow-y-hidden"
+    id="eco-section"
+    bind:this={sectionEL}
+  >
     <div
       class="absolute top-0 left-0 h-screen w-[140vw] sm:w-screen z-0"
       id="particles-js"
