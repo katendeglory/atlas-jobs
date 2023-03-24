@@ -20,7 +20,7 @@
 <div class="grid grid-cols-1 md:grid-cols-3">
   {#each $config.hGal as job}
     <button
-      on:click={() => (window.location = `/job-page?id=${job.id}`)}
+      on:click={() => (window.location = `/job-page?id=${job.id}&from=/`)}
       class="image_container {anim_class[1]} h-[60vh] w-full | gallery-parent flex items-center justify-center text-center"
       use:viewport
       on:enterViewport={() => do_animation(1)}

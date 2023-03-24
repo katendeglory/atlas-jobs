@@ -82,7 +82,8 @@
                   title="💡 Learn more about “{job.title
                     .toLowerCase()
                     .split('→')[0]}”"
-                  on:click={() => (window.location = `/job-page?id=${job.id}`)}
+                  on:click={() =>
+                    (window.location = `/job-page?id=${job.id}&from=/jobs`)}
                 >
                   preview
                 </button>

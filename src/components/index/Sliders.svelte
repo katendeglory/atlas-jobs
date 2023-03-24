@@ -70,7 +70,7 @@
               subtitle={jb.JobTitle}
               img={jb.JobImage}
               desc={jb.JobDescription}
-              link={`/job-page?id=${jb.id}`}
+              link={`/job-page?id=${jb.id}&from=/`}
             />
           </div>
         {/each}

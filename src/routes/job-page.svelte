@@ -6,7 +6,7 @@
    * @type {import('@sveltejs/kit').Load}
    */
   export async function load({ url, params }) {
-    let { id, ecosystem } = queryString.parse(window.location.search);
+    let { id, ecosystem, from } = queryString.parse(window.location.search);
     if (!id) id = "0";
     // HERE HERE : Make the API Call........................
     // .....................................................
@@ -15,6 +15,7 @@
         id: id,
         ecosystem: ecosystem,
         qs: queryString,
+        from: from,
       },
     };
   }
@@ -27,20 +28,25 @@
   import { jobs, valueChains } from "../stores/data";
   import TopNav from "../components/utils/TopNav.svelte";
 
+  let is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
   export let id;
   export let qs;
   export let ecosystem;
+  export let from;
 
   let job = $jobs.find((el) => el.id == id);
   let valueChain = $valueChains.find((el) => el.id == ecosystem);
   let vcCount = job.valueChains.length;
 
   onMount(() => {
+    console.log({ from });
+
     particlesJS.load(
       "particles-js2",
       "/js/particlesjs-config-2.json",
       function () {
-        // console.log("particles.js loaded - callback");
+        // console.log("particles.js loaded");
       }
     );
   });
@@ -71,7 +77,10 @@
   <div class="pt-0 min-h-screen text-gray-300">
     <button
       class="fixed top-16 left-2 mb-2 flex items-center !z-30 !text-sm"
-      on:click={() => history.back()}
+      on:click={() => {
+        if (is_safari || true) window.location = `${from}`;
+        else history.back();
+      }}
     >
       <ion-icon name="chevron-back-outline" class="text-lg mr-1" />
       Back

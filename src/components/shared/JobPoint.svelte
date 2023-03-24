@@ -34,7 +34,7 @@
 </script>
 
 <a
-  href="/job-page?id={id}&ecosystem={ecosystem}"
+  href="/job-page?id={id}&ecosystem={ecosystem}&from=/ecosystem?id={ecosystem}"
   class="absolute flex flex-col items-center justify-center text-center rounded-full text-xs"
   style="top: {top}%; left: {left}%;"
   on:mouseenter={() => (tipShow = true)}
