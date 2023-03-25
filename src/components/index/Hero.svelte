@@ -185,7 +185,7 @@
   <div class="absolute left-[50%] translate-x-[-50%] bottom-8 z-[20]">
     {#if $utils.PAUSED}
       <div
-        class="md:hidden flex cursor-pointer items-center justify-center text-gray-500 text-sm animate-pulse mb-4"
+        class="md:hidden flex cursor-pointer items-center justify-center text-gray-300 text-sm animate-pulse mb-4"
         on:click={onPlayVideo}
       >
         <ion-icon name="play-circle" class="text-2xl mr-2" />
@@ -193,10 +193,10 @@
       </div>
     {:else}
       <div
-        class="flex cursor-pointer items-center justify-center text-gray-500 text-sm animate-pulse mb-4"
+        class="flex cursor-pointer items-center justify-center text-gray-300 text-sm animate-pulse mb-4"
         on:click={onPauseVideo}
       >
-        <ion-icon name="pause-circle" class="text-2xl mr-2" />
+        <ion-icon name="stop-circle" class="text-2xl mr-2" />
         Click here stop
       </div>
     {/if}
@@ -220,10 +220,7 @@
         <ion-icon name="play-circle" class="text-3xl mr-2 text-brand-green-1" />
         What does this future look like?
       {:else}
-        <ion-icon
-          name="pause-circle"
-          class="text-3xl mr-2 text-brand-green-1"
-        />
+        <ion-icon name="stop-circle" class="text-3xl mr-2 text-brand-green-1" />
         Click to stop the video
       {/if}
     </div>
