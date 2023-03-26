@@ -28,7 +28,10 @@
         console.log("particles.js loaded - callback");
       }
     );
-    // sectionEL.scrollBy(window.innerWidth / 2, 0);
+
+    let W = window.innerWidth;
+    let D = W * 0.9;
+    sectionEL.scrollBy((W - D) * 2, 0);
   });
 
   function cancelFullScreen() {
