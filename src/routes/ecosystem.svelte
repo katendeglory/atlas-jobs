@@ -23,6 +23,7 @@
   import { valueChains, jobs } from "../stores/data";
   import JobPoint from "../components/shared/JobPoint.svelte";
   import TopNav from "../components/utils/TopNav.svelte";
+  import Loading from "./../components/utils/Loading.svelte";
 
   export let id;
   export let qs;
@@ -109,7 +110,21 @@
     toggleFullScreen(document.body);
   };
 
+  let MAP;
+  let mapLoaded = false;
+
+  function loadImage(url) {
+    let img = new Image();
+    img.onload = () => {
+      MAP.src = img.src;
+      mapLoaded = true;
+    };
+    img.src = url + "?_=" + new Date();
+  }
+
   onMount(() => {
+    loadImage(valueChain.map);
+
     background.addEventListener("mousemove", (e) => {
       mouseCoord.x = e.clientX;
       mouseCoord.y = e.clientY;
@@ -133,6 +148,14 @@
 <svelte:head>
   <title>Ecosystem Processor | Atlas of Emerging Jobs</title>
 </svelte:head>
+
+{#if mapLoaded}
+  <div class="" />
+{:else}
+  <div class="">
+    <Loading />
+  </div>
+{/if}
 
 {#if !valueChain}
   <div class="text-4xl h-screen uppercase flex items-center justify-center">
@@ -161,10 +184,16 @@
         </div>
         <img
           class="[16:9] w-[184vh] h-[103.5vh] md:w-[100vw] md:h-[56.25vw] absolute top-0 left-0 right-0 bottom-0"
+          alt="map"
+          style="filter: brightness(70%);"
+          bind:this={MAP}
+        />
+        <!-- <img
+          class="[16:9] w-[184vh] h-[103.5vh] md:w-[100vw] md:h-[56.25vw] absolute top-0 left-0 right-0 bottom-0"
           src={valueChain.map}
           alt="map"
-          style="background-image: url(/images/map.png); background-size: cover; filter: brightness(70%);"
-        />
+          style="filter: brightness(70%);"
+        /> -->
         <div
           class="[16:9] w-[184vh] h-[103.5vh] md:w-[100vw] md:h-[56.25vw] relative bg-black/0"
           xyz="fade-100% down-3 stagger-1"
@@ -191,9 +220,11 @@
             <ion-icon name="scan-outline" class="text-lg" />
           </button> -->
 
-          {#each job as j}
-            <JobPoint {...j} {mouseCoord} ecosystem={id} />
-          {/each}
+          {#if mapLoaded}
+            {#each job as j}
+              <JobPoint {...j} {mouseCoord} ecosystem={id} />
+            {/each}
+          {/if}
         </div>
       </div>
     </div>

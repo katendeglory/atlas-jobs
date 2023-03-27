@@ -15,6 +15,6 @@
 </div> -->
 
 <div
-  class="fixed top-0 left-0 right-0 bottom-0 h-screen w-screen"
+  class="fixed top-0 left-0 right-0 bottom-0 h-screen w-screen z-[500]"
   style="background-image: url(/images/loading.gif); background-size: cover; background-position: center;"
 />

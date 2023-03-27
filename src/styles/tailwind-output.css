@@ -689,6 +689,9 @@ select {
 .z-\[60\] {
   z-index: 60;
 }
+.z-\[500\] {
+  z-index: 500;
+}
 .col-span-full {
   grid-column: 1 / -1;
 }
