@@ -149,7 +149,7 @@
       >
         <div class="absolute top-0 left-0 z-0 w-full h-full">
           <div class="w-full h-full">
-            <video id="hero">
+            <video id="hero" class="h-screen w-auto md:w-screen md:h-auto">
               <source src="" type="video/mp4" />
               <track kind="captions" />
             </video>
