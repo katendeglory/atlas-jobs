@@ -8,8 +8,6 @@
   export async function load({ url, params }) {
     let { id, ecosystem, from } = queryString.parse(window.location.search);
     if (!id) id = "0";
-    // HERE HERE : Make the API Call........................
-    // .....................................................
     return {
       props: {
         id: id,
@@ -108,8 +106,10 @@
         <h1
           class="text-[2.1rem] leading-[2.25rem] h-font uppercase mb-3 font-semibold"
           use:viewport
-          on:enterViewport={(e) => e.target.classList.add("xyz-in")}
-          on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
+          on:enterViewport={(e) =>
+            e.target.classList.add(`${is_safari ? "" : "xyz-in"}`)}
+          on:exitViewport={(e) =>
+            e.target.classList.remove(`${is_safari ? "" : "xyz-in"}`)}
         >
           {#if vcCount > 1}
             <div class="!text-sm mb-1 !normal-case text-gray-300 !font-normal">
@@ -122,8 +122,10 @@
         <h1
           class="text-[1.4rem] leading-[1.75rem] h-font uppercase mb-2 font-semibold"
           use:viewport
-          on:enterViewport={(e) => e.target.classList.add("xyz-in")}
-          on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
+          on:enterViewport={(e) =>
+            e.target.classList.add(`${is_safari ? "" : "xyz-in"}`)}
+          on:exitViewport={(e) =>
+            e.target.classList.remove(`${is_safari ? "" : "xyz-in"}`)}
         >
           {#if job.isAtRisk}
             DESCRIPTION OF CURRENT JOB
@@ -136,8 +138,10 @@
         <div
           class="mb-2"
           use:viewport
-          on:enterViewport={(e) => e.target.classList.add("xyz-in")}
-          on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
+          on:enterViewport={(e) =>
+            e.target.classList.add(`${is_safari ? "" : "xyz-in"}`)}
+          on:exitViewport={(e) =>
+            e.target.classList.remove(`${is_safari ? "" : "xyz-in"}`)}
         >
           {#if job.isTransforming}
             <div class="mb-1">
@@ -154,32 +158,40 @@
           <h1
             class="mt-4 text-[1.4rem] leading-[1.75rem] h-font uppercase font-semibold"
             use:viewport
-            on:enterViewport={(e) => e.target.classList.add("xyz-in")}
-            on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
+            on:enterViewport={(e) =>
+              e.target.classList.add(`${is_safari ? "" : "xyz-in"}`)}
+            on:exitViewport={(e) =>
+              e.target.classList.remove(`${is_safari ? "" : "xyz-in"}`)}
           >
             Why is this Job at Risk?
           </h1>
           <div
             class="mb-2"
             use:viewport
-            on:enterViewport={(e) => e.target.classList.add("xyz-in")}
-            on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
+            on:enterViewport={(e) =>
+              e.target.classList.add(`${is_safari ? "" : "xyz-in"}`)}
+            on:exitViewport={(e) =>
+              e.target.classList.remove(`${is_safari ? "" : "xyz-in"}`)}
           >
             {job.why}
           </div>
           <h1
             class="mt-4 text-[1.4rem] leading-[1.75rem] h-font uppercase font-semibold"
             use:viewport
-            on:enterViewport={(e) => e.target.classList.add("xyz-in")}
-            on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
+            on:enterViewport={(e) =>
+              e.target.classList.add(`${is_safari ? "" : "xyz-in"}`)}
+            on:exitViewport={(e) =>
+              e.target.classList.remove(`${is_safari ? "" : "xyz-in"}`)}
           >
             Possible Alternative Jobs to reskill for
           </h1>
           <div
             class="mb-2"
             use:viewport
-            on:enterViewport={(e) => e.target.classList.add("xyz-in")}
-            on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
+            on:enterViewport={(e) =>
+              e.target.classList.add(`${is_safari ? "" : "xyz-in"}`)}
+            on:exitViewport={(e) =>
+              e.target.classList.remove(`${is_safari ? "" : "xyz-in"}`)}
           >
             <!-- {job.desc} -->
             ...
@@ -190,16 +202,20 @@
           <h1
             class="mt-4 text-[1.4rem] leading-[1.75rem] h-font uppercase font-semibold"
             use:viewport
-            on:enterViewport={(e) => e.target.classList.add("xyz-in")}
-            on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
+            on:enterViewport={(e) =>
+              e.target.classList.add(`${is_safari ? "" : "xyz-in"}`)}
+            on:exitViewport={(e) =>
+              e.target.classList.remove(`${is_safari ? "" : "xyz-in"}`)}
           >
             Why?
           </h1>
           <div
             class="mb-2"
             use:viewport
-            on:enterViewport={(e) => e.target.classList.add("xyz-in")}
-            on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
+            on:enterViewport={(e) =>
+              e.target.classList.add(`${is_safari ? "" : "xyz-in"}`)}
+            on:exitViewport={(e) =>
+              e.target.classList.remove(`${is_safari ? "" : "xyz-in"}`)}
           >
             {job.why}
           </div>
@@ -214,8 +230,10 @@
               <div
                 class="mr-2 mb-2 inline-block capitalize bg-gray-200 px-3 py-[0.35rem] text-black shadow-md text-sm rounded-xl"
                 use:viewport
-                on:enterViewport={(e) => e.target.classList.add("xyz-in")}
-                on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
+                on:enterViewport={(e) =>
+                  e.target.classList.add(`${is_safari ? "" : "xyz-in"}`)}
+                on:exitViewport={(e) =>
+                  e.target.classList.remove(`${is_safari ? "" : "xyz-in"}`)}
               >
                 {hs}
               </div>
@@ -231,8 +249,10 @@
               <div
                 class="mr-2 mb-2 inline-block capitalize bg-gray-200 px-3 py-[0.35rem] text-black shadow-md text-sm rounded-xl"
                 use:viewport
-                on:enterViewport={(e) => e.target.classList.add("xyz-in")}
-                on:exitViewport={(e) => e.target.classList.remove("xyz-in")}
+                on:enterViewport={(e) =>
+                  e.target.classList.add(`${is_safari ? "" : "xyz-in"}`)}
+                on:exitViewport={(e) =>
+                  e.target.classList.remove(`${is_safari ? "" : "xyz-in"}`)}
               >
                 {hs}
               </div>
