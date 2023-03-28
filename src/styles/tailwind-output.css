@@ -827,6 +827,12 @@ select {
 .min-h-\[75vh\] {
   min-height: 75vh;
 }
+.min-h-\[100vh\] {
+  min-height: 100vh;
+}
+.min-h-\[110vh\] {
+  min-height: 110vh;
+}
 .w-full {
   width: 100%;
 }
@@ -865,6 +871,9 @@ select {
 }
 .w-\[90vw\] {
   width: 90vw;
+}
+.min-w-\[100vw\] {
+  min-width: 100vw;
 }
 .max-w-full {
   max-width: 100%;
@@ -1925,12 +1934,28 @@ select:focus, input[type="datetime-local"]:focus, input[type="text"]:focus, inpu
     display: none;
   }
 
+  .lg\:h-\[56\.25vw\] {
+    height: 56.25vw;
+  }
+
+  .lg\:h-auto {
+    height: auto;
+  }
+
   .lg\:w-7\/12 {
     width: 58.333333%;
   }
 
   .lg\:w-5\/12 {
     width: 41.666667%;
+  }
+
+  .lg\:w-\[100vw\] {
+    width: 100vw;
+  }
+
+  .lg\:w-screen {
+    width: 100vw;
   }
 
   .lg\:items-center {

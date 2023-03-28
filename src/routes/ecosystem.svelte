@@ -134,13 +134,13 @@
 
     playVideo("hero");
 
-    particlesJS.load(
-      "particles-js",
-      "/js/particlesjs-config-3.json",
-      function () {
-        console.log("particles.js loaded - callback");
-      }
-    );
+    // particlesJS.load(
+    //   "particles-js",
+    //   "/js/particlesjs-config-3.json",
+    //   function () {
+    //     console.log("particles.js loaded - callback");
+    //   }
+    // );
   });
 </script>
 
@@ -173,36 +173,30 @@
   <div class="pt-14">
     <div class="h-screen w-screen overflow-auto no-gradient">
       <div
-        class="[16:9] w-[184vh] h-[103.5vh] md:w-[100vw] md:h-[56.25vw] relative"
+        class="[16:9] w-[184vh] h-[103.5vh] lg:w-[100vw] lg:h-[56.25vw] relative"
         bind:this={background}
       >
         <div class="absolute top-0 left-0 z-0 w-full h-full">
           <div class="w-full h-full">
-            <video id="hero" class="h-screen w-auto md:w-screen md:h-auto">
+            <video id="hero" class="min-h-[100vh] w-full lg:w-screen lg:h-auto">
               <source src="" type="video/mp4" />
               <track kind="captions" />
             </video>
           </div>
-          <div
+          <!-- <div
             class="absolute top-0 left-0 z-0 w-full h-full"
             id="particles-js"
-          />
+          /> -->
         </div>
         <img
           class:hidden={mapLoaded == false}
-          class="[16:9] w-[184vh] h-[103.5vh] md:w-[100vw] md:h-[56.25vw] absolute top-0 left-0 right-0 bottom-0"
+          class="[16:9] w-[184vh] h-[103.5vh] lg:w-[100vw] lg:h-[56.25vw] absolute top-0 left-0 right-0 bottom-0"
           alt="map"
           style="filter: brightness(70%);"
           bind:this={MAP}
         />
-        <!-- <img
-          class="[16:9] w-[184vh] h-[103.5vh] md:w-[100vw] md:h-[56.25vw] absolute top-0 left-0 right-0 bottom-0"
-          src={valueChain.map}
-          alt="map"
-          style="filter: brightness(70%);"
-        /> -->
         <div
-          class="[16:9] w-[184vh] h-[103.5vh] md:w-[100vw] md:h-[56.25vw] relative bg-black/0"
+          class="[16:9] w-[184vh] h-[103.5vh] lg:w-[100vw] lg:h-[56.25vw] relative bg-black/0"
           xyz="fade-100% down-3 stagger-1"
         >
           <div
@@ -222,13 +216,6 @@
             <ion-icon name="chevron-back-outline" class="text-lg mr-1" />
             Back
           </button>
-
-          <!-- <button
-            on:click={onFullScreen}
-            class="fixed z-0 top-16 right-4 mb-4 flex items-center text-gray-300 !text-sm"
-          >
-            <ion-icon name="scan-outline" class="text-lg" />
-          </button> -->
 
           {#if mapLoaded}
             {#each job as j}
