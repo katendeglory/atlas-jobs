@@ -31,11 +31,19 @@
     top = C.top;
     left = C.left;
   });
+
+  let fixText = (text) => {
+    text = text.toLowerCase().split("→")[0];
+    text = text.replace(" ", "~~");
+    text = text.replace(" ", "<br>");
+    text = text.replace("~~", " ");
+    return text;
+  };
 </script>
 
 <a
   href="/job-page?id={id}&ecosystem={ecosystem}&from=/ecosystem?id={ecosystem}"
-  class="absolute flex flex-col items-center justify-center text-center rounded-full text-xs"
+  class="absolute flex flex-col items-center justify-center text-center rounded-full tiny"
   style="top: {top}%; left: {left}%;"
   on:mouseenter={() => (tipShow = true)}
   on:mouseleave={() => (tipShow = false)}
@@ -48,8 +56,8 @@
   {:else}
     <ion-icon name="location" class="text-white text-2xl mr-1" />
   {/if}
-  <div class="max-w-[8.5rem] text-white font-semibold !capitalize line-clamp-2">
-    {title.toLowerCase().split("→")[0]}
+  <div class="max-w-[8rem] text-white font-semibold !capitalize line-clamp-2">
+    {@html fixText(title)}
   </div>
 </a>
 
@@ -131,5 +139,11 @@
 
   .clippy-inversed {
     clip-path: polygon(0 0, 100% 0, 100% 75%, 18% 100%, 0 75%);
+  }
+
+  .tiny {
+    font-size: 0.7rem /* 12px */;
+    line-height: 0.85rem /* 16px */;
+    letter-spacing: 0px;
   }
 </style>

@@ -386,7 +386,7 @@ let MANUFACTURING_2 = [
   },
   {
     id: 8, // Circular economy designer
-    top: "11", left: "57.5",
+    top: "11", left: "60",
   },
   {
     id: 9, // Food plant cybersecurity specialist
@@ -430,7 +430,7 @@ let MANUFACTURING_2 = [
   },
   {
     id: 19, // Food biochemist
-    top: "14", left: "65.5",
+    top: "18", left: "65.5",
   },
   {
     id: 20, // AI SYSTEMS RISK ANALYST
