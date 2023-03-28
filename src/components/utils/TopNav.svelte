@@ -5,6 +5,8 @@
   export let title_mobi = "Home";
   export let subtitle;
   export let crumb_last_child = "";
+  export let parent = "";
+  export let parentURL = "";
   export let url = null;
 </script>
 
@@ -20,6 +22,14 @@
         {title_mobi}
       </a>
       <h1 class="text-sm flex flex-col sm:flex-row items-center">
+        {#if parent}
+          <button
+            class="mr-1 flex items-center"
+            on:click={() => (window.location = parentURL)}
+          >
+            {parent} >
+          </button>
+        {/if}
         {#if url}
           <a class="mr-1 flex items-center" href={url}>
             {subtitle}

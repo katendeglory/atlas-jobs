@@ -64,6 +64,8 @@
       subtitle={valueChain.name}
       url="/ecosystem?id={ecosystem}"
       crumb_last_child={job.title.toLowerCase().split("→")[0]}
+      parent="ECOSYSTEM"
+      parentURL="/explore"
     />
   {:else}
     <TopNav

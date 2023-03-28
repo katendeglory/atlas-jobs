@@ -77,7 +77,7 @@
 </script>
 
 <div
-transition:fly={{ duration: 250, y: -200, delay: 250 }}
+  transition:fly={{ duration: 250, y: -200, delay: 250 }}
   id="header"
   class="navbar here here bg-black text-white fixed top-0 left-0 w-full z-50 transition-all
     duration-250"
@@ -91,29 +91,14 @@ transition:fly={{ duration: 250, y: -200, delay: 250 }}
         ATLAS OF EMERGING JOBS
       </a>
 
-      <div class="hidden lg:flex">
-        <!-- <a class="nav-link mr-6" href="#home">Help</a> -->
-      </div>
+      <div class="hidden lg:flex" />
 
       <div class="lg:flex lg:items-center">
-        <div class="hidden lg:block nav-link mr-8 lg:mr-0">
-          <!-- <a href="/register" class="btn btn-primary">
-            Sign Up
-            <ion-icon name="arrow-forward-circle" class="text-2xl ml-2" />
-          </a> -->
-        </div>
+        <div class="hidden lg:block nav-link mr-8 lg:mr-0" />
 
         <div class="flex items-center">
           {#if is_chrome}
-            <div class="mr-2 lg:ml-2 lg:mr-0">
-              <!-- <button
-                class="btn btn-primary shadow-sm pwa-btn"
-                bind:this={PWAInstallBtn}
-              >
-                Install
-                <ion-icon name="logo-pwa" class="text-2xl ml-2" />
-              </button> -->
-            </div>
+            <div class="mr-2 lg:ml-2 lg:mr-0" />
           {/if}
           <MobileMenu />
         </div>
