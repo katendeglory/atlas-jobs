@@ -5,13 +5,14 @@
    * @type {import('@sveltejs/kit').Load}
    */
   export async function load({ url, params }) {
-    let { id } = queryString.parse(window.location.search);
+    let { id, fh } = queryString.parse(window.location.search);
     if (!id) id = "0";
     // HERE HERE : Make the API Call........................
     // .....................................................
     return {
       props: {
         id: id,
+        fh: fh,
         qs: queryString,
       },
     };
@@ -27,6 +28,7 @@
 
   export let id;
   export let qs;
+  export let fh;
 
   let valueChain = $valueChains.find((el) => el.id == id);
   let job = $jobs.filter((el) => el.valueChains.find((vc) => vc == id));
@@ -162,7 +164,11 @@
     Page Not Found
   </div>
 {:else}
-  <TopNav subtitle={valueChain.name} />
+  <TopNav
+    subtitle="ECOSYSTEM"
+    url="/explore"
+    crumb_last_child={valueChain.name}
+  />
 
   <div class="pt-14">
     <div class="h-screen w-screen overflow-auto no-gradient">
@@ -207,7 +213,10 @@
           </div>
 
           <button
-            on:click={() => window.history.back()}
+            on:click={() => {
+              if (fh) window.history.back();
+              else window.location = "/explore";
+            }}
             class="fixed z-0 top-16 left-2 mb-4 flex items-center text-gray-300 !text-sm"
           >
             <ion-icon name="chevron-back-outline" class="text-lg mr-1" />

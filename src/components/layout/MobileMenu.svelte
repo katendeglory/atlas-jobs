@@ -71,7 +71,8 @@
               {#each $valueChains as v}
                 <button
                   class="a-nav text-sm tracking-wider py-1 text-right"
-                  on:click={() => (window.location = `/ecosystem?id=${v.id}`)}
+                  on:click={() =>
+                    (window.location = `/ecosystem?id=${v.id}&fh=true`)}
                 >
                   {v.name}
                 </button>
