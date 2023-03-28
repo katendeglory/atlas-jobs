@@ -125,9 +125,8 @@
               you prepare for the future skills needed in the marketplace.
             </div>
 
-            <a
-              href="/explore"
-              on:click={onPauseVideo}
+            <button
+            on:click={() => (window.location = "/explore")}
               class="btn btn-primary"
               data-aos="fade-up"
               data-aos-anchor-placement="top-bottom"
@@ -139,7 +138,7 @@
               <span class="material-symbols-outlined text-xl ml-2">
                 trending_flat
               </span>
-            </a>
+            </button>
           </div>
           <div
             class="w-full pb-12 md:pb-0 md:h-screen lg:w-5/12 flex items-center justify-center relative z-10"
