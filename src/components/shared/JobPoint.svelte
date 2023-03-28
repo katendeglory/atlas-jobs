@@ -33,10 +33,21 @@
   });
 
   let fixText = (text) => {
-    text = text.toLowerCase().split("→")[0];
-    text = text.replace(" ", "~~");
-    text = text.replace(" ", "<br>");
-    text = text.replace("~~", " ");
+    text = text.toLowerCase().split("→")[0].trim();
+    let occurences = text.split(" ").length - 1;
+    let length = text.length;
+
+    if (occurences > 1) {
+      text = text.replace(" ", "~~");
+      text = text.replace(" ", "<br>");
+      text = text.replace("~~", " ");
+    }
+    if (occurences == 1 && length > 15) {
+      text = text.replaceAll(" ", "<br>");
+    }
+
+    console.log({ text, occurences });
+
     return text;
   };
 </script>
