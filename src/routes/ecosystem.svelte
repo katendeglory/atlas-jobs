@@ -183,6 +183,7 @@
           />
         </div>
         <img
+          class:hidden={mapLoaded == false}
           class="[16:9] w-[184vh] h-[103.5vh] md:w-[100vw] md:h-[56.25vw] absolute top-0 left-0 right-0 bottom-0"
           alt="map"
           style="filter: brightness(70%);"
