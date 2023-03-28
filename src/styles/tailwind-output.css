@@ -686,11 +686,11 @@ select {
 .z-50 {
   z-index: 50;
 }
-.z-\[60\] {
-  z-index: 60;
-}
 .z-\[500\] {
   z-index: 500;
+}
+.z-\[60\] {
+  z-index: 60;
 }
 .col-span-full {
   grid-column: 1 / -1;
@@ -821,9 +821,6 @@ select {
 .h-64 {
   height: 16rem;
 }
-.h-auto {
-  height: auto;
-}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -841,6 +838,9 @@ select {
 }
 .w-\[184vh\] {
   width: 184vh;
+}
+.w-auto {
+  width: auto;
 }
 .w-\[140vw\] {
   width: 140vw;
@@ -865,12 +865,6 @@ select {
 }
 .w-\[90vw\] {
   width: 90vw;
-}
-.w-\[100vh\] {
-  width: 100vh;
-}
-.w-auto {
-  width: auto;
 }
 .max-w-full {
   max-width: 100%;
@@ -1756,6 +1750,10 @@ select:focus, input[type="datetime-local"]:focus, input[type="text"]:focus, inpu
     height: 56.25vw;
   }
 
+  .md\:h-auto {
+    height: auto;
+  }
+
   .md\:h-screen {
     height: 100vh;
   }
@@ -1764,11 +1762,11 @@ select:focus, input[type="datetime-local"]:focus, input[type="text"]:focus, inpu
     height: 75vh;
   }
 
-  .md\:h-auto {
-    height: auto;
+  .md\:w-\[100vw\] {
+    width: 100vw;
   }
 
-  .md\:w-\[100vw\] {
+  .md\:w-screen {
     width: 100vw;
   }
 
@@ -1786,10 +1784,6 @@ select:focus, input[type="datetime-local"]:focus, input[type="text"]:focus, inpu
 
   .md\:w-\[28rem\] {
     width: 28rem;
-  }
-
-  .md\:w-screen {
-    width: 100vw;
   }
 
   .md\:translate-x-\[-20rem\] {

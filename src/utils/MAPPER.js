@@ -710,7 +710,7 @@ let RETAIL_4 = [
   },
   {
     id: 10, // Food logistics specialist
-    top: "14", left: "17.5",
+    top: "24", left: "17.5",
   },
   {
     id: 11, // Food waste recycling specialist
