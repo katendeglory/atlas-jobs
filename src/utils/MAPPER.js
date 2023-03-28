@@ -694,7 +694,7 @@ let RETAIL_4 = [
   },
   {
     id: 6, // Sustainable packaging technologist
-    top: "21", left: "54",
+    top: "21", left: "42",
   },
   {
     id: 7, // Supply safety consultant
@@ -973,7 +973,7 @@ const MAPPER = [
 /*3*/  { id: 4, mapper: RETAIL_4, name: "Online Marketplace" }, // retail
 /*5*/  { id: 6, mapper: MANUFACTURING_2, name: "Sustainability Providers" }, // plant
 /*6*/  { id: 7, mapper: RETAIL_4, name: "Retail & Groceries" }, // retail
-/*7*/  { id: 8, mapper: RETAIL_4, name: "Transport & Delivery" }, // retail
+/*7*/  { id: 8, mapper: WHOLESALERS_3, name: "Transport & Delivery" }, // retail
 /*8*/  { id: 9, mapper: RESTAURANT_9, name: "Restaurant" }, // restaurant
 /*9*/  { id: 10, mapper: RESTAURANT_9, name: "New Product Development" }, // restaurant
 /*10*/  { id: 11, mapper: DEFAULT, name: "Jobs at Risk" }, // generic
