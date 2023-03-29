@@ -4,7 +4,8 @@
   import Loading from "../utils/Loading.svelte";
   import { Circle } from "svelte-loading-spinners";
 
-  export let videoURL = "https://youtu.be/3uVRGheutQA";
+  export let videoURL = "https://www.youtube.com/embed/3uVRGheutQA";
+
   export let title = "";
 
   let showTitle = true;
@@ -60,7 +61,9 @@
       title="video"
       width="100%"
       height="100%"
-      src={`https://www.youtube.com/embed/${getVideoId(videoURL).id}?rel=0`}
+      src={`https://www.youtube.com/embed/${
+        getVideoId(videoURL).id
+      }?rel=0&modestbranding=1?autoplay=1`}
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
@@ -73,7 +76,7 @@
 
   {#if loaded == false}
     <div
-      class="flex items-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[50%]"
+      class="flex items-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[50%] animate-pulse"
     >
       <Circle size="25" color="rgb(255,255,255)" unit="px" />
       <span class="flex items-center ml-2"> Waiting for youtube... </span>
