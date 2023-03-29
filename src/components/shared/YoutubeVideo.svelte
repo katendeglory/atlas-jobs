@@ -58,7 +58,25 @@
       id="yt-iframe"
       on:click={handleClick}
       on:load={handleOnLoad}
-      title="video"
+      title=""
+      width="100%"
+      height="100%"
+      src="https://player.vimeo.com/video/812709299?h=1bfa0f0b92&autoplay=1&color=ffffff&title=0&byline=0&portrait=0"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    />
+  </div>
+
+  <!-- <div
+    class:no-hidden={!loaded}
+    class="h-[100vh] md:h-[100vh] w-[100vw] overflow-hidden shadow-sm relative z-10 pt-14"
+  >
+    <iframe
+      id="yt-iframe"
+      on:click={handleClick}
+      on:load={handleOnLoad}
+      title=""
       width="100%"
       height="100%"
       src={`https://www.youtube.com/embed/${
@@ -68,7 +86,7 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     />
-  </div>
+  </div> -->
 
   {#if loaded == false}
     <div
