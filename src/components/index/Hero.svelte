@@ -1,10 +1,13 @@
 <script>
+  import YoutubeVideo from "./../shared/YoutubeVideo.svelte";
+  import YoutubeModal from "./../shared/YoutubeModal.svelte";
   import utils from "../../stores/utils";
   import { fly } from "svelte/transition";
   import { onMount } from "svelte";
   import Container from "../utils/Container.svelte";
   // let is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
+  let showVideoModal = false;
   let id = "hero";
 
   const loadVideo = () => {
@@ -126,7 +129,7 @@
             </div>
 
             <button
-            on:click={() => (window.location = "/explore")}
+              on:click={() => (window.location = "/explore")}
               class="btn btn-primary"
               data-aos="fade-up"
               data-aos-anchor-placement="top-bottom"
@@ -159,7 +162,7 @@
       {#if $utils.PAUSED}
         <div
           class="flex items-center justify-center cursor-pointer"
-          on:click={onPlayVideo}
+          on:click={() => /*onPlayVideo*/ (showVideoModal = true)}
         >
           <button class="ripple-block">
             <ion-icon name="play-circle" class="fa-play-circle" />
@@ -185,10 +188,10 @@
     {#if $utils.PAUSED}
       <div
         class="md:hidden flex cursor-pointer items-center justify-center text-gray-300 text-sm animate-pulse mb-4"
-        on:click={onPlayVideo}
+        on:click={() => /*onPlayVideo*/ (showVideoModal = true)}
       >
         <ion-icon name="play-circle" class="text-2xl mr-2" />
-        Click here play
+        Click here to play
       </div>
     {:else}
       <div
@@ -196,7 +199,7 @@
         on:click={onPauseVideo}
       >
         <ion-icon name="stop-circle" class="text-2xl mr-2" />
-        Click here stop
+        Click here to stop
       </div>
     {/if}
 
@@ -225,6 +228,13 @@
     </div>
   </button>
 </section>
+
+<YoutubeModal
+  on:modalClose={() => (showVideoModal = false)}
+  show={showVideoModal}
+>
+  <YoutubeVideo />
+</YoutubeModal>
 
 <div class="hidden add-ratio" />
 

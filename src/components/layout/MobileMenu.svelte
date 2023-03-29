@@ -81,6 +81,15 @@
           </div>
         </button>
         <button
+          class="a-nav px-8 py-2 flex items-center justify-start md:hidden"
+          on:click={() => {
+            window.location = "/explore";
+            hideMenu();
+          }}
+        >
+          Ecosystems
+        </button>
+        <button
           class="a-nav px-8 py-2 flex items-center justify-start"
           on:click={() => {
             window.location = "/contact";
