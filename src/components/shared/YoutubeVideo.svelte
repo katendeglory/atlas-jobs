@@ -56,6 +56,7 @@
     class="h-[100vh] md:h-[100vh] w-[100vw] overflow-hidden shadow-sm relative z-10 pt-14"
   >
     <iframe
+      id="yt-iframe"
       on:click={handleClick}
       on:load={handleOnLoad}
       title="video"
