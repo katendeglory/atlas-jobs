@@ -1,7 +1,6 @@
 <script>
   import { fly } from "svelte/transition";
   import getVideoId from "get-video-id";
-  import Loading from "../utils/Loading.svelte";
   import { Circle } from "svelte-loading-spinners";
 
   export let videoURL = "https://www.youtube.com/embed/3uVRGheutQA";
@@ -71,16 +70,12 @@
     />
   </div>
 
-  <!-- {#if loaded == false}
-    <Loading />
-  {/if} -->
-
   {#if loaded == false}
     <div
       class="flex items-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[50%] animate-pulse"
     >
       <Circle size="25" color="rgb(255,255,255)" unit="px" />
-      <span class="flex items-center ml-2"> Waiting for youtube... </span>
+      <span class="flex items-center ml-2"> Loading... </span>
     </div>
   {/if}
 </div>
