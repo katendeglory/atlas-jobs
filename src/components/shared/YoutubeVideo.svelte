@@ -63,7 +63,7 @@
       height="100%"
       src={`https://www.youtube.com/embed/${
         getVideoId(videoURL).id
-      }?rel=0&modestbranding=1?autoplay=1`}
+      }?rel=0&modestbranding=1&autoplay=1`}
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
