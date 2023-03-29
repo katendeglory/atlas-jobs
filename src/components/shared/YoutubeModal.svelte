@@ -9,6 +9,7 @@
   const onClose = () => {
     dispatch("modalClose");
   };
+  
 </script>
 
 {#if show}
