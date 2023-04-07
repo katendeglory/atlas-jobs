@@ -1,33 +1,52 @@
 <script>
+  import axios from "axios";
+  import config from "./../stores/config";
   import Container from "../components/utils/Container.svelte";
 
   let sending = false;
 
   let message = {
-    name: "",
-    email: "",
-    tel: "",
-    object: "",
-    content: "",
+    name: "Theo Sassler",
+    email: "theodoresassler@gmail.com",
+    tel: "+12345678910",
+    object: "Feedback",
+    content: "This is a test message",
   };
 
-  let handleSubmit = () => {
-    if (1 < 2) return;
+  // let message = {
+  //   name: "",
+  //   email: "",
+  //   tel: "",
+  //   object: "",
+  //   content: "",
+  // };
+
+  let handleSubmit = async () => {
     sending = true;
-    let templateParams = message;
-    emailjs.send("service_pik", "template_pik", templateParams).then(
-      (response) => {
-        sending = false;
-        console.log("SUCCESS!", response.status, response.text);
-        alert(`🙂 Thanks for you message ! We'll get back to you`);
-        message = { name: "", email: "", tel: "", object: "", content: "" };
+
+    let data = {
+      data: {
+        FullName: message.name,
+        Email: message.email,
+        Telephone: message.tel,
+        title: message.object,
+        Message: message.content,
       },
-      (error) => {
-        console.log(`🙂 The email service is down!`);
-        console.log("FAILED...", error);
+    };
+
+    axios
+      .post(`${$config.backendURL}/contacts`, data.data)
+      .then((res) => {
+        alert(`Thanks for your message ! `);
+        message = { name: "", email: "", tel: "", object: "", content: "" };
+        console.log(res.data);
         sending = false;
-      }
-    );
+      })
+      .catch((err) => {
+        console.log(err);
+        alert(`Connection Error: Try again later`);
+        sending = false;
+      });
   };
 </script>
 
@@ -53,7 +72,6 @@
         <form
           on:submit|preventDefault={handleSubmit}
           class="w-full h-full grid grid-cols-1 gap-4 px-4 py-5"
-          style="background-image: url(./images/pattern.svg);"
         >
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input
@@ -103,6 +121,7 @@
             <button
               disabled={sending}
               class={`btn btn-primary !w-full !py-3 !rounded-2xl`}
+              type="submit"
             >
               {#if sending}
                 Please Wait...
