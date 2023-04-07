@@ -5,13 +5,13 @@
 
   let sending = false;
 
-  // let message = {
-  //   name: "Theo Sassler",
-  //   email: "theodoresassler@gmail.com",
-  //   tel: "+12345678910",
-  //   object: "Feedback",
-  //   content: "This is a test message",
-  // };
+  //  let message = {
+  //  name: "Theo Sassler",
+  //email: "theodoresassler@gmail.com",
+  // tel: "123456789",
+  //  object: "Feedback",
+  //  content: "This is a test message",
+  //};
 
   let message = {
     name: "",
