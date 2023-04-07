@@ -5,21 +5,21 @@
 
   let sending = false;
 
-  let message = {
-    name: "Theo Sassler",
-    email: "theodoresassler@gmail.com",
-    tel: "+12345678910",
-    object: "Feedback",
-    content: "This is a test message",
-  };
-
   // let message = {
-  //   name: "",
-  //   email: "",
-  //   tel: "",
-  //   object: "",
-  //   content: "",
+  //   name: "Theo Sassler",
+  //   email: "theodoresassler@gmail.com",
+  //   tel: "+12345678910",
+  //   object: "Feedback",
+  //   content: "This is a test message",
   // };
+
+  let message = {
+    name: "",
+    email: "",
+    tel: "",
+    object: "",
+    content: "",
+  };
 
   let handleSubmit = async () => {
     sending = true;
