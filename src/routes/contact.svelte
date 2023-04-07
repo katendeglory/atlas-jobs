@@ -35,7 +35,7 @@
     };
 
     axios
-      .post(`${$config.backendURL}/contacts`, data.data)
+      .post(`${$config.backendURL}/contacts`, data)
       .then((res) => {
         alert(`Thanks for your message ! `);
         message = { name: "", email: "", tel: "", object: "", content: "" };
